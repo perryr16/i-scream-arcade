@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
     get "/", to: "welcome#index"
-    get "/quiz", to: "quiz#new"
+    get "/quiz", to: "fear_quiz#new"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

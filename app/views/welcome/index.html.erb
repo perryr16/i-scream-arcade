@@ -1,14 +1,26 @@
 <header class='masthead'>
   <div class="container d-flex h-100 align-items-center">
-  <div class="mx-auto text-center">
-    <h1 class="mx-auto my-0 text-uppercase">I Scream Arcade</h1></br>
-    <div class="fear-quiz">
-    <a class="btn btn-primary js-scroll-trigger" href="/quiz">Will it Scare Me?</a>
-    Take the Fear Quiz
-    </header></div>
-  </div>
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">I Scream Arcade</h1></br>
+      <div class="fear-quiz">
+      <a class="btn btn-primary js-scroll-trigger" href="/quiz">Will it Scare Me?</a><br>
+      Take the Fear Quiz
+      </div>
+    </div>
+</header>
 
   <div class="game-search">
-    Search for Games
+    <div class="col-md-10 col-lg-8 mx-auto text-center">
+      <h2 class="text-black mb-4">Search for Games</h2>
+      <form class="form-inline d-flex" _lpchecked="1">
+      <%= check_box_tag(:game_title) %>
+      <%= label_tag(:game_title, "Game Title") %>
+      <%= check_box_tag(:keyword) %>
+      <%= label_tag(:keyword, "Keyword") %>
+
+        <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="game_search"  placeholder="Search by game title or keyword...">
+        <button class="btn btn-primary mx-auto" type="submit">Search</button>
+      </form>
+    </div>
   </div>
 </div>
