@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Welcome page game search' do
   before do
-     visit '/'
+    visit '/'
   end
 
   it 'I can search by game title' do
