@@ -13,13 +13,14 @@
     <div class="col-md-10 col-lg-8 mx-auto text-center">
       <h2 class="text-black mb-4">Search for Games</h2>
       <form class="form-inline d-flex" _lpchecked="1">
-      <%= check_box_tag(:game_title) %>
-      <%= label_tag(:game_title, "Game Title") %>
-      <%= check_box_tag(:keyword) %>
-      <%= label_tag(:keyword, "Keyword") %>
-
+      <%= form_tag do %>
+        <%= radio_button_tag(:search, "Game") %>
+        <%= label_tag(:game_title, "Game") %>
+        <%= radio_button_tag(:search, "Keyword") %>
+        <%= label_tag(:keyword, "Keyword") %>
+      <% end %>
         <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="game_search"  placeholder="Search by game title or keyword...">
-        <button class="btn btn-primary mx-auto" type="submit">Search</button>
+        <%= button_to "Search", "/game-search", method: :get, :class=>"btn btn-primary mx-auto" %>
       </form>
     </div>
   </div>
