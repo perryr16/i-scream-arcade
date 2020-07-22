@@ -3,6 +3,8 @@ require 'rails_helper'
 describe User, type: :model do
   describe "relationships" do
     it { should have_many :fear_quizzes }
+    it { should have_many :user_games }
+    it { should have_many(:games).through(:user_games) }
   end
   
   describe "validations" do
