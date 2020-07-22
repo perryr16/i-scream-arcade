@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :user do
-    name { Faker::Creature::Animal.name }
+    name { Faker::Movies::Ghostbusters.character }
     google_token { rand(10000000..999999999) }
-    email { "#{Faker::Movies::Ghostbusters.character}@gmail.com" }
+    email { "#{Faker::Creature::Animal.name}@gmail.com" }
     photo_array = ["https://i.dlpng.com/static/png/4467625-video-game-characters-that-are-blue-gamer-problems-png-video-game-character-1000_1024_preview.webp",
     "https://www.nicepng.com/png/detail/94-942332_endearing-video-game-characters-that-you-cannot-stand.png",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQaZwFBWHo6k-iya69x6OLiNmywhY4t2YzTew&usqp=CAU",

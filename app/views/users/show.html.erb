@@ -1,0 +1,15 @@
+<header class='masthead'>
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase header-index">User Profile</h1></br>
+      <section class="top-margin">
+        <section class="content-left user-info">
+          <%= image_tag @user.photo, class: "profile-picture"%>
+        </section>
+        <section class="content-right user-photo">
+          <h2 class="mx-auto my-0 text-uppercase"><%=@user.name %></h2>
+          <p class="mx-auto my-0 text-uppercase"><%=@user.email %></p>
+        </section>
+      </section>
+    </div>
+</header>
