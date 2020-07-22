@@ -1,0 +1,25 @@
+<h1>Game Library</h1>
+
+<table>
+  <tr>
+    <th>Favorite</th>
+    <th>Game Cover</th>
+    <th>Title</th>
+    <th>Rating/100</th>
+    <th>Popularity</th>
+    <th>Themes</th>
+    <th>Video</th>
+  </tr>
+<%@games.each do |game| %>
+    <tr id="game-<%= game.id %>">
+      <td><button class="btn"><i class="fa fa-bug" aria-hidden="true"></i></td>
+      <td><img class="game-img" src="<%=game.cover %>" alt=""></td>
+      <td><%=game.title %></td>
+      <td><%=game.agg_rating %></td>
+      <td><%=game.popularity %></td>
+      <td><%=game.themes %></td>
+      <td><%=game.video %></td>
+    </tr>
+<% end %>
+</table>
+
