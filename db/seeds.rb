@@ -5,11 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-ghost_array = ["https://images.vexels.com/media/users/3/181081/isolated/lists/bfff9424a64534109584cbf673d77409-brain-ghost-stroke.png",
-              "https://img.icons8.com/cotton/2x/ghost.png",
-              "https://www.pngfind.com/pngs/m/285-2853935_transparent-background-ghost-gif-hd-png-download.png",
-              "https://www.clipartmax.com/png/middle/45-459178_drawn-ghost-clipart-transparent-background-ghost-no-background.png",
-              "https://i.pinimg.com/originals/46/4b/26/464b2632d12afc02c9a3447c30ded298.jpg"]
 
 spooky_array = [
   "https://www.vhv.rs/dpng/d/136-1366570_spooky-tree-clip-art-transparent-cartoons-spooky-tree.png",
