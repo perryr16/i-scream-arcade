@@ -20,6 +20,7 @@ gem 'faraday'
 gem 'figaro'
 gem 'rspec-rails'
 gem 'factory_bot_rails'
+gem 'faker'
 
 
 group :development, :test do
@@ -28,7 +29,6 @@ group :development, :test do
   gem 'launchy'
   gem 'simplecov'
   gem 'shoulda-matchers'
-  gem 'simplecov'
 end
 
 group :development do

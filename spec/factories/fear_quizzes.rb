@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :fear_quiz do
-    user { nil }
     data { "MyText" }
+    user
   end
 end
