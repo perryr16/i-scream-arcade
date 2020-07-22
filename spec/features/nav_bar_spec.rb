@@ -12,5 +12,11 @@ RSpec.describe 'As visitor' do
         expect(page).to have_link("Take the Fear Quiz")
       end
     end
+
+    it 'I cant see the logout button' do
+      visit '/'
+      expect(page).to have_link("Login")
+      expect(page).to_not have_link("Logout")
+    end
   end
 end
