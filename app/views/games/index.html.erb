@@ -1,25 +1,36 @@
-<h1>Game Library</h1>
+<header class='masthead'>
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <section class="top-margin">
+        <h1 class="mx-auto my-0 text-uppercase">Game Library</h1></br>
+        <table>
+            <tr>
+              <th>Favorite</th>
+              <th>Game Cover</th>
+              <th>Title</th>
+              <th>Rating/100</th>
+              <th>Popularity</th>
+              <th>Themes</th>
+              <th>Video</th>
+            </tr>
+          <%@games.each do |game| %>
+              <tr id="game-<%= game.id %>">
+                <td><%= button_to "Add to My Games", user_games_path(game.id), method: :post %></td>
+                <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>
+                <td><%=game.title %></td>
+                <td><%=game.agg_rating %></td>
+                <td><%=game.popularity %></td>
+                <td><%=game.themes %></td>
+                <td><%=game.video %></td>
+              </tr>
+          <% end %>
+        </table>
+      </section>
+    </div>
+</header>
 
-<table>
-  <tr>
-    <th>Favorite</th>
-    <th>Game Cover</th>
-    <th>Title</th>
-    <th>Rating/100</th>
-    <th>Popularity</th>
-    <th>Themes</th>
-    <th>Video</th>
-  </tr>
-<%@games.each do |game| %>
-    <tr id="game-<%= game.id %>">
-      <td><%= button_to "Add to My Games", user_games_path(game.id), method: :post %></td>
-      <td><img class="game-img" src="<%=game.cover %>" alt=""></td>
-      <td><%=game.title %></td>
-      <td><%=game.agg_rating %></td>
-      <td><%=game.popularity %></td>
-      <td><%=game.themes %></td>
-      <td><%=game.video %></td>
-    </tr>
-<% end %>
-</table>
+
+
+
+
 
