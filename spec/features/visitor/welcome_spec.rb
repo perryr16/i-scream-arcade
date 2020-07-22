@@ -16,7 +16,6 @@ describe 'Visitor Welcome Page' do
       expect(page).to have_content('Take the Fear Quiz')
       click_on('Will it Scare Me?')
       expect(current_path).to eq('/quiz')
-      save_and_open_page
     end
   end
 

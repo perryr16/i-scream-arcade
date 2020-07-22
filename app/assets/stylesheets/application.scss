@@ -92,6 +92,22 @@ p {
   margin-bottom: 1rem;
 }
 
+.spacing {
+padding-top: 20px; 
+}
+
+.inner-page-body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+  background: rgb(213,213,213);
+  background: linear-gradient(180deg, rgba(213,213,213,0.26234243697478987) 0%, rgba(0,0,0,0.8057598039215687) 100%);
+}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -10102,6 +10118,7 @@ h3 {
 
   .navbar {
     display: none;
+    background: black;
   }
 
   .badge {
@@ -10172,7 +10189,7 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: transparent;
+    background-color: #2a024954;
     transition: background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
