@@ -12,17 +12,17 @@
   <div class="game-search">
     <div class="col-md-10 col-lg-8 mx-auto text-center">
       <h2 class="text-black mb-4">Search for Games</h2>
-      <form class="form-inline d-flex" >
-      <%= form_tag do %>
-        <%= radio_button_tag(:search, "Game") %>
+      <%= form_tag "/game-search" do %>
+        <%= radio_button_tag(:search_type, "game") %>
         <%= label_tag(:game_title, "Game") %>
-        <%= radio_button_tag(:search, "Keyword") %>
-        <%= label_tag(:keyword, "Keyword") %>
+        <%= radio_button_tag(:search_type, "keyword") %>
+        <%= label_tag(:keyword, "Keyword") %><br>
+
+        <%= text_field_tag :search %><br>
+        <%= submit_tag "Search" %>
       <% end %>
-        <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="game_search"  placeholder="Search by game title or keyword...">
-        
-        <%= button_to "Search", "/game-search", method: :post, :class=> " btn btn-game-search" %>
-      </form>
-    </div>
+</div>
+
+
   </div>
 </div>
