@@ -5,7 +5,7 @@ FactoryBot.define do
     agg_rating {rand(1..100)}
     artworks { "MyText" }
     category { "" }
-    cover { "https://i1.pngguru.com/preview/722/34/500/super-mario-icons-super-mario-boo.jpg" }
+    cover { "https://banner2.cleanpng.com/20180713/xr/kisspng-smiley-ghost-spirit-halloween-clip-art-bad-spirits-5b4924360558c5.9826495615315200540219.jpg" }
     follows { 1 }
     game_modes { "MyText" }
     hypes { 1 }
