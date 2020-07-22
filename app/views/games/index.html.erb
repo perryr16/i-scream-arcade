@@ -12,7 +12,7 @@
   </tr>
 <%@games.each do |game| %>
     <tr id="game-<%= game.id %>">
-      <td><button class="btn"><i class="fa fa-bug" aria-hidden="true"></i></td>
+      <td><%= button_to "Favorite", "/favorites/#{game.id}", method: :patch %></td>
       <td><img class="game-img" src="<%=game.cover %>" alt=""></td>
       <td><%=game.title %></td>
       <td><%=game.agg_rating %></td>

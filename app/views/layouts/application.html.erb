@@ -27,5 +27,11 @@
             </div>
         </nav>
     <%= yield %>
+    
+      <% flash.each do |type, message| %>
+        <section class=<%= type %>>
+          <p class="user-message"><%= message %></p>
+        </section>
+      <% end %>
   </body>
 </html>
