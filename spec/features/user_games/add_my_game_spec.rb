@@ -14,6 +14,7 @@ describe "a User can add a game to 'my games'" do
 
   it "from game index page" do
     visit '/games'
+    expect(@user.games).to eq([])
 
     within("#game-#{@game1.id}")do
       click_on "Add to My Games"
@@ -34,6 +35,15 @@ describe "a User can add a game to 'my games'" do
     end
 
     expect(page).to have_content("You have added #{@game4.title} to Your Games")
+
+    @user.reload
+    @game1.reload
+    @game2.reload
+    @game4.reload
+    expect(@user.games).to eq([@game1, @game4])
+    expect(@game1.users).to eq([@user])
+    expect(@game2.users).to eq([])
+    expect(@game4.users).to eq([@user])
 
   end
   
