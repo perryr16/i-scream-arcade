@@ -1,8 +1,28 @@
 <header class='masthead'>
   <div class="container d-flex h-100 align-items-center">
-  <div class="mx-auto text-center">
-    <h1 class="mx-auto my-0 text-uppercase">I Scream Arcade</h1></br>
-    <a class="btn btn-primary js-scroll-trigger" href="/quiz">Will it Scare Me?</a>
-    </header>
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">I Scream Arcade</h1></br>
+      <div class="fear-quiz">
+      <a class="btn btn-primary js-scroll-trigger" href="/quiz">Will it Scare Me?</a><br>
+      Take the Fear Quiz
+      </div>
+    </div>
+</header>
+
+  <div class="game-search">
+    <div class="col-md-10 col-lg-8 mx-auto text-center">
+      <h2 class="text-black mb-4">Search for Games</h2>
+      <%= form_tag "/game-search" do %>
+        <%= radio_button_tag(:search_type, "game") %>
+        <%= label_tag(:game_title, "Game") %>
+        <%= radio_button_tag(:search_type, "keyword") %>
+        <%= label_tag(:keyword, "Keyword") %><br>
+
+        <%= text_field_tag :search %><br><br>
+        <%= submit_tag "Search", :class=>"btn btn-game-search" %>
+      <% end %>
+</div>
+
+
   </div>
 </div>
