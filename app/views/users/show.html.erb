@@ -2,14 +2,16 @@
   <div class="container d-flex h-100 align-items-center">
     <div class="mx-auto text-center">
       <h1 class="mx-auto my-0 text-uppercase header-index">User Profile</h1></br>
-      <section class="top-margin">
-        <section class="content-left user-info">
+     
+        <section class="content-left user-photo">
           <%= image_tag @user.photo, class: "profile-picture"%>
         </section>
-        <section class="content-right user-photo">
-          <h2 class="mx-auto my-0 text-uppercase"><%=@user.name %></h2>
-          <p class="mx-auto my-0 text-uppercase"><%=@user.email %></p>
+        <section class="content-right user-info">
+          <h2 class="text-uppercase profile-name text-left"><%=@user.name %></h2>
+          <p class="mx-auto my-0 text-uppercase text-left"><%=@user.email %></p>
+          
         </section>
-      </section>
+
+
     </div>
 </header>

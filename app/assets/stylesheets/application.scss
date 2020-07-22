@@ -10437,6 +10437,16 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
   height: 70vh;
   overflow: scroll;
 }
+.margin-top {
+  position: absolute;
+  top: 200px;
+  height: 70vh;
+  overflow: scroll;
+}
+.center-light {
+  left:10vw;
+  right: 10vw;
+}
 .game-table td{
   border-bottom: 1px solid gray;
   top: 20px;
@@ -10469,40 +10479,29 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
   }
 
 .content-left{
-  border: 1px;
-  background-color:#134234;
-  // color:#DCFFCF;
   position: absolute;
   width: 40vw;
   height: 400px;
-  top: 0;
+  top: 200px;
   left: 0;
-
-  // margin-top: 80px;
-  // padding: 10px;
-  // //  /* border-left: solid 8px #0077A6; */
-  // border-right: solid 3px yellow;
-  // border-bottom: solid 3px yellow;
-  // box-shadow: 10px 10px black;
-  // /* outline: solid 3px black; */
+  z-index: +1;
 }
 .content-right{
-  border: 5px;
+
+  
   position: absolute;
-  width: 30vw;
+  width: 50vw;
   height: 400px;
-  top: 0;
-  left: 43vw;
-
-  // margin-top: 80px;
-  // padding: 10px;
-
-  // //  /* border-left: solid 9px #0E3026; */
-  // border-right: solid 3px yellow;
-  // border-bottom: solid 3px yellow;
-  // box-shadow: 10px 10px black;
-  // /* outline: solid 3px black; */
+  top: 200px;
+  left: 400px;
+  z-index: +1;
   }
   .profile-picture {
   height: 400px;
+}
+.profile-name {
+  font-size: 30px !important;
+}
+.text-left {
+  text-align: left !important;
 }
