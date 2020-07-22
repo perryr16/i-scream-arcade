@@ -17,6 +17,8 @@ RSpec.describe 'As visitor' do
       visit '/'
       expect(page).to have_link("Login")
       expect(page).to_not have_link("Logout")
+      expect(page).to_not have_link("Profile")
+      expect(page).to_not have_link("Game Library")
     end
   end
 end
