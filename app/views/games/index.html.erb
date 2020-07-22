@@ -1,12 +1,12 @@
 <header class='masthead'>
   <div class="container d-flex h-100 align-items-center">
     <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase header-index">Game Library</h1></br>
       <section class="top-margin">
-        <h1 class="mx-auto my-0 text-uppercase">Game Library</h1></br>
-        <table>
+        <table class = "game-table">
             <tr>
-              <th>Favorite</th>
-              <th>Game Cover</th>
+              <th>Add to My Games</th>
+              <th></th>
               <th>Title</th>
               <th>Rating/100</th>
               <th>Popularity</th>
@@ -15,8 +15,13 @@
             </tr>
           <%@games.each do |game| %>
               <tr id="game-<%= game.id %>">
-                <td><%= button_to "Add to My Games", user_games_path(game.id), method: :post %></td>
+                <td><%= button_to user_games_path(game.id), method: :post class: "transparent" do %>
+                  <i class="fa fa-gamepad", aria-hidden="true"></i>
+                <% end %>
+                </td>
+
                 <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>
+                  
                 <td><%=game.title %></td>
                 <td><%=game.agg_rating %></td>
                 <td><%=game.popularity %></td>
