@@ -12,6 +12,8 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+//variables
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -44,6 +46,7 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+// global tags
 *,
 *::before,
 *::after {
@@ -72,6 +75,7 @@ body {
   background-color: #fff;
 }
 
+// app-specific classes
 .game-search {
   width: 100%;
   height: 100%;
@@ -111,7 +115,7 @@ p {
 }
 
 .spacing {
-padding-top: 20px; 
+padding-top: 20px;
 }
 
 .inner-page-body {
@@ -126,6 +130,7 @@ padding-top: 20px;
   background: linear-gradient(180deg, rgba(213,213,213,0.26234243697478987) 0%, rgba(0,0,0,0.8057598039215687) 100%);
 }
 
+// not sure who wrote this
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -137,6 +142,7 @@ abbr[data-original-title] {
           text-decoration-skip-ink: none;
 }
 
+// more global tags
 address {
   margin-bottom: 1rem;
   font-style: normal;
@@ -575,6 +581,7 @@ pre code {
   overflow-y: scroll;
 }
 
+// grid/layout rules
 .container {
   width: 100%;
   padding-right: 0.75rem;
@@ -10290,6 +10297,7 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
   background-attachment: scroll;
   background-size: cover;
 }
+
 .masthead h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 2.5rem;
@@ -10304,8 +10312,43 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
   max-width: 20rem;
   font-size: 1rem;
 }
+
+.quiz {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: rgb(255,252,252);
+  background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5970763305322129) 76%), url("https://user-images.githubusercontent.com/59414750/88225752-406f1000-cc28-11ea-9864-d6c200c33096.jpg");
+  // background-image: url("https://user-images.githubusercontent.com/54954621/88128254-c5a7e580-cb92-11ea-8b07-88433389fcd5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.quiz h1 {
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.quiz h2 {
+  max-width: 20rem;
+  font-size: 1rem;
+}
+
 @media (min-width: 768px) {
   .masthead h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .quiz h1 {
     font-size: 4rem;
     line-height: 4rem;
   }
@@ -10324,6 +10367,38 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
     max-width: 30rem;
     font-size: 1.25rem;
   }
+
+  .quiz {
+    height: 100vh;
+    padding: 0;
+  }
+  .quiz h1 {
+    font-size: 3.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
+  }
+  .quiz h2 {
+    max-width: 30rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* HIDE RADIO */
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 2px solid #f00;
 }
 
 .about-section {
