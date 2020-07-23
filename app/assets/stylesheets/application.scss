@@ -10480,10 +10480,10 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
 
 .content-left{
   position: absolute;
-  width: 40vw;
+  width: 300px;
   height: 400px;
   top: 200px;
-  left: 0;
+  left: 5vw;
   z-index: +1;
 }
 .content-right{
@@ -10493,15 +10493,19 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
   width: 50vw;
   height: 400px;
   top: 200px;
-  left: 400px;
+  left: 30vw;
   z-index: +1;
   }
-  .profile-picture {
-  height: 400px;
+
+.profile-picture {
+  width: 20vw;
 }
 .profile-name {
   font-size: 30px !important;
 }
 .text-left {
   text-align: left !important;
+}
+.profile-game-list {
+  overflow: scroll
 }

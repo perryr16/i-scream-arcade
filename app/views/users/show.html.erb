@@ -9,7 +9,36 @@
         <section class="content-right user-info">
           <h2 class="text-uppercase profile-name text-left"><%=@user.name %></h2>
           <p class="mx-auto my-0 text-uppercase text-left"><%=@user.email %></p>
-          
+          <section class="profile-game-list">
+            
+            <table class = "game-table">
+            <tr>
+              <th>Save Games</th>
+              <th></th>
+              <th>Title</th>
+              <th>Rating/100</th>
+              <th>Popularity</th>
+              <th>Themes</th>
+              <th>Video</th>
+            </tr>
+          <% @user.games each do |game| %>
+              <tr id="game-<%= game.id %>">
+                <td><%= button_to user_games_path(game.id), method: :post, class: "transparent add-game" do %>
+                  <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
+                <% end %>
+                </td>
+                <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>  
+                <td><%=game.title %></td>
+                <td><%=game.agg_rating %></td>
+                <td><%=game.popularity %></td>
+                <td><%=game.themes %></td>
+                <td><%=game.video %></td>
+              </tr>
+          <% end %>
+        </table>
+
+            <% end %>
+          </section>
         </section>
 
 

@@ -13,7 +13,7 @@ describe "user show page" do
   end
 
   it "user show page has personal info" do
-    visit user_path(@user)
+    visit '/profile'
 
     expect(page).to_not have_content(@user.google_token)
 

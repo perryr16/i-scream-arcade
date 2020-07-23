@@ -1,13 +1,14 @@
 class UsersController < ApplicationController 
 
   def show
-
-    @user = current_user ||= backup_user
+    @user = current_user if current_user 
+    @user = backup_user  if !current_user
   end
 
   private
 
   def backup_user 
+    binding.pry
     User.create!(
       name: "George Washington",
       google_token: "123344567dgafgarga",
