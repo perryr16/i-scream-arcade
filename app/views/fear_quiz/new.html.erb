@@ -1,15 +1,50 @@
 <header class='quiz'>
   <div class="container d-flex h-100 align-items-center">
-    <div class="mx-auto text-center">
-      <h1>Tell Me Your Fears</h1>
-<div class"rock">
-  <%= check_box_tag 'rock', 'rock music' %>
-  <label>'rock music' </label>
+    <section>
+      <h1 class="mx-auto text-uppercase">Tell Me Your Fears</h1>
 
-  <%= check_box_tag 'rock', 'classical music' %>
-  <label>'classical music' </label>
+      <input id='one' type='checkbox' />
+      <label for='one'>
+        <span></span>
+          Spiders
+        <ins><i>Spiders</i></ins>
+      </label>
 
-  <%= check_box_tag 'rock', 'pop music' %>
-  <label>'pop music' </label>
-  </div>
+      <input id='two' type='checkbox' />
+      <label for='two'>
+        <span></span>
+          Heights
+        <ins><i>Heights</i></ins>
+      </label>
+
+      <input id='three' type='checkbox' />
+      <label for='three'>
+        <span></span>
+          Zombies
+        <ins><i>Zombies</i></ins>
+      </label>
+
+      <input id='four' type='checkbox' />
+      <label for='four'>
+        <span></span>
+          Death
+        <ins><i>Death</i></ins>
+      </label>
+
+      <input id='five' type='checkbox' />
+      <label for='five'>
+        <span></span>
+          Outdoors
+        <ins><i>Outdoors</i></ins>
+      </label>
+
+      <input id='six' type='checkbox' />
+      <label for='six'>
+        <span></span>
+          Lonliness
+        <ins><i>Lonliness</i></ins>
+      </label>
+
+      <br><%= submit_tag "See My Results", :class=>"btn btn-game-search" %>
+  </section>
 </header>
