@@ -78,16 +78,16 @@ body {
   background: #EE9D1C;
 }
 
-.btn-game-search {
-  color: rgb(255, 255, 255)!important;
-  background-color: black!important;
-  border-color: black!important;
+#btn-game-search {
+  color: rgb(255, 255, 255);
+  background-color: black;
+  border-color: black;
 }
 
-.btn-game-search:hover {
-  color: #000000!important;
-  background-color: #ffffff!important;
-  border-color: #ffffff!important;
+#btn-game-search:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #ffffff;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
