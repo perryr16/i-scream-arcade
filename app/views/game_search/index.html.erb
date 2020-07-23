@@ -1,5 +1,37 @@
-<div class="inner-page-body">
+<header class='masthead'>
   <div class="container d-flex h-100 align-items-center">
-    <h2>Search Results</h2>
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">Search Results</h1></br></br>
+</header>
+
+    <div class="mx-auto text-center">
+      <div class="game-search">
+      <section class="results-margin">
+     <table class = "game-table">
+            <tr>
+              <th>Add to My Games</th>
+              <th></th>
+              <th>Title</th>
+              <th>Rating/100</th>
+              <th>Popularity</th>
+              <th>Themes</th>
+              <th>Video</th>
+            </tr>
+          <%@games.each do |game| %>
+              <tr id="game-<%= game.id %>">
+                <td><%= button_to user_games_path(game.id), method: :post, class: "transparent add-game" do %>
+                  <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
+                <% end %>
+                </td>
+                <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>  
+                <td><%=game.title %></td>
+                <td><%=game.agg_rating %></td>
+                <td><%=game.popularity %></td>
+                <td><%=game.themes %></td>
+                <td><%=game.video %></td>
+              </tr>
+          <% end %>
+        </table>
+      </section>
   </div>
-</div>
+</header>

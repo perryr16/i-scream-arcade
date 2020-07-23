@@ -3,6 +3,7 @@ class GameSearchController < ApplicationController
   end
 
   def index
+    @games = Game.all
     if params[:search_type] == "keyword"
       render :index
     else
