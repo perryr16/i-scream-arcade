@@ -7,13 +7,14 @@
           <%= image_tag @user.photo, class: "profile-picture"%>
         </section>
         <section class="content-right user-info">
-          <h2 class="text-uppercase profile-name text-left"><%=@user.name %></h2>
+          <h2 class="text-uppercase thirty-px text-left"><%=@user.name %></h2>
           <p class="mx-auto my-0 text-uppercase text-left"><%=@user.email %></p>
+          <br><br>
+          <h2 class = "thirty-px saved-games text-uppercase text-left">Saved Games</h2>
           <section class="profile-game-list">
-            
             <table class = "game-table">
             <tr>
-              <th>Save Games</th>
+              <th>Save Game</th>
               <th></th>
               <th>Title</th>
               <th>Rating/100</th>
@@ -21,7 +22,7 @@
               <th>Themes</th>
               <th>Video</th>
             </tr>
-          <% @user.games each do |game| %>
+          <% @user.games.each do |game| %>
               <tr id="game-<%= game.id %>">
                 <td><%= button_to user_games_path(game.id), method: :post, class: "transparent add-game" do %>
                   <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
@@ -36,8 +37,6 @@
               </tr>
           <% end %>
         </table>
-
-            <% end %>
           </section>
         </section>
 

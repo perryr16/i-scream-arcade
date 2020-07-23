@@ -32,6 +32,6 @@ george = User.create!(
       email: "george@delaware.com",
       photo: "https://www.americanhistorycentral.com/wp-content/uploads/2016/08/george-washington-portrait-843x1024.jpg"
     )
-5.times do |index|  
+15.times do |index|  
   george.games << Game.all[index]
 end

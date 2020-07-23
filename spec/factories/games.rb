@@ -20,10 +20,11 @@ FactoryBot.define do
     screenshots { "MyText" }
     similar_games { "MyText" }
     storyline { "MyString" }
-    sequence(:themes, (0..10).cycle) { |n| ["theme#{n}", "theme#{n+1}"]}
+    sequence(:themes) { |n| ["theme#{n}", "theme#{n+1}"]}
+    # themes { [1,2,3]}
     # themes{ ["theme1, theme2"]}
     total_rating { 1.5 }
     url { "MyString" }
-    video { "video_url" }
+    sequence(:video) {|n| "video_url#{n}" }
   end
 end
