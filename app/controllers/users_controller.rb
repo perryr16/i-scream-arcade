@@ -2,7 +2,8 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user if current_user 
-    @user = backup_user  if !current_user
+    @user = backup_user if !current_user
+
   end
 
   def edit 
@@ -41,6 +42,7 @@ class UsersController < ApplicationController
     user.update(update_params)
     if user.save
       flash[:notice] = "You have updated your profile"
+      session[:user_id] = user.id
     end
     redirect_to '/profile'
   end
