@@ -84,5 +84,15 @@ describe "user show page" do
     end
   end
 
+  it "can click a game title link and end on game show page " do
+    visit '/profile'
+
+    within("#game-#{@game2.id}")do
+      click_on @game2.title
+    end
+
+    expect(current_path).to eq(game_path(@game2))
+  end
+
 
 end

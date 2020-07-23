@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
     get "/", to: "welcome#index"
-    get "/games/:game_id", to: "games#show"
     get "/quiz", to: "fear_quiz#new"
     post "/game-search", to: "game_search#show"
-
-    resources :games, only: [:index]
+    
+    # get "/games/:game_id", to: "games#show"
+    resources :games, only: [:index, :show]
     resources :user_games, only: [:create, :destroy]
     resources :results, only: [:index]
 

@@ -31,7 +31,7 @@
                 <% end %>
                 </td>
                 <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>  
-                <td><%=game.title %></td>
+                <td><%= link_to game.title, game_path(game) %></td>
                 <td><%=game.agg_rating %></td>
                 <td><%=game.popularity %></td>
                 <td><%=game.themes %></td>
