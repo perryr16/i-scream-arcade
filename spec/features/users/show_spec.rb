@@ -5,10 +5,10 @@ describe "user show page" do
   before :each do 
     @user = create(:user)
     @user2 = create(:user, name: "name2", email: "email@email.com", photo: "photo.url")
-    @game1 = create(:game)
-    @game2 = create(:game)
-    @game3 = create(:game, agg_rating: 101)
-    @game4 = create(:game)
+    @game1 = create(:game, agg_rating: 98, popularity: 110)
+    @game2 = create(:game, agg_rating: 99, popularity: 118)
+    @game3 = create(:game, agg_rating: 101, popularity: 119)
+    @game4 = create(:game, agg_rating: 97, popularity: 117)
     @user.games << @game1
     @user.games << @game2
     @user.games << @game4
