@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :game do
     sequence(:title) { |n|"game #{n}" }
     age_rating { 1 }
-    agg_rating {rand(1..100)}
+    agg_rating {rand(11..90)}
     artworks { "MyText" }
     category { "" }
     cover { "https://banner2.cleanpng.com/20180713/xr/kisspng-smiley-ghost-spirit-halloween-clip-art-bad-spirits-5b4924360558c5.9826495615315200540219.jpg" }
@@ -13,17 +13,16 @@ FactoryBot.define do
     keywords { "MyText" }
     multiplayer_modes { "MyText" }
     player_perspective { "MyText" }
-    popularity { rand(1..100)}
+    popularity { rand(91..100)}
     rating { 1.5 }
     rating_count { 1 }
     release_date { "MyText" }
     screenshots { "MyText" }
     similar_games { "MyText" }
     storyline { "MyString" }
-    sequence(:themes, (0..10).cycle) { |n| ["theme#{n}", "theme#{n+1}"]}
-    # themes{ ["theme1, theme2"]}
+    sequence(:themes) { |n| ["theme#{n}", "theme#{n+1}"]}
     total_rating { 1.5 }
     url { "MyString" }
-    video { "video_url" }
+    sequence(:video) {|n| "video_url#{n}" }
   end
 end

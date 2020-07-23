@@ -1,3 +1,4 @@
+
 /*!
 * Start Bootstrap - Grayscale v6.0.2 (https://startbootstrap.com/themes/grayscale)
 * Copyright 2013-2020 Start Bootstrap
@@ -10560,4 +10561,137 @@ input[type='checkbox']:checked + label > span:before{
     border-color: #212121;
     transform: translate3d(0,-.5em,0) rotate(45deg);
   }
+}
+.thumbnail {
+  height: 60px;
+  width: 60px;
+}
+.header-index {
+  position: absolute;
+  top: 75px;
+  left: 20vw;
+}
+.top-margin {
+  position: absolute;
+  top: 200px;
+  left: 20vw;
+  height: 70vh;
+  overflow: scroll;
+}
+.margin-top {
+  position: absolute;
+  top: 200px;
+  height: 70vh;
+  overflow: scroll;
+}
+.center-light {
+  left:10vw;
+  right: 10vw;
+}
+.game-table td{
+  border-bottom: 1px solid gray;
+  top: 20px;
+}
+.game-table th{
+  position:sticky;
+  top: 0;
+  z-index: 2;
+}
+.notice{
+  background-color:black;
+  color:#e9c318;
+  border: 1px solid;
+  border-color:black;
+  font-family: "Arial";
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 40px;
+}
+.error{
+  background-color:black;
+  color:red;
+  border: 1px solid;
+  border-color:black;
+  font-family: "Arial";
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 40px;
+}
+.user-message {
+  margin-top:1px;
+  margin-bottom: 1px;
+}
+.transparent {
+  background:transparent;
+  border:none;
+}
+.transparent:hover {
+    color: #e9c318;
+  }
+
+.content-left{
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  top: 200px;
+  left: 5vw;
+  z-index: +1;
+}
+.content-right{
+
+  
+  position: absolute;
+  width: 50vw;
+  height: 400px;
+  top: 200px;
+  left: 30vw;
+  z-index: +1;
+  }
+
+.profile-picture {
+  width: 20vw;
+}
+.thirty-px {
+  font-size: 30px !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.profile-game-list {
+  height: 50vh;
+  bottom: 5vh;
+  overflow: scroll;
+  // margin-bottom: 50px;
+}
+.saved-games{
+  // width: 100vw;
+  border-bottom: 3px solid gray;
+  // color: #e9c318 !important;
+  font-style: italic;
+}
+.game-table th {
+  // background: gray;
+  font-style:italic;
+}
+.transparent-50 {
+  background-color: rgba(0,0,0,0.5) !important;
+  color: #949494;
+}
+.transparent-50:hover {
+    color: #e9c318;
+  }
+.transparent-30 {
+  background-color: rgba(0,0,0,0.3) !important;
+  color: #949494;
+}
+.transparent-30:hover {
+    color: #e9c318;
+  }
+
+.center {
+  position:relative;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  top: 400px;
 }

@@ -1,0 +1,24 @@
+<header class='masthead'>
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase header-index">User Profile</h1></br>
+        <section class="top-margin center">
+          <%= form_for @user do |f| %>
+            <%= f.label :name %><br>
+            <%= f.text_field :name, size: 50, class: "transparent-30"%> 
+            <br><br>
+          
+            <%= f.label :email %><br>
+            <%= f.text_field :email, size: 50, class: "transparent-30"%> 
+            <br><br>
+          
+            <%= f.label :photo, "Photo URL"%><br>
+            <%= f.text_field :photo, size: 50, class: "transparent-30" %> 
+            <br><br>
+          
+            <%= f.submit "Update Profile", class: "btn transparent-50" %>
+          <% end %>
+
+        </section>
+    </div>
+</header>
