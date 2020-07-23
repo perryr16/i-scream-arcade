@@ -46,9 +46,6 @@ class UsersController < ApplicationController
     redirect_to '/profile'
   end
 
-
-
-
   def backup_user 
     User.find_by(name: "George Washington")
   end 
