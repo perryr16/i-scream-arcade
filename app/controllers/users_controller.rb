@@ -5,6 +5,14 @@ class UsersController < ApplicationController
     @user = backup_user  if !current_user
   end
 
+  def edit 
+    @user = User.find(params[:id])
+  end
+
+  def update 
+
+  end
+
   private
 
   def backup_user 

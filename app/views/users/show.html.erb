@@ -5,6 +5,8 @@
      
         <section class="content-left user-photo">
           <%= image_tag @user.photo, class: "profile-picture"%>
+          <br><br>
+          <%= button_to "Edit Profile", edit_user_path(@user), method: :get,  class: "btn transparent-50"%>
         </section>
         <section class="content-right user-info">
           <h2 class="text-uppercase thirty-px text-left"><%=@user.name %></h2>

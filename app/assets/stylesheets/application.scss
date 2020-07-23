@@ -10522,3 +10522,25 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
   // background: gray;
   font-style:italic;
 }
+.transparent-50 {
+  background-color: rgba(0,0,0,0.5) !important;
+  color: #949494;
+}
+.transparent-50:hover {
+    color: #e9c318;
+  }
+.transparent-30 {
+  background-color: rgba(0,0,0,0.3) !important;
+  color: #949494;
+}
+.transparent-30:hover {
+    color: #e9c318;
+  }
+
+.center {
+  position:relative;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  top: 400px;
+}
