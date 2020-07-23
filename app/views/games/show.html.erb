@@ -1,23 +1,23 @@
-<div class="container-fluid">
-  <div class= "cover">
-    <div style="float: left; margin: 65px 15px 15px 20px;"><img src="game/game-cover.png" width="200" height="150" />
-    </div>
-  </div>
-</div>
-<%
-=begin%>
- <div class="title" style="float: left; margin: 90px 50px 200px"> 
-<%
-=end%>
-  <%
-=begin%>
- <h3><%= "Game Title" %></h3> 
-<%
-=end%>
-</div>
-<div class="favorite_button" style="float: left; margin: 300px -200px 75px">
-  <%= button_to  "favorite", "/favorites" %>
-</div>
-<div class="description" style="float: left; margin: 150px 80px 200px">
-  <p><%= "Video description goes here" %></p>
+<div class="inner-page-body">
+  <section style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 7em">
+    <section>
+      <div><%= image_tag  src="https://cdn11.bigcommerce.com/s-ymgqt/products/24049/images/27742/mario_kart__77494.1432323546.500.750.jpg?c=2", :class => "style_image" %></div>
+      <div> <%= button_to  "Favorite ❤️", "/favorties" %> </div>
+    </section>
+    <section>
+      <div>
+        <h2><%= "Title of game" %></h2>
+        <p><%= "description of game"%></p>
+      </div>
+      <div>
+        <p><%= "5 Stars"%></p>
+      </div>
+    </section>
+    <section>
+      <iframe width="550" height="300" src="https://www.youtube.com/embed/ASWgJvuQhTA"></iframe>
+    </section>
+  </section>
+  <section>
+    <div><h2><%= "Related Games"%></div>
+  </section>
 </div>
