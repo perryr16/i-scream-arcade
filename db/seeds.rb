@@ -15,6 +15,7 @@ spooky_array = [
   "https://banner2.cleanpng.com/20180713/xr/kisspng-smiley-ghost-spirit-halloween-clip-art-bad-spirits-5b4924360558c5.9826495615315200540219.jpg"
 ] 
 Game.destroy_all
+User.destroy_all
 30.times do 
     Game.create!(
       title: Faker::Games::SuperSmashBros.fighter,
@@ -23,4 +24,14 @@ Game.destroy_all
       popularity: rand(1..100),
       video: "http://Video_URL.com"
     )
+end
+
+george = User.create!(
+      name: "George Washington",
+      google_token: "123344567dgafgarga",
+      email: "george@delaware.com",
+      photo: "https://www.americanhistorycentral.com/wp-content/uploads/2016/08/george-washington-portrait-843x1024.jpg"
+    )
+15.times do |index|  
+  george.games << Game.all[index]
 end

@@ -5,8 +5,13 @@ Rails.application.routes.draw do
     post "/game-search", to: "game_search#show"
 
     resources :games, only: [:index]
-    resources :user_games, only: [:create]
+    resources :user_games, only: [:create, :destroy]
     resources :results, only: [:index]
+
+    get '/profile', to: 'users#show'
+    resources :users, only: [:edit, :update]
+
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
