@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 
   def missing_params_error
     flash[:error] = "Please enter a #{missing_params}."
-    redirect_to edit_user_path(@current_user)
+    redirect_to edit_user_path(current_user)
   end
 
   def update_profile_success

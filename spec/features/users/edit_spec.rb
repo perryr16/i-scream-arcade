@@ -51,31 +51,39 @@ describe "user show page" do
     end
   end
 
-    it "can edit profile when all fields are filled out" do
+  it "cant edit profile when fields are blank" do
     visit edit_user_path(@user)
 
     photo_url =  "https://cdn.science101.com/wp-content/uploads/2018/08/smart-beagle-810x608-1535480926636.jpg"
 
-    fill_in "user[name]", with: "Dog Bark"
+    fill_in "user[name]", with: ""
     fill_in "user[email]", with: "pup@woof.com"
     fill_in "user[photo]", with: photo_url 
 
     click_on "Update Profile"
 
-    expect(current_path).to eq('/profile')
-    expect(page).to have_content("You have updated your profile")
-    
-    within(".user-info")do
-      expect(page).to have_content("Dog Bark")
-      expect(page).to have_content("pup@woof.com")
-      expect(page).to_not have_content("name1")
-      expect(page).to_not have_content("email@email.com")
-    end
+    expect(current_path).to eq(edit_user_path(@user))
+    expect(page).to have_content("Please enter a name")
 
-    within(".user-photo")do
-      expect(page).to have_css("img[src*='#{photo_url}']")
-      expect(page).to_not have_css("img[src*='https://ftnj.com/wp-content/uploads/2018/09/female-headshot-silhouette.jpg']")
-    end
+    fill_in "user[name]", with: ""
+    fill_in "user[email]", with: "pup@woof.com"
+    fill_in "user[photo]", with: "" 
+
+    click_on "Update Profile"
+
+    expect(current_path).to eq(edit_user_path(@user))
+    expect(page).to have_content("Please enter a name, photo")
+
+    fill_in "user[name]", with: ""
+    fill_in "user[email]", with: ""
+    fill_in "user[photo]", with: "" 
+
+    click_on "Update Profile"
+
+    expect(current_path).to eq(edit_user_path(@user))
+    expect(page).to have_content("Please enter a name, email, photo")
+    
+   
   end
   
 
