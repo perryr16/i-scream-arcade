@@ -1,17 +1,12 @@
 <header class='masthead'>
   <div class="container d-flex h-100 align-items-center">
     <div class="mx-auto text-center">
-      <h1 class="mx-auto my-0 text-uppercase">Search Results</h1></br></br>
-</header>
-
-    <div class="mx-auto text-center">
-      <div class="game-search">
-      <section class="results-margin">
-     <table class = "game-table">
+      <h1 class="mx-auto my-0 text-uppercase header-index">Search Results</h1></br>
+      <div class="search-results">
+      <section class="top-margin">
+        <table class = "game-table">
             <tr>
-            <% if current_user %>
-              <th>Add to My Games</th>
-              <% end %>
+              <th>Save Games</th>
               <th></th>
               <th>Title</th>
               <th>Rating/100</th>
@@ -20,11 +15,9 @@
               <th>Video</th>
             </tr>
           <%@games.each do |game| %>
-            <% if current_user %>
               <tr id="game-<%= game.id %>">
-                <td><%= button_to user_games_path(game.id), method: :post, class: "transparent add-game" do %>
+                <td><%= button_to user_games_path(game.id), method: :post, class: "transparent save-game" do %>
                   <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
-                <% end %>
                 <% end %>
                 </td>
                 <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>  
@@ -37,5 +30,12 @@
           <% end %>
         </table>
       </section>
-  </div>
+    </div>
+    </div>
 </header>
+
+
+
+
+
+

@@ -9,14 +9,13 @@ describe 'Game Search Index Page' do
   end
 
   it 'I can see the Search Page title' do
-    expect(page).to have_css('.game-search-index')
-    expect(page).to have_content('Search Results')
-  end
-
-  it 'I can see the returned games and their info' do
-    within('.returned-games') do
-      expect(page).to have_content('Game Title')
-      expect(page).to have_content('Rating')
+    within('.search-results') do
+    expect(page).to have_content('Save Games')
+    expect(page).to have_content('Title')
+    expect(page).to have_content('Rating')
+    expect(page).to have_content('Popularity')
+    expect(page).to have_content('Themes')
+    expect(page).to have_content('Video')
     end
   end
 end
