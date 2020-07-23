@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     post "/game-search", to: "game_search#show"
 
     resources :games, only: [:index]
-    resources :user_games, only: [:create]
+    resources :user_games, only: [:create, :destroy]
 
     get '/profile', to: 'users#show'
 

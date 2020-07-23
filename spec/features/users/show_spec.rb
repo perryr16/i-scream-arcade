@@ -7,7 +7,7 @@ describe "user show page" do
     @user2 = create(:user, name: "name2", email: "email@email.com", photo: "photo.url")
     @game1 = create(:game)
     @game2 = create(:game)
-    @game3 = create(:game)
+    @game3 = create(:game, agg_rating: 101)
     @game4 = create(:game)
     @user.games << @game1
     @user.games << @game2
@@ -57,8 +57,32 @@ describe "user show page" do
 
   end
 
-  xit "if a visitior tries to access a profile page it is a 404" do
+  it "User clicks the controller and the game is removed from saved games" do
+    visit '/profile'
+
+    within(".profile-game-list")do
+      expect(page).to have_content(@game1.title)
+      expect(page).to have_content(@game2.title)
+      expect(page).to have_content(@game4.title)
+    end
+    
+    within("#game-#{@game2.id}") do
+      find('.unsave-game').click
+    end
+
+    @user.reload
+
+    expect(current_path).to eq('/profile')
+    expect(page).to have_content("You have removed #{@game2.title} from Saved Games")
+    visit ('/profile')
+
+    within(".profile-game-list")do
+      expect(page).to have_content(@game1.title)
+      expect(page).to have_content(@game4.title)
+
+      expect(page).to_not have_content(@game2.title)
+    end
   end
-  
+
 
 end

@@ -13,4 +13,12 @@ class UserGamesController < ApplicationController
     redirect_back(fallback_location: games_path)
   end
 
+  def destroy 
+    game = Game.find(params[:id])
+    user_game = UserGame.find_by(user_id: current_user.id, game_id: game.id)
+    UserGame.destroy(user_game.id)
+    flash[:notice] = "You have removed #{game.title} from Saved Games"
+    redirect_back(fallback_location: '/profile')
+  end
+
 end

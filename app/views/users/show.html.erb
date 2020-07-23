@@ -24,7 +24,7 @@
             </tr>
           <% @user.games.each do |game| %>
               <tr id="game-<%= game.id %>">
-                <td><%= button_to user_games_path(game.id), method: :post, class: "transparent add-game" do %>
+                <td><%= button_to user_game_path(game.id), method: :delete, class: "transparent unsave-game" do %>
                   <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
                 <% end %>
                 </td>
