@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
     resources :games, only: [:index]
     resources :user_games, only: [:create]
+
+    resources :results, only: [:index]
+
 end

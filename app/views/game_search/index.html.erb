@@ -9,7 +9,9 @@
       <section class="results-margin">
      <table class = "game-table">
             <tr>
+            <% if current_user %>
               <th>Add to My Games</th>
+              <% end %>
               <th></th>
               <th>Title</th>
               <th>Rating/100</th>
@@ -18,9 +20,11 @@
               <th>Video</th>
             </tr>
           <%@games.each do |game| %>
+            <% if current_user %>
               <tr id="game-<%= game.id %>">
                 <td><%= button_to user_games_path(game.id), method: :post, class: "transparent add-game" do %>
                   <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
+                <% end %>
                 <% end %>
                 </td>
                 <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>  

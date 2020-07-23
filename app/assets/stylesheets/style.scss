@@ -1,6 +1,3 @@
-@import "bootstrap";
-@charset "UTF-8";
-<<<<<<< HEAD
 /*!
 * Start Bootstrap - Grayscale v6.0.2 (https://startbootstrap.com/themes/grayscale)
 * Copyright 2013-2020 Start Bootstrap
@@ -12,37 +9,37 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #64a19d;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #64a19d;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --black: #000000;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
+// :root {
+//   --blue: #007bff;
+//   --indigo: #6610f2;
+//   --purple: #6f42c1;
+//   --pink: #e83e8c;
+//   --red: #dc3545;
+//   --orange: #fd7e14;
+//   --yellow: #ffc107;
+//   --green: #28a745;
+//   --teal: #64a19d;
+//   --cyan: #17a2b8;
+//   --white: #fff;
+//   --gray: #6c757d;
+//   --gray-dark: #343a40;
+//   --primary: #64a19d;
+//   --secondary: #6c757d;
+//   --success: #28a745;
+//   --info: #17a2b8;
+//   --warning: #ffc107;
+//   --danger: #dc3545;
+//   --light: #f8f9fa;
+//   --dark: #343a40;
+//   --black: #000000;
+//   --breakpoint-xs: 0;
+//   --breakpoint-sm: 576px;
+//   --breakpoint-md: 768px;
+//   --breakpoint-lg: 992px;
+//   --breakpoint-xl: 1200px;
+//   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+//   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+// }
 
 *,
 *::before,
@@ -78,16 +75,16 @@ body {
   background: #EE9D1C;
 }
 
-.btn-game-search {
-  color: rgb(255, 255, 255)!important;
-  background-color: black!important;
-  border-color: black!important;
+#btn-game-search {
+  color: rgb(255, 255, 255);
+  background-color: black;
+  border-color: black;
 }
 
-.btn-game-search:hover {
-  color: #000000!important;
-  background-color: #ffffff!important;
-  border-color: #ffffff!important;
+#btn-game-search:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #ffffff;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -111,7 +108,7 @@ p {
 }
 
 .spacing {
-padding-top: 20px; 
+padding-top: 20px;
 }
 
 .inner-page-body {
@@ -10290,6 +10287,7 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
   background-attachment: scroll;
   background-size: cover;
 }
+
 .masthead h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 2.5rem;
@@ -10304,8 +10302,39 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
   max-width: 20rem;
   font-size: 1rem;
 }
+
+.quiz {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: rgb(255,252,252);
+  background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5970763305322129) 76%), url("https://user-images.githubusercontent.com/59414750/88225752-406f1000-cc28-11ea-9864-d6c200c33096.jpg");
+  // background-image: url("https://user-images.githubusercontent.com/54954621/88128254-c5a7e580-cb92-11ea-8b07-88433389fcd5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.quiz h1 {
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
 @media (min-width: 768px) {
   .masthead h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .quiz h1 {
     font-size: 4rem;
     line-height: 4rem;
   }
@@ -10323,6 +10352,16 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
   .masthead h2 {
     max-width: 30rem;
     font-size: 1.25rem;
+  }
+
+  .quiz {
+    height: 100vh;
+    padding: 0;
+  }
+  .quiz h1 {
+    font-size: 3.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
   }
 }
 
@@ -10421,64 +10460,104 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
   padding: 5rem 0;
 }
 
-.thumbnail {
-  height: 60px;
-  width: 60px;
-}
-.header-index {
-  position: absolute;
-  top: 75px;
-  left: 20vw;
-}
-.top-margin {
-  position: absolute;
-  top: 200px;
-  left: 20vw;
-  height: 70vh;
-  overflow: scroll;
-}
-.game-table td{
-  border-bottom: 1px solid gray;
-  top: 20px;
-}
-.game-table th{
-  position:sticky;
-  top: 0;
-  z-index: 2;
-}
-.notice{
-  background-color:black;
-  color:#e9c318;
-  border: 1px solid;
-  border-color:black;
-  font-family: "Arial";
-  font-weight: bold;
-  font-style: italic;
-  padding-left: 40px;
-}
-.user-message {
-  margin-top:1px;
-  margin-bottom: 1px;
-}
-.transparent {
-  background:transparent;
-  border:none;
-}
-.transparent:hover {
-    color: #e9c318;
-  }
 
-.results-margin {
-  // position: absolute;
-  top: 400px;
-  // left: 20vw;
-  margin-left: 150px;
-  height: 70vh;
-  overflow: scroll;
-  // background-color: #EE9D1C!important;
-  // align-items: center!important;
-  width: 100%;
+/* Hide the Ordinary Checkbox */
+input[type="checkbox"] {
+    display: none;
 }
-=======
-@import "style";
->>>>>>> 444001f31f118466d018819b7a7bc7571d6b1a6c
+
+input[type='checkbox'] + label{
+  position: relative;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  display: flex;
+  font-size: 23px;
+  margin: .6em 0;
+  align-items: center;
+  color: #9e9e9e;
+  transition: color 250ms cubic-bezier(.4,.0,.23,1);
+}
+input[type='checkbox'] + label > ins{
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 2em;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  transition: height 300ms cubic-bezier(.4,.0,.23,1);
+}
+input[type='checkbox'] + label > ins > i{
+  position: absolute;
+  bottom: 0;
+  font-style: normal;
+  color: #EE9D1C;
+}
+input[type='checkbox'] + label > span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1em;
+  width: 1em;
+  height: 1em;
+  background: transparent;
+  border: 2px solid #9E9E9E;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(.4,.0,.23,1);
+}
+
+input[type='checkbox'] + label:hover, input[type='checkbox']:focus + label{
+  color: #fff;
+}
+input[type='checkbox'] + label:hover > span, input[type='checkbox']:focus + label > span{
+  background: rgba(255,255,255,.1);
+}
+input[type='checkbox']:checked + label > ins{ height: 100%; }
+
+input[type='checkbox']:checked + label > span{
+  border: .5em solid #FFEB3B;
+  animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
+}
+input[type='checkbox']:checked + label > span:before{
+  content: "";
+  position: absolute;
+  top: .6em;
+  left: .2em;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transform: rotate(45deg);
+  transform-origin: 0% 100%;
+  animation: checkbox-check 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards;
+}
+
+@keyframes shrink-bounce{
+  0%{
+    transform: scale(1);
+  }
+  33%{
+    transform: scale(.85);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes checkbox-check{
+  0%{
+    width: 0;
+    height: 0;
+    border-color: #212121;
+    transform: translate3d(0,0,0) rotate(45deg);
+  }
+  33%{
+    width: .2em;
+    height: 0;
+    transform: translate3d(0,0,0) rotate(45deg);
+  }
+  100%{
+    width: .2em;
+    height: .5em;
+    border-color: #212121;
+    transform: translate3d(0,-.5em,0) rotate(45deg);
+  }
+}
