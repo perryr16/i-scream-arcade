@@ -41,7 +41,6 @@ class UsersController < ApplicationController
     user.update(update_params)
     if user.save
       flash[:notice] = "You have updated your profile"
-      current_user.reload
     end
     redirect_to '/profile'
   end

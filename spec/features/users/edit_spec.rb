@@ -34,9 +34,11 @@ describe "user show page" do
     fill_in "user[photo]", with: photo_url 
 
     click_on "Update Profile"
-
     expect(current_path).to eq('/profile')
     expect(page).to have_content("You have updated your profile")
+    
+    @user.reload
+    visit '/profile'
     
     within(".user-info")do
       expect(page).to have_content("Dog Bark")
