@@ -10606,6 +10606,16 @@ input[type='checkbox']:checked + label > span:before{
   font-style: italic;
   padding-left: 40px;
 }
+.error{
+  background-color:black;
+  color:red;
+  border: 1px solid;
+  border-color:black;
+  font-family: "Arial";
+  font-weight: bold;
+  font-style: italic;
+  padding-left: 40px;
+}
 .user-message {
   margin-top:1px;
   margin-bottom: 1px;
