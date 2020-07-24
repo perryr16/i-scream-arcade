@@ -18,11 +18,10 @@ Game.destroy_all
 User.destroy_all
 30.times do 
     Game.create!(
-      title: Faker::Games::SuperSmashBros.fighter,
-      total_rating: rand(1..100),
+      name: Faker::Games::SuperSmashBros.fighter,
       cover: spooky_array.sample,
       popularity: rand(1..100),
-      video: "http://Video_URL.com"
+      total_rating: rand(1..100)
     )
 end
 
