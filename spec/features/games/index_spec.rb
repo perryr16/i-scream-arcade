@@ -12,11 +12,11 @@ describe "From Game Index" do
 
   end
 
-  it "can click a game title link and end on game show page " do
+  it "can click a game name link and end on game show page " do
     visit games_path
 
     within("#game-#{@game2.id}")do
-      click_on @game2.title
+      click_on @game2.name
     end
 
     expect(current_path).to eq(game_path(@game2))

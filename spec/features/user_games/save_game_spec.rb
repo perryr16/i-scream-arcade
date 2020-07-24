@@ -21,20 +21,20 @@ describe "a User can add a game to 'my games'" do
     end
 
     expect(current_path).to eq(games_path)
-    expect(page).to have_content("You have added #{@game1.title} to Saved Games")
+    expect(page).to have_content("You have added #{@game1.name} to Saved Games")
     
     within("#game-#{@game1.id}")do
       find('.save-game').click
     end
   
     expect(current_path).to eq(games_path)
-    expect(page).to have_content("You have already added #{@game1.title} to Saved Games")
+    expect(page).to have_content("You have already added #{@game1.name} to Saved Games")
     
     within("#game-#{@game4.id}")do
       find('.save-game').click
     end
 
-    expect(page).to have_content("You have added #{@game4.title} to Saved Games")
+    expect(page).to have_content("You have added #{@game4.name} to Saved Games")
 
     @user.reload
     @game1.reload

@@ -9,7 +9,7 @@
           <%= button_to "Edit Profile", edit_user_path(@user), method: :get,  class: "btn transparent-50"%>
         </section>
         <section class="content-right user-info">
-          <h2 class="text-uppercase thirty-px text-left user-namex"><%=@user.name %></h2>
+          <h2 class="text-uppercase thirty-px text-left"><%=@user.name %></h2>
           <p class="mx-auto my-0 text-uppercase text-left"><%=@user.email %></p>
           <br><br>
           <h2 class = "thirty-px saved-games text-uppercase text-left">Saved Games</h2>
@@ -21,8 +21,6 @@
               <th>Title</th>
               <th>Rating/100</th>
               <th>Popularity</th>
-              <th>Themes</th>
-              <th>Video</th>
             </tr>
           <% @user.games.each do |game| %>
               <tr id="game-<%= game.id %>">
@@ -31,11 +29,9 @@
                 <% end %>
                 </td>
                 <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>  
-                <td><%= link_to game.title, game_path(game) %></td>
-                <td><%=game.agg_rating %></td>
+                <td><%= link_to game.name, game_path(game) %></td>
+                <td><%=game.total_rating %></td>
                 <td><%=game.popularity %></td>
-                <td><%=game.themes %></td>
-                <td><%=game.video %></td>
               </tr>
           <% end %>
         </table>

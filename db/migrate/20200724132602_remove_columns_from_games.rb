@@ -1,7 +1,7 @@
 class RemoveColumnsFromGames < ActiveRecord::Migration[5.2]
   def change
     remove_column :games, :title, :string
-    remove_column :games, :agg_rating, :float
+    remove_column :games, :total_rating, :float
     remove_column :games, :artworks, :text
     remove_column :games, :follows, :integer
     remove_column :games, :game_modes, :text

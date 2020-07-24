@@ -10,8 +10,6 @@
               <th>Title</th>
               <th>Rating/100</th>
               <th>Popularity</th>
-              <th>Themes</th>
-              <th>Video</th>
             </tr>
           <%@games.each do |game| %>
               <tr id="game-<%= game.id %>">
@@ -20,11 +18,9 @@
                 <% end %>
                 </td>
                 <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>  
-                <td><%= link_to game.title, game_path(game) %></td>
-                <td><%=game.agg_rating %></td>
+                <td><%= link_to game.name, game_path(game) %></td>
+                <td><%=game.total_rating %></td>
                 <td><%=game.popularity %></td>
-                <td><%=game.themes %></td>
-                <td><%=game.video %></td>
               </tr>
           <% end %>
         </table>
