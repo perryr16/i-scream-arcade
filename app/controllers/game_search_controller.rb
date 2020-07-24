@@ -4,7 +4,6 @@ class GameSearchController < ApplicationController
 
   def index
     @games = Game.all
-    @game = Game.all.first
     #this is just for getting the page up and running
 
     if params[:search_type] == "keyword"

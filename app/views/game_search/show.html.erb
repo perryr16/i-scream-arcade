@@ -1,17 +1,18 @@
 <div class="inner-page-body">
   <section style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 7em">
     <section>
-      <div><%= image_tag  src="https://cdn11.bigcommerce.com/s-ymgqt/products/24049/images/27742/mario_kart__77494.1432323546.500.750.jpg?c=2", :class => "style_image" %></div>
-      <div> <%= button_to  "Favorite ❤️", "/favorties" %> </div>
-    </section>
-    <section>
-      <div>
-        <h2><%= "Title of game" %></h2>
-        <h2><%= @game.title %></h2>
+      <div class='game'>
+        <div><%= image_tag  src="https://cdn11.bigcommerce.com/s-ymgqt/products/24049/images/27742/mario_kart__77494.1432323546.500.750.jpg?c=2", :class => "style_image" %></div>
+        </section>
+        <section>
+        <div>
+        <h2><%= "Title" %></h2>
+        <div> <%= button_to  "Save Game", "/favorties" %> </div>
         <p><%= "description of game"%></p>
+        <p><%= "Popularity"%></p>
       </div>
       <div>
-        <p><%= "5 Stars"%></p>
+        <p><%= "Themes"%></p>
       </div>
     </section>
     <section>
