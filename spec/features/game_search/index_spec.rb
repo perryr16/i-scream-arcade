@@ -14,8 +14,6 @@ describe 'Game Search Index Page' do
     expect(page).to have_content('Title')
     expect(page).to have_content('Rating')
     expect(page).to have_content('Popularity')
-    expect(page).to have_content('Themes')
-    expect(page).to have_content('Video')
     end
   end
 end

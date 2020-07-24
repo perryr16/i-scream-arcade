@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     get "/quiz", to: "fear_quiz#new"
 
     post "/game-search", to: "game_search#index"
+    post "/game-search", to: "game_search#show"
 
     resources :games, only: [:index, :show]
     resources :user_games, only: [:create, :destroy]
