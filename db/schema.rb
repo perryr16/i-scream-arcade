@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_23_171705) do
+ActiveRecord::Schema.define(version: 2020_07_24_141527) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "fear_quizzes", force: :cascade do |t|
     t.bigint "user_id"
@@ -31,34 +37,88 @@ ActiveRecord::Schema.define(version: 2020_07_23_171705) do
     t.index ["game_id"], name: "index_fear_ratings_on_game_id"
   end
 
+  create_table "game_categories", force: :cascade do |t|
+    t.bigint "game_id"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_game_categories_on_category_id"
+    t.index ["game_id"], name: "index_game_categories_on_game_id"
+  end
+
+  create_table "game_genres", force: :cascade do |t|
+    t.bigint "game_id"
+    t.bigint "genre_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_game_genres_on_game_id"
+    t.index ["genre_id"], name: "index_game_genres_on_genre_id"
+  end
+
+  create_table "game_keywords", force: :cascade do |t|
+    t.bigint "game_id"
+    t.bigint "keyword_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_game_keywords_on_game_id"
+    t.index ["keyword_id"], name: "index_game_keywords_on_keyword_id"
+  end
+
+  create_table "game_platforms", force: :cascade do |t|
+    t.bigint "game_id"
+    t.bigint "platform_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_game_platforms_on_game_id"
+    t.index ["platform_id"], name: "index_game_platforms_on_platform_id"
+  end
+
+  create_table "game_similars", force: :cascade do |t|
+    t.bigint "game_id"
+    t.bigint "similar_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_game_similars_on_game_id"
+    t.index ["similar_id"], name: "index_game_similars_on_similar_id"
+  end
+
+  create_table "game_themes", force: :cascade do |t|
+    t.bigint "game_id"
+    t.bigint "theme_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_game_themes_on_game_id"
+    t.index ["theme_id"], name: "index_game_themes_on_theme_id"
+  end
+
   create_table "games", force: :cascade do |t|
-    t.string "title"
     t.integer "age_rating"
-    t.float "agg_rating"
-    t.text "artworks", default: [], array: true
-    t.integer "category"
     t.string "cover"
-    t.integer "follows"
-    t.text "game_modes", default: [], array: true
-    t.integer "hypes"
-    t.text "companies", default: [], array: true
-    t.text "keywords", default: [], array: true
-    t.text "multiplayer_modes", default: [], array: true
-    t.text "player_perspective", default: [], array: true
     t.float "popularity"
-    t.float "rating"
-    t.integer "rating_count"
-    t.text "release_date", default: [], array: true
-    t.text "screenshots", default: [], array: true
-    t.text "similar_games", default: [], array: true
-    t.string "storyline"
-    t.text "themes", default: [], array: true
     t.float "total_rating"
-    t.string "url"
-    t.string "video"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "summary"
+    t.string "first_release_date"
+    t.string "name"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "genre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "keywords", force: :cascade do |t|
+    t.string "keyword"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "platforms", force: :cascade do |t|
+    t.string "platform"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -68,6 +128,26 @@ ActiveRecord::Schema.define(version: 2020_07_23_171705) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_reviews_on_game_id"
+  end
+
+  create_table "screenshots", force: :cascade do |t|
+    t.bigint "game_id"
+    t.string "screenshot"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_screenshots_on_game_id"
+  end
+
+  create_table "similars", force: :cascade do |t|
+    t.string "games"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "themes", force: :cascade do |t|
+    t.string "theme"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "user_games", force: :cascade do |t|
@@ -88,9 +168,31 @@ ActiveRecord::Schema.define(version: 2020_07_23_171705) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "videos", force: :cascade do |t|
+    t.bigint "game_id"
+    t.string "video"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_videos_on_game_id"
+  end
+
   add_foreign_key "fear_quizzes", "users"
   add_foreign_key "fear_ratings", "games"
+  add_foreign_key "game_categories", "categories"
+  add_foreign_key "game_categories", "games"
+  add_foreign_key "game_genres", "games"
+  add_foreign_key "game_genres", "genres"
+  add_foreign_key "game_keywords", "games"
+  add_foreign_key "game_keywords", "keywords"
+  add_foreign_key "game_platforms", "games"
+  add_foreign_key "game_platforms", "platforms"
+  add_foreign_key "game_similars", "games"
+  add_foreign_key "game_similars", "similars"
+  add_foreign_key "game_themes", "games"
+  add_foreign_key "game_themes", "themes"
   add_foreign_key "reviews", "games"
+  add_foreign_key "screenshots", "games"
   add_foreign_key "user_games", "games"
   add_foreign_key "user_games", "users"
+  add_foreign_key "videos", "games"
 end

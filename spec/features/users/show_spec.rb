@@ -26,6 +26,7 @@ describe "user show page" do
       expect(page).to_not have_content(@user2.name)
       expect(page).to_not have_content(@user2.email)
     end
+    expect(".user-namex".length).to eq(100)
 
     within(".user-photo")do
       expect(page).to have_css("img[src*='#{@user.photo}']")
@@ -79,6 +80,8 @@ describe "user show page" do
     within(".profile-game-list")do
       expect(page).to have_content(@game1.title)
       expect(page).to have_content(@game4.title)
+
+
 
       expect(page).to_not have_content(@game2.title)
     end
