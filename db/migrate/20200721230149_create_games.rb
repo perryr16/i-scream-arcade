@@ -3,7 +3,7 @@ class CreateGames < ActiveRecord::Migration[5.2]
     create_table :games do |t|
       t.string :title
       t.integer :age_rating
-      t.float :agg_rating
+      t.float :total_rating
       t.text :artworks, array: true, default: []
       t.integer :category
       t.string :cover
