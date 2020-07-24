@@ -1,7 +1,25 @@
 <div class="inner-page-body">
-  <div class="container d-flex h-100 align-items-center">
-    <div class="mx-auto text-center">
-      <p>Game Search Results Could Go Here</p>
-    </div>
-  </div>
+  <section style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 7em">
+    <section>
+      <div class='game'>
+        <div><%= image_tag  src="https://cdn11.bigcommerce.com/s-ymgqt/products/24049/images/27742/mario_kart__77494.1432323546.500.750.jpg?c=2", :class => "style_image" %></div>
+        </section>
+        <section>
+        <div>
+        <h2><%= "Title" %></h2>
+        <div> <%= button_to  "Save Game", "/favorties" %> </div>
+        <p><%= "description of game"%></p>
+        <p><%= "Popularity"%></p>
+      </div>
+      <div>
+        <p><%= "Themes"%></p>
+      </div>
+    </section>
+    <section>
+      <iframe width="550" height="300" src="https://www.youtube.com/embed/ASWgJvuQhTA"></iframe>
+    </section>
+  </section>
+  <section>
+    <div><h2><%= "Related Games"%></div>
+  </section>
 </div>
