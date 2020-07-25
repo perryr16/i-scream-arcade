@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_24_144119) do
+ActiveRecord::Schema.define(version: 2020_07_25_194906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -167,6 +167,7 @@ ActiveRecord::Schema.define(version: 2020_07_24_144119) do
     t.string "photo", default: "https://ftnj.com/wp-content/uploads/2018/09/female-headshot-silhouette.jpg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "google_refresh_token"
   end
 
   create_table "videos", force: :cascade do |t|
