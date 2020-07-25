@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 2020_07_24_144119) do
 
   create_table "games", force: :cascade do |t|
     t.integer "age_rating"
+    t.float "agg_rating"
     t.string "cover"
     t.float "popularity"
     t.datetime "created_at", null: false
