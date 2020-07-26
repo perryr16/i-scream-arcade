@@ -1,0 +1,24 @@
+<header class='formhead'>
+  <div class="container d-flex h-100 align-items-center">
+    <section class="review_form">
+      <h1>&bull; Write a Review &bull;</h1>
+      <div class="underline"></div>
+      <div class="icon_wrapper">
+        <center>
+          <img src="https://i.ibb.co/PMZNkbD/icons8-game-controller-64.png" alt="icons8-game-controller-64" border="0">
+        </center>
+      </div>
+      <br>
+      <%= form_tag("/games/#{@game.id}", method: :post) do %>
+        <%= label_tag "Title" %>
+        <%= text_field_tag :title %>
+        <%= label_tag "Rating" %>
+        <%= number_field_tag :user_rating, nil, options = {min:1, max:5} %><br>
+        <%= label_tag "Review" %>
+        <%= text_field_tag :content %><br>
+
+        <%= submit_tag 'Submit', class: "review_button"%>
+      <% end %>
+    </section>
+  </div>
+</header>
