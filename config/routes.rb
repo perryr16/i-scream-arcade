@@ -5,6 +5,9 @@ Rails.application.routes.draw do
     post "/game-search", to: "game_search#index"
     post "/game-search", to: "game_search#show"
 
+    get '/games/:game_id/review', to: 'reviews#new'
+    post '/games/:game_id', to: 'reviews#create'
+
     resources :games, only: [:index, :show]
     resources :user_games, only: [:create, :destroy]
     resources :results, only: [:index]
