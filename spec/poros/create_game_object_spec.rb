@@ -18,6 +18,8 @@ describe "create Game and assocaited objects from API call" do
     expect(mk64.summary).to eq(exp_summary)
     expect(mk64.release_date).to eq('1996')
     expect(mk64.total_rating).to eq(81.8)
+    expect(mk64.video).to eq("https://www.youtube.com/watch?v=ASWgJvuQhTA")
+    
     # categories (empty)
     # Genres
     expect(mk64.genres.length).to eq(2)
@@ -47,9 +49,6 @@ describe "create Game and assocaited objects from API call" do
     expect(mk64.themes.length).to eq(2)
     expect(mk64.themes[0].theme).to eq('Action')
     expect(mk64.themes[1].theme).to eq('Kids')
-
-    # Videos
-    expect(mk64.video.video).to eq("https://www.youtube.com/watch?v=ASWgJvuQhTA")
 
   end
   

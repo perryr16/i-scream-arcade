@@ -10,8 +10,7 @@ class IScreamResults
 
   def create_game_objects(game_name)
     data = game_params(game_name)[:data]
-    game_object(data)
-    game = Game.last
+    game = game_object(data)
 
     category_objects(data, game)
     genre_objects(data, game)
@@ -20,22 +19,11 @@ class IScreamResults
     screenshot_objects(data, game)
     similar_objects(data, game)
     theme_objects(data, game)
-    video_object(data, game)
   end
 
   def game_object(data)
     Game.create(new_game_params(data))
   end
-
-  # def generate_game_related_object(data, game, attribute)
-  #   PROBLEM: need a plural and a singlular, apporaching unreadable
-
-  #   return nil if !data[attribute].is_a?(Array)
-  #   data[attribute].each do |value|
-  #   binding.pry
-  #     game.cateogries.create(attribute => value)
-  #   end
-  # end
 
   def category_objects(data, game)
     return nil if !data[:categories].is_a?(Array)
@@ -79,10 +67,6 @@ class IScreamResults
     end
   end
 
-  def video_object(data, game)
-    Video.create(video: data[:videos], game_id: game.id) if data[:videos]
-  end 
-
   def screenshot_objects(data, game)
     return nil if !data[:screenshots].is_a?(Array)
     data[:screenshots].each do |screenshot|
@@ -91,8 +75,6 @@ class IScreamResults
   end
 
   def new_game_params(data)
-    # game_keys = Game.columns.map { |column| column.name.to_sym }
-    # game_vals = game_keys.map {|key| params[:data][key]}
     {
       age_rating:         data[:age_ratings][0],
       cover:              data[:cover],
@@ -100,7 +82,8 @@ class IScreamResults
       summary:            data[:summary],
       release_date:       data[:release_date],
       name:               data[:name],
-      total_rating:       data[:total_rating].round(1)
+      total_rating:       data[:total_rating].round(1),
+      video:              data[:video]
     }
   end
 end

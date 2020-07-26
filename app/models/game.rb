@@ -4,10 +4,6 @@ class Game < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :screenshots, dependent: :destroy
   
-  #one-one
-  has_one :video, dependent: :destroy
-  
-
   #many-many
   has_many :user_games, dependent: :destroy
   has_many :users, through: :user_games
