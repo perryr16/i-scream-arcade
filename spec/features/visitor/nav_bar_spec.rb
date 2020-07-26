@@ -7,15 +7,15 @@ RSpec.describe 'As visitor' do
       visit "/"
 
       within 'nav' do
-        expect(page).to have_link("Login")
-        expect(page).to have_link("Register")
+        expect(page).to have_link("Log In with Google")
         expect(page).to have_link("Take the Fear Quiz")
+        expect(page).to have_link("Games")
       end
     end
 
     it 'I cant see the logout button' do
       visit '/'
-      expect(page).to have_link("Login")
+      expect(page).to have_link("Log In with Google")
       expect(page).to_not have_link("Logout")
       expect(page).to_not have_link("Profile")
       expect(page).to_not have_link("Game Library")
