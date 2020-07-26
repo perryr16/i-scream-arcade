@@ -7,7 +7,7 @@ describe "create Game and assocaited objects from API call" do
   end
 
   it "creates Mario Kart 64 and associated Objects" do
-    @results.game_object("Mario%20Kart%2064")
+    @results.create_game_objects("Mario%20Kart%2064")
     mk64 = Game.last 
 
     exp_summary = "Mario Kart 64 is the second main installment of the Mario Kart series. It is the first game in the series to use three-dimensional graphics, however, the characters and items in this game are still two-dimensional, pre-rendered sprites. The game offers two camera angles and three engine sizes: 50cc, 100cc and 150cc. Each kart has distinctive handling, acceleration and top speed capabilities. Shells that you fire at rival racers, Bananas that make them skid out and Lightning Bolts that make them small and very slow are just a few of the game's unique power-ups."
