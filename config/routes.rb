@@ -5,8 +5,8 @@ Rails.application.routes.draw do
     post "/game-search", to: "game_search#index"
     post "/game-search", to: "game_search#show"
     
-    resources :sessions, only: :index
     get 'auth/:provider/callback', to: 'sessions#create'
+    get '/logout', to: 'sessions#destroy'
     get 'auth/failure', to: redirect('/')
 
     resources :games, only: [:index, :show]

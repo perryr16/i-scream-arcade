@@ -8,6 +8,12 @@ class SessionsController < ApplicationController
     redirect_to '/profile'
   end
 
+  def destroy
+    session[:user_id] = nil
+    flash[:notice] = 'You have been logged out.'
+    redirect_to '/'
+  end
+
   private
 
   def auth
