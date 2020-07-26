@@ -1,0 +1,136 @@
+.formhead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: rgb(255,252,252);
+  background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5970763305322129) 76%), url("https://user-images.githubusercontent.com/54954621/88128254-c5a7e580-cb92-11ea-8b07-88433389fcd5.jpg");
+  // background-image: url("https://user-images.githubusercontent.com/54954621/88128254-c5a7e580-cb92-11ea-8b07-88433389fcd5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .formhead h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .formhead {
+    height: 100vh;
+    padding: 0;
+  }
+  .formhead h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
+  }
+}
+
+input,
+textarea {
+	display: block;
+	width: 100%;
+	border: 0;
+	padding: 10px 5px;
+  background: white no-repeat;
+
+	/*
+	* IMPORTANT PART HERE
+	*/
+
+  /* 2 imgs : 1px gray line (normal state) AND 2px green line (focus state) */
+	background-image: linear-gradient(to bottom, #1abc9c, #1abc9c), linear-gradient(to bottom, silver, silver);
+	/* sizes for the 2 images (default state) */
+	background-size: 0 2px, 100% 1px;
+	/* positions for the 2 images. Change both "50%" to "0%" or "100%" and tri again */
+	background-position: 50% 100%, 50% 100%;
+
+	/* animation solely on background-size */
+  transition: background-size 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+
+}
+
+input:focus,
+textarea:focus{
+  /* sizes for the 2 images (focus state) */
+	background-size: 100% 2px, 100% 1px;
+	outline: none;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 5px;
+  box-sizing: border-box;
+  font-family: "Gill Sans", Gadget, sans-serif;
+  font-size: 15px;
+  box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.06);
+  border-radius:10px
+}
+
+.review_button{
+  border: none;
+  width: 30%;
+  font-family: "Gill Sans", Gadget, sans-serif;
+  font-size: 18px;
+  background: #404040;
+  color: #ffffff !important;
+  font-weight: 100;
+  padding: 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+
+.review_button:hover {
+  color: #404040 !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: #EE9D1B;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.3s ease 0s;
+}
+
+.underline {
+  border-bottom: solid 2px #474544;
+  margin: -0.512em auto;
+  width: 200px;
+}
+
+.icon_wrapper {
+  margin: 20px auto 0;
+  width: 100%;
+}
+
+.icon {
+  display: block;
+  fill: #474544;
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.review_form{
+  margin: 30px auto;
+  width: 700px;
+  border: 5px solid #222;
+  background: #fff;
+  padding: 15px;
+}
+
+.review_form h1{
+  color: #474544;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
