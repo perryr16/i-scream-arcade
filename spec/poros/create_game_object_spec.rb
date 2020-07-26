@@ -2,7 +2,7 @@ require 'rails_helper'
 # NOTE: This will fail if microservice is not running. To start:
 # $ shotgun 
 
-describe "create Game and assocaited objects from API call" do 
+xdescribe "create Game and assocaited objects from API call" do 
 
   before :each do 
     @results = IScreamResults.new
