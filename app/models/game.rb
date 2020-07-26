@@ -3,8 +3,10 @@ class Game < ApplicationRecord
   has_many :fear_ratings, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :screenshots, dependent: :destroy
-  has_many :videos, dependent: :destroy
-
+  
+  #one-one
+  has_one :video, dependent: :destroy
+  
 
   #many-many
   has_many :user_games, dependent: :destroy
