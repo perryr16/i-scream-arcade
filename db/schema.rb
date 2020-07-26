@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_26_201335) do
+ActiveRecord::Schema.define(version: 2020_07_26_211809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 2020_07_26_201335) do
     t.string "release_date"
     t.string "name"
     t.float "total_rating"
+    t.string "video"
   end
 
   create_table "genres", force: :cascade do |t|
@@ -168,14 +169,6 @@ ActiveRecord::Schema.define(version: 2020_07_26_201335) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "videos", force: :cascade do |t|
-    t.bigint "game_id"
-    t.string "video"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["game_id"], name: "index_videos_on_game_id"
-  end
-
   add_foreign_key "fear_quizzes", "users"
   add_foreign_key "fear_ratings", "games"
   add_foreign_key "game_categories", "categories"
@@ -194,5 +187,4 @@ ActiveRecord::Schema.define(version: 2020_07_26_201335) do
   add_foreign_key "screenshots", "games"
   add_foreign_key "user_games", "games"
   add_foreign_key "user_games", "users"
-  add_foreign_key "videos", "games"
 end
