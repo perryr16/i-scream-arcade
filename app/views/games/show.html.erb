@@ -3,6 +3,7 @@
     <section>
       <div><%= image_tag  src="https://cdn11.bigcommerce.com/s-ymgqt/products/24049/images/27742/mario_kart__77494.1432323546.500.750.jpg?c=2", :class => "style_image" %></div>
       <div> <%= button_to  "Favorite ❤️", "/favorties" %> </div>
+      <button><%= link_to 'Write a Review', "/games/#{@game.id}/review" %></button>
     </section>
     <section>
       <div>
