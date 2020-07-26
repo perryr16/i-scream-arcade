@@ -32,9 +32,7 @@
   }
 }
 
-input,
-textarea {
-	display: block;
+.review_form input, textarea {
 	width: 100%;
 	border: 0;
 	padding: 10px 5px;
@@ -56,40 +54,39 @@ textarea {
 
 }
 
-input:focus,
-textarea:focus{
+input:focus, textarea:focus{
   /* sizes for the 2 images (focus state) */
 	background-size: 100% 2px, 100% 1px;
 	outline: none;
 }
 
-input[type=text] {
+.review_form input[type=text] {
   width: 100%;
   padding: 10px;
   margin: 10px 5px;
   box-sizing: border-box;
-  font-family: "Gill Sans", Gadget, sans-serif;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 15px;
   box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.06);
   border-radius:10px
 }
 
-.review_button{
+#review_button{
   border: none;
-  width: 30%;
-  font-family: "Gill Sans", Gadget, sans-serif;
-  font-size: 18px;
+  width: 20%;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 15px;
   background: #404040;
   color: #ffffff !important;
   font-weight: 100;
-  padding: 20px;
+  padding: 10px;
   text-transform: uppercase;
   border-radius: 6px;
   display: inline-block;
   transition: all 0.3s ease 0s;
 }
 
-.review_button:hover {
+#review_button:hover {
   color: #404040 !important;
   font-weight: 700 !important;
   letter-spacing: 3px;
