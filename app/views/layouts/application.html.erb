@@ -28,7 +28,7 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/quiz">Take the Fear Quiz</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/games">Games</a></li>
                 <% if current_user.nil? %>
-                      <%= link_to "Log In with Google", "/auth/google_oauth2" %>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/auth/google_oauth2">Log In with Google</a></li>
                 <% else %>
                   <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/profile">Profile</a></li>
                   <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/logout">Logout</a></li>
