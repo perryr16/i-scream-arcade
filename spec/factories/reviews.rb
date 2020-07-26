@@ -4,5 +4,6 @@ FactoryBot.define do
     # game { nil }
     content { "MyString" }
     user_rating { 1 }
+    title { Faker::Movies::HarryPotter.quote }
   end
 end
