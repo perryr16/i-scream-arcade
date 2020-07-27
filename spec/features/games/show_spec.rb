@@ -5,7 +5,7 @@ RSpec.describe "As a user" do
     game1 = create(:game)
     visit "/games/#{game1.id}"
 
-    expect(page).to have_content(game1.title)
+    expect(page).to have_content(game1.name)
     expect(page).to have_content("description of game")
     expect(page).to have_content("Related Games")
   end
