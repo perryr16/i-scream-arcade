@@ -1,5 +1,6 @@
 <header class='masthead'>
   <div class="container d-flex h-100 align-items-center">
+  <% cache cache_key_for(Game, "list") do %>
     <div class="mx-auto text-center">
       <h1 class="mx-auto my-0 text-uppercase header-index">Game Library</h1></br>
       <section class="top-margin">
@@ -26,6 +27,7 @@
         </table>
       </section>
     </div>
+  <% end %>
 </header>
 
 
