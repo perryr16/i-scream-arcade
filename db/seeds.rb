@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+smash64 = Smash64.new
+results = IScreamResults.new 
+results.seed_game_objects(smash64.info)
+
 
 spooky_array = [
   "https://www.vhv.rs/dpng/d/136-1366570_spooky-tree-clip-art-transparent-cartoons-spooky-tree.png",
@@ -34,3 +38,4 @@ george = User.create!(
 15.times do |index|  
   george.games << Game.all[index]
 end
+

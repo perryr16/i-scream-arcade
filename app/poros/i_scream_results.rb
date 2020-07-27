@@ -21,6 +21,19 @@ class IScreamResults
     theme_objects(data, game)
   end
 
+  def seed_game_objects(params)
+    data = params[:data]
+    game = game_object(data)
+
+    category_objects(data, game)
+    genre_objects(data, game)
+    keyword_objects(data, game)
+    platform_objects(data, game)
+    screenshot_objects(data, game)
+    similar_objects(data, game)
+    theme_objects(data, game)
+  end
+
   def game_object(data)
     Game.create(new_game_params(data))
   end
