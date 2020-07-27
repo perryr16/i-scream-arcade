@@ -5,7 +5,8 @@ FactoryBot.define do
     popularity { rand(91..100)}
     total_rating { rand(1..10) }
     sequence(:summary) {|n| "Summary #{n}"}
-    first_release_date { rand(1990..2020) }
+    release_date { rand(1990..2020) }
     sequence(:name) { |n|"game #{n}" }
+    video {"video_url"}
   end
 end
