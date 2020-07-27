@@ -168,6 +168,7 @@ ActiveRecord::Schema.define(version: 2020_07_26_212449) do
     t.string "photo", default: "https://ftnj.com/wp-content/uploads/2018/09/female-headshot-silhouette.jpg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "google_refresh_token"
   end
 
   add_foreign_key "fear_quizzes", "users"

@@ -20,3 +20,4 @@ deploy:
   on: 
     repo: perryr16/i-scream-arcade
   run: rails db:migrate
+  skip_cleanup: true
