@@ -3,9 +3,7 @@ class Game < ApplicationRecord
   has_many :fear_ratings, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :screenshots, dependent: :destroy
-  has_many :videos, dependent: :destroy
-
-
+  
   #many-many
   has_many :user_games, dependent: :destroy
   has_many :users, through: :user_games
@@ -31,5 +29,7 @@ class Game < ApplicationRecord
 
   validates_presence_of :name
 
-
+  def average_user_rating
+    reviews.average(:user_rating).to_f
+  end
 end
