@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(version: 2020_07_26_201335) do
     t.integer "user_rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
     t.index ["game_id"], name: "index_reviews_on_game_id"
   end
 

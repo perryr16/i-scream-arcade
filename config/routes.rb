@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     get 'auth/:provider/callback', to: 'sessions#create'
     get '/logout', to: 'sessions#destroy'
 
+    get '/games/:game_id/review', to: 'reviews#new'
+    post '/games/:game_id', to: 'reviews#create'
+
     resources :games, only: [:index, :show]
     resources :user_games, only: [:create, :destroy]
     resources :results, only: [:index]
