@@ -128,6 +128,7 @@ ActiveRecord::Schema.define(version: 2020_07_26_212449) do
     t.integer "user_rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
     t.index ["game_id"], name: "index_reviews_on_game_id"
   end
 
@@ -167,7 +168,6 @@ ActiveRecord::Schema.define(version: 2020_07_26_212449) do
     t.string "photo", default: "https://ftnj.com/wp-content/uploads/2018/09/female-headshot-silhouette.jpg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "google_refresh_token"
   end
 
   add_foreign_key "fear_quizzes", "users"

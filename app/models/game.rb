@@ -29,5 +29,7 @@ class Game < ApplicationRecord
 
   validates_presence_of :name
 
-
+  def average_user_rating
+    reviews.average(:user_rating).to_f
+  end
 end
