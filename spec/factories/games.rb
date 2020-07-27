@@ -7,7 +7,5 @@ FactoryBot.define do
     sequence(:summary) {|n| "Summary #{n}"}
     first_release_date { rand(1990..2020) }
     sequence(:name) { |n|"game #{n}" }
-
-
   end
 end

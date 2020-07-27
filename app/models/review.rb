@@ -1,4 +1,4 @@
 class Review < ApplicationRecord
   belongs_to :game
-  validates_presence_of :content, :user_rating
+  validates_presence_of :content, :user_rating, :title
 end

@@ -7,8 +7,19 @@ RSpec.describe "As a user" do
 
     expect(page).to have_content("Title of game")
     expect(page).to have_content("description of game")
-    expect(page).to have_content("5 Stars")
     expect(page).to have_content("Related Games")
-  end  
-  
+  end
+
+  it "can see the average ratings from users" do
+    game1 = create(:game)
+    create(:review, user_rating: 1, game_id: game1.id)
+    create(:review, user_rating: 3, game_id: game1.id)
+    create(:review, user_rating: 2, game_id: game1.id)
+    create(:review, user_rating: 1, game_id: game1.id)
+    create(:review, user_rating: 2, game_id: game1.id)
+
+    visit "/games/#{game1.id}"
+
+    expect(page).to have_content("Average User Rating: 1.8")
+  end
 end
