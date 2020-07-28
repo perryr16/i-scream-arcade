@@ -94,15 +94,20 @@ class IScreamResults
     end
   end
 
+  def age_ratings(data)
+    return nil if !data[:age_ratings].is_a?(Array)
+    data[:age_ratings][0]
+  end
+
   def new_game_params(data)
     {
-      age_rating:         data[:age_ratings][0],
+      age_rating:         age_ratings(data),
       cover:              data[:cover],
-      popularity:         data[:popularity].round(1),
+      popularity:         data[:popularity].to_i,
       summary:            data[:summary],
       release_date:       data[:release_date],
       name:               data[:name],
-      total_rating:       data[:total_rating].round(1),
+      total_rating:       data[:total_rating].to_i,
       video:              data[:video]
     }
   end
