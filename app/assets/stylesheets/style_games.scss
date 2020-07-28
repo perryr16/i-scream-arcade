@@ -5,12 +5,7 @@
   min-height: 35rem;
   padding: 15rem 0;
   padding-left: 50px;
-  background: rgb(255,252,252);
-  background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5970763305322129) 76%), url("https://user-images.githubusercontent.com/59414750/88612783-35ade400-d049-11ea-9ee1-d9010687b5fb.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background: #222831;
 }
 
 .game_styling h3{
@@ -34,6 +29,12 @@
     height: 100vh;
     padding: 0;
   }
+
+  .game_info {
+    height: 100vh;
+    padding: 0;
+  }
+
   .game_styling h1 {
     font-size: 6.5rem;
     line-height: 6.5rem;
@@ -97,6 +98,7 @@
 
 .solid_text{
   color: 	#FFFFF0;
+  padding-right: 30px;
 }
 
 .ratings_info{
