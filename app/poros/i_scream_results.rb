@@ -14,6 +14,7 @@ class IScreamResults
   end
 
   def create_game_objects(game_name)
+    return "Invalid Game Name" if game_params(game_name).is_a?(String)
     return existing_game(game_name) if existing_game(game_name)
     data = game_params(game_name)[:data]
     game = game_object(data)
