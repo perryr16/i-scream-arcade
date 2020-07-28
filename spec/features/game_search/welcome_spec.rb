@@ -5,7 +5,7 @@ describe 'Welcome page game search' do
     visit '/'
   end
 
-  it 'I can search by game title' do
+  xit 'I can search by game title' do
     within('.game-search') do
       choose 'search_type_keyword'
       fill_in :search, with: "spiders"
@@ -15,7 +15,7 @@ describe 'Welcome page game search' do
     expect(page).to have_content("Search Results")
   end
 
-  it 'I can search by game title' do
+  xit 'I can search by game title' do
     within('.game-search') do
       choose 'search_type_game'
       fill_in :search, with: "mario party"

@@ -1,5 +1,9 @@
 class GameSearchController < ApplicationController
   def show
+    results = IScreamResults.new
+    if params[:search_type] == 'game'
+      @game = results.create_game_objects(params[:search])
+    end
   end
 
   def index

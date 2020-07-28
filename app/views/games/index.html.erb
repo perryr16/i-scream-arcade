@@ -7,10 +7,13 @@
         <table class = "game-table">
             <tr>
               <th>Save Games</th>
-              <th></th>
+              <th></th> 
               <th>Title</th>
+              <th>Release Year</th>
               <th>Rating/100</th>
               <th>Popularity</th>
+              
+
             </tr>
           <%@games.each do |game| %>
               <tr id="game-<%= game.id %>">
@@ -20,6 +23,7 @@
                 </td>
                 <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>  
                 <td><%= link_to game.name, game_path(game) %></td>
+                <td><%=game.release_date %></td>
                 <td><%=game.total_rating %></td>
                 <td><%=game.popularity %></td>
               </tr>

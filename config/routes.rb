@@ -2,7 +2,7 @@ Rails.application.routes.draw do
     get "/", to: "welcome#index"
     get "/quiz", to: "fear_quiz#new"
 
-    post "/game-search", to: "game_search#index"
+    # post "/game-search", to: "game_search#index"
     post "/game-search", to: "game_search#show"
     
     get 'auth/:provider/callback', to: 'sessions#create'

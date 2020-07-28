@@ -5,10 +5,16 @@ class IScreamResults
   end
 
   def game_params(game_name)
+    game_name = game_name.gsub(" ", "%20")
     service.get_game_exact(game_name)
   end
 
+  def existing_game(game_name)
+    Game.find_by(name: game_name)
+  end
+
   def create_game_objects(game_name)
+    return existing_game(game_name) if existing_game(game_name)
     data = game_params(game_name)[:data]
     game = game_object(data)
 
