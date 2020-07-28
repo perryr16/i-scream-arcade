@@ -42,12 +42,6 @@
   }
 }
 
-.style_image {
-  width: 65%;
-  height: 55%;
-  border: 10px solid black;
-}
-
 .container {
   padding-left: 80px;
   padding-right: 80px;
@@ -59,8 +53,8 @@
   width: 60%;
   font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 15px;
-  background: #404040;
-  color: #ffffff !important;
+  background-color: rgba(0,0,0,0.5);
+  color: #e9c318 !important;
   font-weight: 100;
   padding: 10px;
   text-transform: uppercase;
@@ -68,10 +62,11 @@
   display: inline-block;
   transition: all 0.3s ease 0s;
   text-decoration: none;
+  border-radius: 10px;
 }
 
 .review:hover {
-  color: #404040 !important;
+  color: #e9c318 !important;
   font-weight: 700 !important;
   letter-spacing: 3px;
   background: #EE9D1B;
@@ -91,33 +86,23 @@
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 45);
 }
 
-.game_title {
-  color: #282828;
-  font-weight: bold;
+.grid-space {
+  padding-left: 100px;
+  padding-top: 0.5px;
 }
-
-.solid_text{
-  color: 	#FFFFF0;
-  padding-right: 30px;
-}
-
-.ratings_info{
-  color: #EE9D1B;
-  text-align: center;
-  font-weight: bold;
-}
-
-.right {
-  position: right;
-}
-
 
 .scrolling-box {
-  background-color: #eaeaea;
+  background-color: rgba(0,0,0,0.5) !important;
+  border-radius: 10px;
+  color: #949494;
   display: block;
   width: 465px;
-  height: 250px;
+  height: 425px;
   padding: 1em;
   overflow-y: scroll;
   text-align: center;
+}
+
+h5{
+  color: #e9c318;
 }
