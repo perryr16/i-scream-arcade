@@ -27,5 +27,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":16,"name":"ghosts"}}'
-  recorded_at: Tue, 28 Jul 2020 20:38:29 GMT
+  recorded_at: Tue, 28 Jul 2020 21:47:16 GMT
 recorded_with: VCR 6.0.0

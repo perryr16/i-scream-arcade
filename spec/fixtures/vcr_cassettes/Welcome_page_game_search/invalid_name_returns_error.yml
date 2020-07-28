@@ -27,5 +27,33 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '"Invalid Game Name"'
-  recorded_at: Tue, 28 Jul 2020 20:38:08 GMT
+  recorded_at: Tue, 28 Jul 2020 21:46:56 GMT
+- request:
+    method: get
+    uri: https://i-scream-microservice.herokuapp.com/game/not%20a%20game%20name%203df34adsf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '19'
+    body:
+      encoding: UTF-8
+      string: '"Invalid Game Name"'
+  recorded_at: Tue, 28 Jul 2020 21:46:57 GMT
 recorded_with: VCR 6.0.0
