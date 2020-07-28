@@ -1,26 +1,70 @@
-<div class="game_show">
-  <section style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 7em">
-    <section>
-      <div><%= image_tag  @game.cover, :class => "style_image" %></div>
-      <div> <%= button_to  "Favorite ❤️", "/favorties" %> </div>
-      <button><%= link_to 'Write a Review', "/games/#{@game.id}/review" %></button>
+<header class='quiz'>
+  <body class= 'game-show'>
+  <div class="container d-flex h-100 align-items-center">
+    <div class="inner-page-body">
+      <h1 class="below-nav"><%=@game.name %></h1>
+      <section class="scroll-through">
+      <section style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 7em">
+        <section>
+          <div class='game-info'>
+            <%= image_tag @game.cover, class: "style_image"%>
+            <%@game.screenshots.each do |screenshot| %>
+              <%= image_tag screenshot.screenshot %>
+            <%end %>
+            <%= button_to user_games_path(@game.id), method: :post, class: "transparent save-game" do %>
+                      <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
+                    <% end %>
+            <p><b>Released in <%=@game.release_date %></b></p>
+            <p><b>Critic's Rating: <%=@game.total_rating %></b></p>
+            <p><b>User's Rating: <%=@game.average_user_rating.round(2) %></b></p>
+          </section>
+        <section>
+          <iframe width="550" height="300" src="https://www.youtube.com/embed/<%=@game.video%>"></iframe>
+        </section>
+      </section>
+      <p><%=@game.summary %></p>
+      <p><b>Genres:</b> <%@game.genres.each do |genre| %>
+          <%=genre.genre %>
+          <%end %></p>
+      <p><b>Themes:</b> <%@game.themes.each do |theme| %>
+          <%=theme.theme %>
+          <%end %></p>
+      <p><b>Platforms:</b> <%@game.platforms.each do |platform| %>
+          <%=platform.platform %>
+          <%end %></p>
+
+      <table>
+        <tr>
+          <th class="horiz-center"><b>SIMILAR GAMES</b></th>
+          <th class="horiz-center"><b>REVIEWS</b></th>
+        </tr>
+        <tr>
+          <td>
+          <%@game.similars.each do |similar| %>
+          <%= button_to similar.game, "/game_search?similar=#{similar.game}", method: :post, class: "btn transparent-50 width-wide"%>
+          <%end %>
+          </td>
+          <td class="grid-space">
+            <p>Number of reviews (<%= @game.reviews.count %>)</p>
+            <center><button class="review"><%= link_to 'Write a Review', "/games/#{@game.id}/review" %></button></center>
+            <br>
+            <div class="scrolling-box">
+            <% if @game.reviews.count == 0 %>
+              <h5>Be the first to review.</h5>
+              <% else %>
+              <% @game.reviews.each do |review|%>
+               <section class="review-<%= review.id %>">
+                <h5><%= review.title %></h5>
+                Rating: <%= review.user_rating %>
+                <p><%= review.content %></p>
+               </section>
+             <% end %>
+           <% end %>
+           </div>
+          </td>
+        </tr>
+      </table>
+      <br><br>
     </section>
-    <section>
-      <div style="color:white;">
-        <h2 class="mx-auto text-uppercase"><%= @game.name %></h2>
-        <p><%= "description of game"%></p>
-      </div>
-      <div style="color:white;">
-        <p>Average User Rating: <%= @game.average_user_rating.round(2) %></p>
-      </div>
-    </section>
-    <section>
-      <iframe width="550" height="300" src="https://www.youtube.com/embed/ASWgJvuQhTA"></iframe>
-    </section>
-  </section>
-  <section>
-    <div>
-      <h2 style="color:white;"><%= "Related Games"%>
     </div>
-  </section>
-</div>
+  </div>
