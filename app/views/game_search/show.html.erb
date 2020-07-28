@@ -1,25 +1,52 @@
-<div class="inner-page-body">
-  <section style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 7em">
-    <section>
-      <div class='game'>
-        <div><%= image_tag  src="https://cdn11.bigcommerce.com/s-ymgqt/products/24049/images/27742/mario_kart__77494.1432323546.500.750.jpg?c=2", :class => "style_image" %></div>
-        </section>
+<header class='quiz'>
+  <div class="container d-flex h-100 align-items-center">
+    <div class="inner-page-body">
+      <h1 class="below-nav"><%=@game.name %></h1>
+      <section class="scroll-through">
+      <section style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 7em">
         <section>
-        <div>
-        <h2><%= "Title" %></h2>
-        <div> <%= button_to  "Save Game", "/favorties" %> </div>
-        <p><%= "description of game"%></p>
-        <p><%= "Popularity"%></p>
-      </div>
-      <div>
-        <p><%= "Themes"%></p>
-      </div>
+          <div class='game-info'>
+            <%= image_tag @game.cover, class: "style_image"%>
+            <%@game.screenshots.each do |screenshot| %>
+              <%= image_tag screenshot.screenshot %>
+            <%end %>
+            <%= button_to user_games_path(@game.id), method: :post, class: "transparent save-game" do %>
+                      <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
+                    <% end %> 
+            <p><b>Released in <%=@game.release_date %></b></p>
+            <p><b>Rating: <%=@game.total_rating %></b></p>
+            
+          </section>
+        <section>
+          <iframe width="550" height="300" src="https://www.youtube.com/embed/<%=@game.video%>"></iframe>
+        </section>
+      </section>
+      <p><%=@game.summary %></p>
+      <p><b>Genres:</b> <%@game.genres.each do |genre| %>
+          <%=genre.genre %>
+          <%end %></p>
+      <p><b>Themes:</b> <%@game.themes.each do |theme| %>
+          <%=theme.theme %>
+          <%end %></p>
+      <p><b>Platforms:</b> <%@game.platforms.each do |platform| %>
+          <%=platform.platform %>
+          <%end %></p>
+        
+      <table>
+        <tr>
+          <th class="horiz-center"><b>SIMILAR GAMES</b></th>
+        </tr>
+        <tr>
+          <td> 
+          <%@game.similars.each do |similar| %>
+          <%= button_to similar.game, "/game_search?similar=#{similar.game}", method: :post, class: "btn transparent-50 width-wide"%>
+          <%end %>
+          </td>
+        </tr>
+      </table>
+      <br><br>
     </section>
-    <section>
-      <iframe width="550" height="300" src="https://www.youtube.com/embed/ASWgJvuQhTA"></iframe>
-    </section>
-  </section>
-  <section>
-    <div><h2><%= "Related Games"%></div>
-  </section>
-</div>
+    </div>
+  </div>
+  <br><br><br>
+</header>  

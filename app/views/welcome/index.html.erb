@@ -12,7 +12,7 @@
   <div class="game-search">
     <div class="col-md-10 col-lg-8 mx-auto text-center">
       <h2 class="text-black mb-4">Search for Games</h2>
-      <%= form_tag "/game-search" do %>
+      <%= form_tag "/game_search" do %>
         <%= radio_button_tag(:search_type, "game") %>
         <%= label_tag(:game_title, "Game") %>
         <%= radio_button_tag(:search_type, "keyword") %>
