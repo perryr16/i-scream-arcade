@@ -1,25 +1,49 @@
 <div class="inner-page-body">
   <section style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 7em">
     <section>
-      <div class='game'>
-        <div><%= image_tag  src=@game.cover, :class => "style_image" %></div>
-        </section>
-        <section>
-        <div>
-        <h2><%= "Title" %></h2>
-        <div> <%= button_to  "Save Game", "/favorties" %> </div>
-        <p><%= "description of game"%></p>
-        <p><%= "Popularity"%></p>
-      </div>
-      <div>
-        <p><%= "Themes"%></p>
-      </div>
-    </section>
+      <div class='game-info'>
+
+        <%= image_tag @game.cover, class: "style_image"%>
+        <%= button_to user_games_path(@game.id), method: :post, class: "transparent save-game" do %>
+                  <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
+                <% end %> 
+        <h1><%=@game.name %></h1>
+        <p>Released in <%=@game.release_date %></p>
+        <p>Rating: <%=@game.total_rating %></p>
+        <p><%=@game.summary %></p>
+      </section>
     <section>
-      <iframe width="550" height="300" src="https://www.youtube.com/embed/ASWgJvuQhTA"></iframe>
+      <iframe width="550" height="300" src="https://www.youtube.com/embed/<%=@game.video%>%"></iframe>
     </section>
   </section>
-  <section>
-    <div><h2><%= "Related Games"%></div>
-  </section>
+  <table>
+    <tr>
+      <th>Genre</th>
+      <th>Themes</th>
+      <th>Platforms</th>
+      <th>Similar Games</th>
+    </tr>
+    <tr>
+      <td> 
+      <%@game.genres.each do |genre| %>
+      <p><%=genre.genre %></p>
+      <%end %>
+      </td>
+      <td> 
+      <%@game.themes.each do |theme| %>
+      <p><%=theme.theme %></p>
+      <%end %>
+      </td>
+      <td> 
+      <%@game.platforms.each do |platform| %>
+      <p><%=platform.platform%></p>
+      <%end %>
+      </td>
+      <td> 
+      <%@game.similars.each do |similar| %>
+      <p><%=similar.game %></p>
+      <%end %>
+      </td>
+    </tr>
+  </table>
 </div>

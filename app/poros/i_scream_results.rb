@@ -25,6 +25,7 @@ class IScreamResults
     screenshot_objects(data, game)
     similar_objects(data, game)
     theme_objects(data, game)
+    game
   end
 
   def seed_game_objects(params)

@@ -23,15 +23,12 @@ describe 'Game Search Show Page' do
     fill_in 'search', with: 'Super Mario World'
     click_on 'Search'
 
-    visit '/games'
-    
-    summary = "Super Mario World is a jump-and-run platformer and a follow-up to Super Mario Bros. 3. The game retains many of the elements that debuted in Super Mario Bros. 3, such as the world map and Koopaling boss fights, while introducing a large variety of new gameplay mechanics, such as an expanded and less linear world map and the ability to save the game. Much of the game's introduced characters, game mechanics, and artistic themes influenced later titles in the Mario series. The game was released to best-selling status on the SNES, received large amounts of critical acclaim, and is commonly seen on Nintendo's best games of all times on various critic listings.",
-    expect(page).to have_content("Summary: #{summary}")
+    summary = "Super Mario World is a jump-and-run platformer and a follow-up to Super Mario Bros. 3. The game retains many of the elements that debuted in Super Mario Bros. 3, such as the world map and Koopaling boss fights, while introducing a large variety of new gameplay mechanics, such as an expanded and less linear world map and the ability to save the game. Much of the game's introduced characters, game mechanics, and artistic themes influenced later titles in the Mario series. The game was released to best-selling status on the SNES, received large amounts of critical acclaim, and is commonly seen on Nintendo's best games of all times on various critic listings."
+    expect(page).to have_content(summary)
 
     expect(page).to have_content('Super Mario World')
-    expect(page).to have_content('8')
     expect(page).to have_css("img[src*='https://images.igdb.com/igdb/image/upload/t_thumb/co23jy.jpg']")    
-    expect(page).to have_content("1996")
+    expect(page).to have_content("1990")
     expect(page).to have_content('96.4')
     expect(page).to have_content('Crash Bandicoot: The Wrath of Cortex')
     expect(page).to have_content('Big Crown: Showdown')
