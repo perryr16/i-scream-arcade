@@ -32,4 +32,12 @@ RSpec.describe "As a user" do
 
     expect(page).to have_content("User's Rating: 1.8")
   end
+
+  it "can't display ratings if there are none" do
+    game1 = create(:game)
+
+    visit "/games/#{game1.id}"
+
+    expect(page).to have_content("Be the first to review.")
+  end
 end
