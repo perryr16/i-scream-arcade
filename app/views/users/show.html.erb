@@ -1,8 +1,8 @@
 <header class='masthead'>
   <div class="container d-flex h-100 align-items-center">
     <div class="mx-auto text-center">
+    <% if current_user %>
       <h1 class="mx-auto my-0 text-uppercase header-index">User Profile</h1></br>
-     
         <section class="content-left user-photo">
           <%= image_tag @user.photo, class: "profile-picture"%>
           <br><br>
@@ -37,7 +37,22 @@
         </table>
           </section>
         </section>
-
-
+    <% else %>
+      <div class='visitor-container'>
+        <div class="container d-flex h-100 align-items-center">
+          <section class="review_form">
+            <div class="underline"></div>
+              <div class="icon_wrapper">
+                <center>
+                  <img class="icon" src="https://cdn2.iconfinder.com/data/icons/funeral-filloutline/64/scythe-reaper-cultures-spooky-terror-scary-fear-horror-death-halloween-256.png" alt="zombie" border="0">
+                </center>
+                <h3>Ah, spooks.</h3><br></center> <p>You must be logged in to view this page.</p>
+                <a class="btn btn-primary js-scroll-trigger" href="/auth/google_oauth2">Log In with Google</a>
+              </div>
+            <br>
+          </section>
+        </div>
+      </header>
+     <% end %>
     </div>
 </header>
