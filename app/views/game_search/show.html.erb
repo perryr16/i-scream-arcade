@@ -1,49 +1,52 @@
-<div class="inner-page-body">
-  <section style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 7em">
-    <section>
-      <div class='game-info'>
-
-        <%= image_tag @game.cover, class: "style_image"%>
-        <%= button_to user_games_path(@game.id), method: :post, class: "transparent save-game" do %>
-                  <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
-                <% end %> 
-        <h1><%=@game.name %></h1>
-        <p>Released in <%=@game.release_date %></p>
-        <p>Rating: <%=@game.total_rating %></p>
-        <p><%=@game.summary %></p>
+<header class='quiz'>
+  <div class="container d-flex h-100 align-items-center">
+    <div class="inner-page-body">
+      <h1 class="below-nav"><%=@game.name %></h1>
+      <section class="scroll-through">
+      <section style="display: flex; flex-direction: row; justify-content: space-evenly; padding-top: 7em">
+        <section>
+          <div class='game-info'>
+            <%= image_tag @game.cover, class: "style_image"%>
+            <%@game.screenshots.each do |screenshot| %>
+              <%= image_tag screenshot.screenshot %>
+            <%end %>
+            <%= button_to user_games_path(@game.id), method: :post, class: "transparent save-game" do %>
+                      <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
+                    <% end %> 
+            <p><b>Released in <%=@game.release_date %></b></p>
+            <p><b>Rating: <%=@game.total_rating %></b></p>
+            
+          </section>
+        <section>
+          <iframe width="550" height="300" src="https://www.youtube.com/embed/<%=@game.video%>"></iframe>
+        </section>
       </section>
-    <section>
-      <iframe width="550" height="300" src="https://www.youtube.com/embed/<%=@game.video%>%"></iframe>
+      <p><%=@game.summary %></p>
+      <p><b>Genres:</b> <%@game.genres.each do |genre| %>
+          <%=genre.genre %>
+          <%end %></p>
+      <p><b>Themes:</b> <%@game.themes.each do |theme| %>
+          <%=theme.theme %>
+          <%end %></p>
+      <p><b>Platforms:</b> <%@game.platforms.each do |platform| %>
+          <%=platform.platform %>
+          <%end %></p>
+        
+      <table>
+        <tr>
+          <th class="horiz-center"><b>SIMILAR GAMES</b></th>
+        </tr>
+        <tr>
+          <td> 
+          <%@game.similars.each do |similar| %>
+          <%= button_to similar.game, "/game_search?similar=#{similar.game}", method: :post, class: "btn transparent-50 width-wide"%>
+          <%end %>
+          </td>
+        </tr>
+      </table>
+      <br><br>
     </section>
-  </section>
-  <table>
-    <tr>
-      <th>Genre</th>
-      <th>Themes</th>
-      <th>Platforms</th>
-      <th>Similar Games</th>
-    </tr>
-    <tr>
-      <td> 
-      <%@game.genres.each do |genre| %>
-      <p><%=genre.genre %></p>
-      <%end %>
-      </td>
-      <td> 
-      <%@game.themes.each do |theme| %>
-      <p><%=theme.theme %></p>
-      <%end %>
-      </td>
-      <td> 
-      <%@game.platforms.each do |platform| %>
-      <p><%=platform.platform%></p>
-      <%end %>
-      </td>
-      <td> 
-      <%@game.similars.each do |similar| %>
-      <%= button_to similar.game, "/game_search?similar=#{similar.game}", method: :post %>
-      <%end %>
-      </td>
-    </tr>
-  </table>
-</div>
+    </div>
+  </div>
+  <br><br><br>
+</header>  
