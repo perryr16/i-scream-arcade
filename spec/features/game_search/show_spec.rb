@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Game Search Show Page' do
 
-  xit "can get game by title" do
+  it "can get game by title", :vcr do
     visit '/'
     choose 'search_type_game'
     fill_in 'search', with: 'Super Mario World'
@@ -29,16 +29,17 @@ describe 'Game Search Show Page' do
 
 
     click_button 'Crash Bandicoot: The Wrath of Cortex'
+    game = Game.last 
+    expect(game.name).to eq("Crash Bandicoot: The Wrath of Cortex")
+    expect(current_path).to eq("/game_search/#{game.id}")
 
     expect(page).to have_content('Crash Bandicoot: The Wrath of Cortex')
     expect(page).to have_content('Released in 2001')
     expect(page).to have_content('Rating: 64.0')
     expect(page).to have_content('Xbox')
     expect(page).to have_button('Havocado')
-    
-
-
     # expect(page).to have_content('')
   end
+  
   
 end

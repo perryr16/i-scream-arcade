@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-xdescribe "hit sinatra microservice" do 
+describe "hit sinatra microservice" do 
 
   before :each do 
     @service = IScreamService.new 
   end
 
-  it "returns keyword info using microservice" do
+  it "returns keyword info using microservice", :vcr do
 
     spider_json = @service.get_keyid('spider')
 
@@ -14,19 +14,19 @@ xdescribe "hit sinatra microservice" do
     expect(spider_json).to eq(expected_json)
   end
 
-  it "returns key_id info using microservice" do
+  it "returns key_id info using microservice", :vcr do
     spider_json = @service.get_keyword('16')
 
     expected_json = {:data=>{:id=>16, :name=>"ghosts"}}
     expect(spider_json).to eq(expected_json)
   end
 
-  it "returns game info using microservice" do 
+  it "returns game info using microservice", :vcr do 
     mk64_json = @service.get_game_exact("Mario%20Kart%2064")
 
     exp_age_rating = [8]
     exp_release_date = 1996
-    exp_cover = "//images.igdb.com/igdb/image/upload/t_thumb/co1te8.jpg"
+    exp_cover = "https://images.igdb.com/igdb/image/upload/t_thumb/co1te8.jpg"
     exp_popularity = 5.457862054247628
     exp_summary = "Mario Kart 64 is the second main installment of the Mario Kart series. It"
     exp_name = "Mario Kart 64"
@@ -38,11 +38,11 @@ xdescribe "hit sinatra microservice" do
     exp_keyword3 = 281
     exp_platforms = ["Nintendo 64","Wii","Wii U"]
     exp_similars = ["Super Mario Bros.","Crash Team Racing","Crash Nitro Kart","Super Mario Kart","Mario Kart: Super Circuit","Mario Kart DS","Mario Kart 7","Mario Kart 8","Paper Mario: The Thousand-Year Door"]
-    exp_screenshot1 = "//images.igdb.com/igdb/image/upload/t_thumb/sc87rl.jpg"
-    exp_screenshot2 = "//images.igdb.com/igdb/image/upload/t_thumb/sc87rm.jpg"
-    exp_screenshot3 = "//images.igdb.com/igdb/image/upload/t_thumb/sc87rn.jpg"
+    exp_screenshot1 = "https://images.igdb.com/igdb/image/upload/t_thumb/sc87rl.jpg"
+    exp_screenshot2 = "https://images.igdb.com/igdb/image/upload/t_thumb/sc87rm.jpg"
+    exp_screenshot3 = "https://images.igdb.com/igdb/image/upload/t_thumb/sc87rn.jpg"
     exp_themes = ["Action","Kids"]
-    exp_videos = "ASWgJvuQhTA"
+    exp_video = "ASWgJvuQhTA"
     
     data = mk64_json[:data]
     expect(data[:age_ratings]).to eq(exp_age_rating)
@@ -63,7 +63,7 @@ xdescribe "hit sinatra microservice" do
     expect(data[:screenshots]).to include(exp_screenshot2)
     expect(data[:screenshots]).to include(exp_screenshot3)
     expect(data[:themes]).to eq(exp_themes)
-    expect(data[:videos]).to eq(exp_videos)
+    expect(data[:video]).to eq(exp_video)
 
   end
   

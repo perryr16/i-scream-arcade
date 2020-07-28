@@ -15,7 +15,7 @@ class GameSearchController < ApplicationController
   end
 
   def create
-    if !params[:search_type]
+    if !params[:search_type] && !params[:similar]
       flash[:error] = "Please Select a Search Type"
       redirect_to "/"
     elsif params[:search] == ""
@@ -40,20 +40,11 @@ class GameSearchController < ApplicationController
 
   end
 
-  def missing_search(parmas)
-    if !params[:search_type]
-      flash[:error] = "Please Select a Search Type"
-    elsif !params[:search]
-      flash[:error] = "Please Enter a Valid Search"
-    end
-    redirect_to "/"
-  end
-
   def create_redirect(game)
-    if game == "Invalid Game Name"
-      flash[:error] = game
-      redirect_to "/"
-    else 
+    if game.is_a?(String)
+      flash[:error] = game 
+      redirect_back(fallback_location: '/')
+    else
       redirect_to "/game_search/#{game.id}"
     end
   end

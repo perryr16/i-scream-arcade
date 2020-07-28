@@ -2,13 +2,13 @@ require 'rails_helper'
 # NOTE: This will fail if microservice is not running. To start:
 # $ shotgun 
 
-xdescribe "create Game and assocaited objects from API call" do 
+describe "create Game and assocaited objects from API call" do 
 
   before :each do 
     @results = IScreamResults.new
   end
 
-  it "creates Mario Kart 64 and associated Objects" do
+  it "creates Mario Kart 64 and associated Objects", :vcr do
     @results.create_game_objects("Mario%20Kart%2064")
     mk64 = Game.last 
 
@@ -16,11 +16,11 @@ xdescribe "create Game and assocaited objects from API call" do
     expect(mk64.name).to eq("Mario Kart 64")
     expect(mk64.age_rating).to eq(8)
     expect(mk64.cover).to eq("https://images.igdb.com/igdb/image/upload/t_thumb/co1te8.jpg")
-    expect(mk64.popularity).to eq(5.5)
+    expect(mk64.popularity).to eq(5.0)
     expect(mk64.summary).to eq(exp_summary)
     expect(mk64.release_date).to eq('1996')
-    expect(mk64.total_rating).to eq(81.8)
-    expect(mk64.video).to eq("https://www.youtube.com/watch?v=ASWgJvuQhTA")
+    expect(mk64.total_rating).to eq(81.0)
+    expect(mk64.video).to eq("ASWgJvuQhTA")
     
     # categories (empty)
     # Genres
