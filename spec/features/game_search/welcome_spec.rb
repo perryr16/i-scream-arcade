@@ -5,22 +5,40 @@ describe 'Welcome page game search' do
     visit '/'
   end
 
-  xit 'I can search by game title' do
-    within('.game-search') do
-      choose 'search_type_keyword'
-      fill_in :search, with: "spiders"
-      click_button "Search"
-    end
-    expect(current_path).to eq "/game-search"
-    expect(page).to have_content("Search Results")
-  end
-
-  xit 'I can search by game title' do
+  it 'I can search by game title', :vcr do
     within('.game-search') do
       choose 'search_type_game'
-      fill_in :search, with: "mario party"
+      fill_in :search, with: "Mario Kart 64"
       click_button "Search"
     end
-    expect(current_path).to eq "/game-search"
+    game = Game.last
+    expect(current_path).to eq("/game_search/#{game.id}")
   end
+
+  it "missing fields on sarch return error" do
+    click_button "Search"
+    expect(current_path).to eq('/')
+    expect(page).to have_content('Please Select a Search Type')
+
+    within('.game-search') do
+      choose 'search_type_keyword'
+      click_button "Search"
+    end
+    expect(current_path).to eq('/')
+    expect(page).to have_content('Please Enter a Valid Search')
+  end
+
+  it "invalid name returns error", :vcr do
+    within('.game-search') do
+      choose 'search_type_game'
+      fill_in :search, with: "not a game name 3df34adsf"
+      click_button "Search"
+    end
+  
+    expect(current_path).to eq('/')
+    expect(page).to have_content("Invalid Game Name")
+    
+  end
+  
+  
 end

@@ -1,0 +1,31 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://i-scream-microservice.herokuapp.com/keyid/16
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '34'
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":16,"name":"ghosts"}}'
+  recorded_at: Tue, 28 Jul 2020 21:47:16 GMT
+recorded_with: VCR 6.0.0

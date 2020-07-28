@@ -1,7 +1,8 @@
 class IScreamService 
 
   def conn 
-    Faraday.new('http://localhost:9393')
+    # Faraday.new('http://localhost:9393')
+    Faraday.new('https://i-scream-microservice.herokuapp.com')
   end
 
   def get_keyid(keyword)
@@ -20,6 +21,7 @@ class IScreamService
   end
 
   def json_parse(response)
+    return "No Game Data For Specified Title" if response.body == '<h1>Internal Server Error</h1>'
     JSON.parse(response.body, symbolize_names: true)
   end
 
