@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+smash64 = Smash64.new
+results = IScreamResults.new
+results.seed_game_objects(smash64.info)
+
 
 
 spooky_array = [

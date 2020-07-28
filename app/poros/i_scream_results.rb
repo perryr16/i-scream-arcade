@@ -5,11 +5,31 @@ class IScreamResults
   end
 
   def game_params(game_name)
+    game_name = game_name.gsub(" ", "%20")
     service.get_game_exact(game_name)
   end
 
+  def existing_game(game_name)
+    Game.find_by(name: game_name)
+  end
+
   def create_game_objects(game_name)
+    return existing_game(game_name) if existing_game(game_name)
     data = game_params(game_name)[:data]
+    game = game_object(data)
+
+    category_objects(data, game)
+    genre_objects(data, game)
+    keyword_objects(data, game)
+    platform_objects(data, game)
+    screenshot_objects(data, game)
+    similar_objects(data, game)
+    theme_objects(data, game)
+    game
+  end
+
+  def seed_game_objects(params)
+    data = params[:data]
     game = game_object(data)
 
     category_objects(data, game)
@@ -74,15 +94,20 @@ class IScreamResults
     end
   end
 
+  def age_ratings(data)
+    return nil if !data[:age_ratings].is_a?(Array)
+    data[:age_ratings][0]
+  end
+
   def new_game_params(data)
     {
-      age_rating:         data[:age_ratings][0],
+      age_rating:         age_ratings(data),
       cover:              data[:cover],
-      popularity:         data[:popularity].round(1),
+      popularity:         data[:popularity].to_i,
       summary:            data[:summary],
       release_date:       data[:release_date],
       name:               data[:name],
-      total_rating:       data[:total_rating].round(1),
+      total_rating:       data[:total_rating].to_i,
       video:              data[:video]
     }
   end
