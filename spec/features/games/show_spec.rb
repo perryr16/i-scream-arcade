@@ -6,7 +6,6 @@ RSpec.describe "As a user" do
     visit "/games/#{game1.id}"
 
     expect(page).to have_content(game1.name)
-    expect(page).to have_content("description of game")
     expect(page).to have_content("Related Games")
   end
 
