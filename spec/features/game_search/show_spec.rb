@@ -1,21 +1,6 @@
 require 'rails_helper'
 
 describe 'Game Search Show Page' do
-  
-  xit 'I can see the Search Page title' do
-    visit '/'
-    choose 'search_type_game'
-    fill_in :search, with: "mario party"
-    click_button "Search"
-
-    expect(current_path).to eq('/game-search')
-    within('.game') do
-      expect(page).to have_button('Save Game')
-      expect(page).to have_content('Title')
-      expect(page).to have_content('Popularity')
-      expect(page).to have_content('Themes')
-    end
-  end
 
   xit "can get game by title" do
     visit '/'
