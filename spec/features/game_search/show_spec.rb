@@ -29,7 +29,7 @@ describe 'Game Search Show Page' do
     expect(page).to have_content('Super Mario World')
     expect(page).to have_css("img[src*='https://images.igdb.com/igdb/image/upload/t_thumb/co23jy.jpg']")    
     expect(page).to have_content("1990")
-    expect(page).to have_content('96.4')
+    expect(page).to have_content('96.0')
     expect(page).to have_content('Crash Bandicoot: The Wrath of Cortex')
     expect(page).to have_content('Big Crown: Showdown')
     expect(page).to have_content('Super Mario Maker 2')
@@ -40,6 +40,14 @@ describe 'Game Search Show Page' do
     expect(page).to have_content('Super Nintendo Entertainment System (SNES)')
     expect(page).to have_content('Wii U')
     expect(page).to have_content('New Nintendo 3DS')
+
+    click_on 'Crash Bandicoot: The Wrath of Cortex'
+
+    expect(page).to have_content('Crash Bandicoot: The Wrath of Cortex')
+    expect(page).to have_content('Released in 2001')
+    expect(page).to have_content('Rating: 64.0')
+    expect(page).to have_content('Xbox')
+    expect(page).to have_content('Havocado')
     
 
 

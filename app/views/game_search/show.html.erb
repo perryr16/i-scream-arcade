@@ -41,7 +41,7 @@
       </td>
       <td> 
       <%@game.similars.each do |similar| %>
-      <%= link_to similar.game, "/game_search?similar=#{similar.game}" %></p>
+      <%= button_to similar.game, "/game_search?similar=#{similar.game}", method: :post %>
       <%end %>
       </td>
     </tr>
