@@ -18,7 +18,18 @@ Click [here](https://i-scream-arcade.herokuapp.com/) to view it in production
 
 ## Quick Links
 
-[About](#about)
+![giphy](https://user-images.githubusercontent.com/59414750/88854080-05cc2100-d1ae-11ea-8168-a708186ce93b.gif)
+
+* [About](#about)
+* [Software Requirements](#software-requirements)
+* [Getting Started](#getting-started)
+* [Test Suite](#running-the-test-suite)
+* [Schema](#schema)
+* [Fear Quiz](#fear-quiz)
+* [Games](#games)
+* [Visitor Functionality](#visitor-functionality)
+* [Reviews](#reviews)
+* [Profile](#profile)
 
 ## About
 
@@ -73,6 +84,28 @@ To return the test suite to its normal state, change the connection address from
 ## Schema
 
 ![Untitled](https://user-images.githubusercontent.com/59414750/88850305-69535000-d1a8-11ea-92aa-e1ee45b49b4c.png)
+
+## Fear Quiz
+
+<img width="1433" alt="Screen Shot 2020-07-29 at 2 51 28 PM" src="https://user-images.githubusercontent.com/59414750/88852112-0a430a80-d1ab-11ea-8af7-823d5053e640.png">
+
+## Games
+
+<img width="1433" alt="Screen Shot 2020-07-29 at 2 53 42 PM" src="https://user-images.githubusercontent.com/59414750/88852381-7160bf00-d1ab-11ea-8c76-89ffec36ff06.png">
+
+<img width="1427" alt="Screen Shot 2020-07-29 at 3 02 14 PM" src="https://user-images.githubusercontent.com/59414750/88854292-4b88e980-d1ae-11ea-9f13-e3e0909909bb.png">
+
+## Reviews
+
+<img width="1427" alt="Screen Shot 2020-07-29 at 3 03 00 PM" src="https://user-images.githubusercontent.com/59414750/88854367-68bdb800-d1ae-11ea-938e-67f91c2fae54.png">
+
+<img width="1427" alt="Screen Shot 2020-07-29 at 3 02 45 PM" src="https://user-images.githubusercontent.com/59414750/88854666-dd90f200-d1ae-11ea-883b-85b9c928f1be.png">
+
+## Profile
+
+<img width="1234" alt="Screen Shot 2020-07-29 at 3 01 45 PM" src="https://user-images.githubusercontent.com/59414750/88854485-9276df00-d1ae-11ea-8c34-582cd5fd59d5.png">
+
+<img width="1427" alt="Screen Shot 2020-07-29 at 3 03 19 PM" src="https://user-images.githubusercontent.com/59414750/88854519-a0c4fb00-d1ae-11ea-8198-a52f750ee167.png">
 
 ## Visitor Functionality
 Visitors have the ability to search for games on our website and take the fear quiz to see a list of recommended games that match their fears. Remember, the purpose of our application is fear.
