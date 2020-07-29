@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://i-scream-microservice.herokuapp.com/game/Mario%20Kart%2064
+    uri:  https://i-scream-microservice.herokuapp.com/game/Mario%20Kart%2064
     body:
       encoding: US-ASCII
       string: ''
@@ -38,5 +38,5 @@ http_interactions:
         64","Wii","Wii U"],"similars":["Super Mario Bros.","Crash Team Racing","Crash
         Nitro Kart","Super Mario Kart","Mario Kart: Super Circuit","Mario Kart DS","Mario
         Kart 7","Mario Kart 8","Paper Mario: The Thousand-Year Door"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/sc87rl.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rm.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87ro.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rp.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rq.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rr.jpg"],"themes":["Action","Kids"],"video":"ASWgJvuQhTA"}}'
-  recorded_at: Tue, 28 Jul 2020 21:47:24 GMT
+  recorded_at: Wed, 29 Jul 2020 23:12:06 GMT
 recorded_with: VCR 6.0.0
