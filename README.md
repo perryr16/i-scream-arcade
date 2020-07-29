@@ -30,6 +30,7 @@ Click [here](https://i-scream-arcade.herokuapp.com/) to view it in production
 * [Reviews](#reviews)
 * [Profile](#profile)
 * [User Experience](#user-experience)
+* [Future Implementations](#future-implementations)
 
 ## About
 
