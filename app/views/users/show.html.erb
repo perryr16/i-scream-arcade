@@ -1,34 +1,39 @@
-<header class='masthead'>
+<header class='profile'>
   <div class="container d-flex h-100 align-items-center">
     <div class="mx-auto text-center">
     <% if current_user %>
-      <h1 class="mx-auto my-0 text-uppercase header-index">User Profile</h1></br>
+      <h1 class="mx-auto my-0 text-uppercase header-index">User Profile</h1>
         <section class="content-left user-photo">
           <%= image_tag @user.photo, class: "profile-picture"%>
           <br><br>
           <%= button_to "Edit Profile", edit_user_path(@user), method: :get,  class: "btn transparent-50"%>
         </section>
         <section class="content-right user-info">
-          <h2 class="text-uppercase thirty-px text-left"><%=@user.name %></h2>
-          <p class="mx-auto my-0 text-uppercase text-left"><%=@user.email %></p>
-          <br><br>
-          <h2 class = "thirty-px saved-games text-uppercase text-left">Saved Games</h2>
+          <div class="profile-section">
+            <p><b>Name:</b> <%=@user.name %></p>
+            <p><b>Email:</b> <%=@user.email %></p>
+          </div>
+          <h2>Saved Games</h2>
           <section class="profile-game-list">
-            <table class = "game-table">
-            <tr>
-              <th>Remove</th>
-              <th></th>
-              <th>Title</th>
-              <th>Rating/100</th>
-              <th>Popularity</th>
-            </tr>
+            <table class="my-games">
+            <div class="tbl-header">
+                <thead>
+                  <tr>
+                    <th>Remove</th>
+                    <th></th>
+                    <th>Title</th>
+                    <th>Rating</th>
+                    <th>Popularity</th>
+                  </tr>
+                </thead>
+          </div>
           <% @user.games.each do |game| %>
               <tr id="game-<%= game.id %>">
                 <td><%= button_to user_game_path(game.id), method: :delete, class: "transparent unsave-game" do %>
                   <i class="fa fa-gamepad fa-4x", aria-hidden="true"></i>
                 <% end %>
                 </td>
-                <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>  
+                <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>
                 <td><%= link_to game.name, game_path(game) %></td>
                 <td><%=game.total_rating %></td>
                 <td><%=game.popularity %></td>

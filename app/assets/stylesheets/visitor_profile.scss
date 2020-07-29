@@ -43,3 +43,53 @@
   background: #fff;
   padding: 15px;
 }
+
+
+.profile {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: rgb(255,252,252);
+  background: linear-gradient(180deg, rgba(46, 49, 49, 1) 0%, rgba(46,49,49,0.5970763305322129) 76%), url("https://user-images.githubusercontent.com/59414750/88753169-cdc6ce80-d118-11ea-8ae0-d219691bd401.jpeg");
+  // background-image: url("https://user-images.githubusercontent.com/54954621/88128254-c5a7e580-cb92-11ea-8b07-88433389fcd5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.profile h1 {
+  color: #949494;
+  opacity: 70%;
+}
+
+.profile-section {
+  color: #949494;
+}
+
+.profile h2 {
+  color: #949494;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .profile h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .profile {
+    height: 100vh;
+    padding: 0;
+  }
+  .profile h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
+  }
+}
