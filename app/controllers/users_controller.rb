@@ -1,15 +1,14 @@
-class UsersController < ApplicationController 
+class UsersController < ApplicationController
 
   def show
-    @user = current_user if current_user 
-    # @user = backup_user if !current_user
+    @user = current_user if current_user
   end
 
-  def edit 
+  def edit
     @user = User.find(params[:id])
   end
 
-  def update 
+  def update
     if missing_params.present?
       missing_params_error
     else
@@ -45,9 +44,4 @@ class UsersController < ApplicationController
     end
     redirect_to '/profile'
   end
-
-  def backup_user 
-    User.find_by(name: "George Washington")
-  end 
-  
 end
