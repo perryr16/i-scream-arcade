@@ -71,10 +71,10 @@ body {
 }
 
 .game-search {
-  width: 100%;
-  height: 100%;
-  background: #EE9D1C;
-  display: flex;
+  // width: 100%;
+  // height: 100%;
+  // background: #EE9D1C;
+  // display: flex;
 }
 
 #btn-game-search {
@@ -10176,6 +10176,28 @@ body.game-show {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   overflow: hidden;
+  line-height: 1rem;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.small-gradient{
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  overflow: hidden;
+  line-height: 1rem;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.tiny-gradient{
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.8rem;
   line-height: 1rem;
   letter-spacing: 0.2rem;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
