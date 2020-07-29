@@ -31,9 +31,22 @@ Games are returned with data relavent to your decision making such as trailers, 
 * Rails Version 5.2.4
 
 ## Getting Started
-To begin, fork and clone this repository. Once opened, run `bundle install`.
-To open the web application run the command `heroku open` or enter `https://i-scream-arcade.herokuapp.com/` in your internet browser
+If you want to create your own IScream Arcade and make any additional improvements or add extenstions. Follow these steps.
 
+To begin, fork and clone this repository. Or you can run the following command below if you are not interested in saving your own copy.
+
+```
+git clone git@github.com:perryr16/i-scream-arcade.git
+```
+
+Once the repository has been downloaded to your local machine. Run the following commands:
+
+```
+bundle install
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
 ## Running the Test Suite
 The test suite is run using RSpec and Capybara. The test results have been mocked and stubbed using Webmock and VCR. To run all tests simply enter the following commands.
@@ -51,9 +64,6 @@ Shotgun is a gem that starts the sinatra service while allowing developers to ma
 
 To return the test suite to its normal state, change the connection address from `http://localhost:9393` back to `https://i-scream-microservice.herokuapp.com`. To maintain VCR's functionality change all references in the VCR cassettes from `http://localhost:9393` to `https://i-scream-microservice.herokuapp.com`.
 
+## Schema
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Untitled](https://user-images.githubusercontent.com/59414750/88850305-69535000-d1a8-11ea-92aa-e1ee45b49b4c.png)
