@@ -53,6 +53,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -68,6 +69,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+    overflow: hidden;
 }
 
 .game-search {
@@ -10165,11 +10167,6 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
 }
 .width-wide {
   width: 100%;
-}
-
-
-body.game-show {
-  overflow: hidden !important;
 }
 
 .quiz b{

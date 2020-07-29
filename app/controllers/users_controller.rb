@@ -2,7 +2,6 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user if current_user
-    # @user = backup_user if !current_user
   end
 
   def edit
