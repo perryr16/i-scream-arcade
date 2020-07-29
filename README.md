@@ -40,5 +40,4 @@ To return the test suite to its normal state, change the connection address from
 
 * Deployment instructions
 
-
 * ...
