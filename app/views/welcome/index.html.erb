@@ -5,19 +5,19 @@
       <div class="fear-quiz">
       <a class="btn btn-primary js-scroll-trigger" href="/quiz">Will it Scare Me?</a><br>
       Take the Fear Quiz
+      <br><br><br><br>
+        <div class="game-search">
+      <h2 class="text-black mb-4 text-center mx-auto small-gradient">Search for Games</h2>
+      <%= form_tag "/game_search" do %>
+        <%= radio_button_tag(:search_type, "game") %>
+        <%= label_tag(:game_title, "GAME", class: "tiny-gradient") %>
+        <%= radio_button_tag(:search_type, "keyword") %>
+        <%= label_tag(:keyword, "KEYWORD", class: "tiny-gradient") %><br>
+        <%= text_field_tag :search %><br><br>
+        <%= submit_tag "Search", :class=>"btn btn-primary js-scroll-trigger"%>
+      <% end %>
+      </div>
       </div>
     </div>
 </header>
-  <div class="game-search">
-    <div class="col-md-10 col-lg-8 mx-auto text-center">
-      <h2 class="text-black mb-4">Search for Games</h2>
-      <%= form_tag "/game_search" do %>
-        <%= radio_button_tag(:search_type, "game") %>
-        <%= label_tag(:game_title, "Game") %>
-        <%= radio_button_tag(:search_type, "keyword") %>
-        <%= label_tag(:keyword, "Keyword") %><br>
-        <%= text_field_tag :search %><br><br>
-        <%= submit_tag "Search", :class=>"btn btn-game-search", :id =>'btn-game-search' %>
-      <% end %>
-    </div>
-  </div>
+
