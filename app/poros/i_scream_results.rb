@@ -1,4 +1,4 @@
-class IScreamResults 
+class IScreamResults
 
   def service
     IScreamService.new

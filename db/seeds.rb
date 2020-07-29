@@ -9,6 +9,3 @@
 smash64 = Smash64.new
 results = IScreamResults.new
 results.seed_game_objects(smash64.info)
-
-
-
