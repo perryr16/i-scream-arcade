@@ -27,9 +27,9 @@ Click [here](https://i-scream-arcade.herokuapp.com/) to view it in production
 * [Schema](#schema)
 * [Fear Quiz](#fear-quiz)
 * [Games](#games)
-* [Visitor Functionality](#visitor-functionality)
 * [Reviews](#reviews)
 * [Profile](#profile)
+* [User Experience](#user-experience)
 
 ## About
 
@@ -87,7 +87,7 @@ To return the test suite to its normal state, change the connection address from
 
 ## Fear Quiz
 
-<img width="1433" alt="Screen Shot 2020-07-29 at 2 51 28 PM" src="https://user-images.githubusercontent.com/59414750/88852112-0a430a80-d1ab-11ea-8af7-823d5053e640.png">
+<img width="1427" alt="Screen Shot 2020-07-29 at 3 21 23 PM" src="https://user-images.githubusercontent.com/59414750/88854860-35c7f400-d1af-11ea-9317-3b41ed333c84.png">
 
 ## Games
 
@@ -107,5 +107,13 @@ To return the test suite to its normal state, change the connection address from
 
 <img width="1427" alt="Screen Shot 2020-07-29 at 3 03 19 PM" src="https://user-images.githubusercontent.com/59414750/88854519-a0c4fb00-d1ae-11ea-8198-a52f750ee167.png">
 
-## Visitor Functionality
-Visitors have the ability to search for games on our website and take the fear quiz to see a list of recommended games that match their fears. Remember, the purpose of our application is fear.
+## User Experience
+
+There are two main types of users on our application (a regular user or a visitor). Visitors such as the casual gamer or a parent can search games and select some fears to return recommended games. For example, if a mom does not want her child to play games that involve drowning, they can select `drowning` from the quiz. It returns a list of games that include the keyword drowning and as a parent, those would be the games I would have my child avoid.
+
+As a logged in user, you get to experience all the benefits listed above. Once a user has authorized Google, they have the ability to rate, review, and save games.
+
+## Future Implementations
+
+* Build a "cute search" for users that return games that don't include their fears
+* Provide a user with a button that allows them to buy the game
