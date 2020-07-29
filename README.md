@@ -16,6 +16,12 @@ Click [here](https://i-scream-arcade.herokuapp.com/) to view it in production
 
 [Melanie Tran](https://github.com/melatran)
 
+## Quick Links
+
+[About](#about)
+
+## About
+
 IScream Arcade is an app designed to asist users in their hunt for the next terrifying video game. The game data is returned from a sinatra microservice that accesses the IGDB (Internet Game Database) API. You can read more about the API documentation [here](https://api-docs.igdb.com/#about)
 
 Users and visitors may take the ever terrifying `Fear Quiz` that will expose your true fears. Based on the results IScream Arcade will recommend video games that contain your recently exposed fears.
@@ -67,3 +73,6 @@ To return the test suite to its normal state, change the connection address from
 ## Schema
 
 ![Untitled](https://user-images.githubusercontent.com/59414750/88850305-69535000-d1a8-11ea-92aa-e1ee45b49b4c.png)
+
+## Visitor Functionality
+Visitors have the ability to search for games on our website and take the fear quiz to see a list of recommended games that match their fears. Remember, the purpose of our application is fear.
