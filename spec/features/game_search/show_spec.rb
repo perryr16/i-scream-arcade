@@ -40,6 +40,4 @@ describe 'Game Search Show Page' do
     expect(page).to have_button('Havocado')
     # expect(page).to have_content('')
   end
-  
-  
 end
