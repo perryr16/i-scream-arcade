@@ -46,7 +46,9 @@
           </td>
           <td class="grid-space">
             <p>Number of reviews (<%= @game.reviews.count %>)</p>
+            <% if current_user %>
             <center><button class="review"><%= link_to 'Write a Review', "/games/#{@game.id}/review" %></button></center>
+            <% end %>
             <br>
             <div class="scrolling-box">
             <% if @game.reviews.count == 0 %>
