@@ -4,14 +4,7 @@ class GameSearchController < ApplicationController
   end
 
   def index
-    @games = Game.all
-    #this is just for getting the page up and running
-
-    if params[:search_type] == "keyword"
-      render :index
-    else
-      render :show
-    end
+    @games = Game.find(session[:search_ids])
   end
 
   def create
@@ -36,6 +29,16 @@ class GameSearchController < ApplicationController
     elsif params[:similar]
       game_name = params[:similar].to_s
       game = results.create_game_objects(params[:similar])
+    elsif params[:search_type] == 'keyword'
+      games = results.games_by_keywords(params[:search])
+      return games if games.is_a?(String)
+      session[:search_ids] = games.map(&:id) if games.is_a?(Array)
+    elsif params[:search_type] == 'quiz'
+      boxes = params.keys.find_all {|param| param.include?("box")}
+      fear_keywords = params.permit(boxes).to_h.values.join(',')
+      
+      games = results.games_by_keywords(fear_keywords)
+      session[:search_ids] = games.map(&:id) if games.is_a?(Array)
     end
 
   end
@@ -44,6 +47,10 @@ class GameSearchController < ApplicationController
     if game.is_a?(String)
       flash[:error] = game 
       redirect_back(fallback_location: '/')
+    elsif params[:search_type] == 'keyword'
+      redirect_to "/game_search"
+    elsif params[:search_type] == 'quiz'
+      redirect_to "/game_search"
     else
       redirect_to "/game_search/#{game.id}"
     end
