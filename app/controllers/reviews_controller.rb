@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
     @game = Game.find(params[:game_id])
     review = @game.reviews.create(review_params)
     if review.save
-      flash[:notice] = "Your Review Has Been Added"
+      flash[:success] = "Your Review Has Been Added"
       redirect_to "/games/#{@game.id}"
     else
       flash[:error] = review.errors.full_messages.to_sentence
