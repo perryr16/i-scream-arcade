@@ -16,7 +16,7 @@
                     <% end %>
             <p><b>Released in <%=@game.release_date %></b></p>
             <p><b>Critic's Rating: <%=@game.total_rating %></b></p>
-            <p><b>User's Rating: <%=@game.average_user_rating.round(2) %></b></p>
+            <p><b>IScream Rating: <%=@game.average_user_rating.round(2) %></b></p>
           </section>
         <section>
           <iframe width="550" height="300" src="https://www.youtube.com/embed/<%=@game.video%>"></iframe>
