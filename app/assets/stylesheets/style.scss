@@ -10012,8 +10012,9 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: transparent;
+    background-color: #242425b3;
     transition: background-color 0.3s ease-in-out;
+    max-height: 10px;
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
