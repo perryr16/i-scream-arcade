@@ -112,4 +112,22 @@ class IScreamResults
       video:              data[:video]
     }
   end
+
+  def games_by_keywords(keywords)
+    results = service.get_games_by_keywords(keywords)
+    return results if results.is_a?(String)
+    results[:data].map do |api_return|
+      data = api_return[:data]
+      game = game_object(data)
+
+      category_objects(data, game)
+      genre_objects(data, game)
+      keyword_objects(data, game)
+      platform_objects(data, game)
+      screenshot_objects(data, game)
+      similar_objects(data, game)
+      theme_objects(data, game)
+      game
+    end
+  end
 end
