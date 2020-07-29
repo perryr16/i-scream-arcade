@@ -13,7 +13,12 @@
             <p><b>Name:</b> <%=@user.name %></p>
             <p><b>Email:</b> <%=@user.email %></p>
           </div>
+          <br>
           <h2>Saved Games</h2>
+          <% if @user.games.count == 0 %>
+          <img src="https://i.ibb.co/TtGJvyH/output-onlinepngtools-1.png" width="270" height="320">
+          <p class= "color-me">You have not saved any games.</p>
+          <% else %>
           <section class="profile-game-list">
             <table class="my-games">
             <div class="tbl-header">
@@ -38,6 +43,7 @@
                 <td><%=game.total_rating %></td>
                 <td><%=game.popularity %></td>
               </tr>
+          <% end %>
           <% end %>
         </table>
           </section>

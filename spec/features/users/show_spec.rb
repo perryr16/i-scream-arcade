@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "user show page" do
 
-  before :each do 
+  before :each do
     @user = create(:user)
     @user2 = create(:user, name: "name2", email: "email@email.com", photo: "photo.url")
     @game1 = create(:game, total_rating: 98, popularity: 110)
@@ -41,7 +41,7 @@ describe "user show page" do
       expect(page).to have_content(@game4.name)
       expect(page).to have_content(@game4.total_rating)
       expect(page).to have_content(@game4.popularity)
-      
+
       expect(page).to_not have_content(@game3.name)
       expect(page).to_not have_content(@game3.total_rating)
       expect(page).to_not have_content(@game3.popularity)
@@ -57,7 +57,7 @@ describe "user show page" do
       expect(page).to have_content(@game2.name)
       expect(page).to have_content(@game4.name)
     end
-    
+
     within("#game-#{@game2.id}") do
       find('.unsave-game').click
     end
@@ -71,9 +71,6 @@ describe "user show page" do
     within(".profile-game-list")do
       expect(page).to have_content(@game1.name)
       expect(page).to have_content(@game4.name)
-
-
-
       expect(page).to_not have_content(@game2.name)
     end
   end
@@ -88,5 +85,12 @@ describe "user show page" do
     expect(current_path).to eq(game_path(@game2))
   end
 
+  it "can display a message if there are no saved games" do
+    user = create(:user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
+    visit '/profile'
+
+    expect(page).to have_content("You have not saved any games")
+  end
 end
