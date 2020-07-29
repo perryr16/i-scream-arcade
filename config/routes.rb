@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     # post "/game-search", to: "game_search#index"
     # get '/game_search/:id', to: "game_search#show"
     post "/game_search", to: "game_search#create"
-    resources :game_search, only: [:show]
+    resources :game_search, only: [:index, :show]
     
     get 'auth/:provider/callback', to: 'sessions#create'
     get '/logout', to: 'sessions#destroy'
