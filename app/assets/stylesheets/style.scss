@@ -9711,8 +9711,8 @@ body {
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: #ee9d1c;
+  border: 1px solid #ee9d1c;
 }
 #mainNav .navbar-toggler:focus {
   outline: none;
@@ -9736,8 +9736,9 @@ body {
     padding-top: 0;
     padding-bottom: 0;
     border-bottom: none;
-    background-color: transparent;
+    background-color: #242425b3;
     transition: background-color 0.3s ease-in-out;
+    max-height: 10px;
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
@@ -10025,15 +10026,10 @@ background: linear-gradient(180deg, rgba(255,252,252,0) 0%, rgba(126,109,109,0.5
 }
 
 .notice{
-  background-color:black;
-  color:#e9c318;
-  border: 1px solid;
-  border-color:black;
-  font-family: "Arial";
+  color:#EE9D1C;
   font-weight: bold;
-  font-style: italic;
-  padding-left: 40px;
 }
+
 .error{
   background-color:black;
   color:red;
