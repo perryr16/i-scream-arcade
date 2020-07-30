@@ -88,7 +88,7 @@ To return the test suite to its normal state, change the connection address from
 
 ## Fear Quiz
 
-<img width="1427" alt="Screen Shot 2020-07-29 at 3 21 23 PM" src="https://user-images.githubusercontent.com/59414750/88854860-35c7f400-d1af-11ea-9317-3b41ed333c84.png">
+<img width="1402" alt="Screen Shot 2020-07-30 at 2 48 55 PM" src="https://user-images.githubusercontent.com/59414750/88973136-e4356d00-d273-11ea-922b-a23fc1f7a3ed.png">
 
 ## Games
 

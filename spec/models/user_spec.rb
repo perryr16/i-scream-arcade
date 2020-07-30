@@ -5,8 +5,9 @@ describe User, type: :model do
     it { should have_many :fear_quizzes }
     it { should have_many :user_games }
     it { should have_many(:games).through(:user_games) }
+    it { should have_many :reviews}
   end
-  
+
   describe "validations" do
     it{ should validate_presence_of :name }
     it{ should validate_presence_of :email }
