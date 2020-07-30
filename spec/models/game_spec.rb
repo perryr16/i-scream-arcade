@@ -31,11 +31,12 @@ RSpec.describe Game, type: :model do
   describe "instance_methods" do
     it ".average_user_rating" do
       game1 = create(:game)
-      create(:review, user_rating: 1, game_id: game1.id)
-      create(:review, user_rating: 3, game_id: game1.id)
-      create(:review, user_rating: 2, game_id: game1.id)
-      create(:review, user_rating: 1, game_id: game1.id)
-      create(:review, user_rating: 2, game_id: game1.id)
+      user = create(:user)
+      create(:review, user_rating: 1, game_id: game1.id, user_id: user.id)
+      create(:review, user_rating: 3, game_id: game1.id, user_id: user.id)
+      create(:review, user_rating: 2, game_id: game1.id, user_id: user.id)
+      create(:review, user_rating: 1, game_id: game1.id, user_id: user.id)
+      create(:review, user_rating: 2, game_id: game1.id, user_id: user.id)
 
       expect(game1.average_user_rating).to eq(1.8)
     end
@@ -43,11 +44,12 @@ RSpec.describe Game, type: :model do
     it "won't display the average user ratings of all games" do
       game1 = create(:game)
       game2 = create(:game)
-      create(:review, user_rating: 1, game_id: game1.id)
-      create(:review, user_rating: 3, game_id: game1.id)
-      create(:review, user_rating: 2, game_id: game1.id)
-      create(:review, user_rating: 1, game_id: game2.id)
-      create(:review, user_rating: 2, game_id: game2.id)
+      user = create(:user)
+      create(:review, user_rating: 1, game_id: game1.id, user_id: user.id)
+      create(:review, user_rating: 3, game_id: game1.id, user_id: user.id)
+      create(:review, user_rating: 2, game_id: game1.id, user_id: user.id)
+      create(:review, user_rating: 1, game_id: game2.id, user_id: user.id)
+      create(:review, user_rating: 2, game_id: game2.id, user_id: user.id)
 
       expect(game1.average_user_rating).to eq(2.0)
       expect(game2.average_user_rating).to eq(1.5)

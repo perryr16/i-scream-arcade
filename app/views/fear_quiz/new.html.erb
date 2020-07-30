@@ -3,7 +3,12 @@
     <section class="quiz-scroll">
       <h1 class="mx-auto text-uppercase">Tell Me Your Fears</h1>
       <%= form_tag( '/quiz_game_search', method: :post) do %>
+<<<<<<< HEAD
       <table class='quiz-table'>
+=======
+      <center>
+      <table>
+>>>>>>> master
         <tr>
           <th></th>
           <th></th>
@@ -73,8 +78,15 @@
             <%= check_box_tag 'box50', 'zombies' %> zombies <br>
           </td>
         </tr>
+<<<<<<< HEAD
       </table><br><br>
+=======
+      </table>
+      </center>
+      <br><center>
+>>>>>>> master
       <%= submit_tag "See My Results", class: "btn btn-primary js-scroll-trigger" %>
+      </center>
       <% end %>
     </section>
 </header>

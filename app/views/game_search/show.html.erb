@@ -59,6 +59,10 @@
                 <h5><%= review.title %></h5>
                 Rating: <%= review.user_rating %>
                 <p><%= review.content %></p>
+                <% if current_user && review.user_id == current_user.id %>
+                  <button class= "my-review"><%=link_to 'Edit', "/games/#{review.game_id}/#{review.id}/edit" %></button>
+                  <%=button_to 'Delete', "/games/#{review.game_id}/#{review.id}", method: :delete, class: "my-review" %>
+                <% end %>
                </section>
              <% end %>
            <% end %>
