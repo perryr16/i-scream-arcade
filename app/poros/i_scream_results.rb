@@ -37,7 +37,7 @@ class IScreamResults
 
       category_objects(data, game)
       genre_objects(data, game)
-      keyword_objects(data, game)
+      # keyword_objects(data, game)
       platform_objects(data, game)
       screenshot_objects(data, game)
       similar_objects(data, game)
@@ -63,12 +63,12 @@ class IScreamResults
     end
   end
 
-  def keyword_objects(data, game)
-    return nil if !data[:keywords].is_a?(Array)
-    data[:keywords].each do |keyword|
-      game.keywords.create(keyword: keyword)
-    end
-  end
+  # def keyword_objects(data, game)
+  #   return nil if !data[:keywords].is_a?(Array)
+  #   data[:keywords].each do |keyword|
+  #     game.keywords.create(keyword: keyword)
+  #   end
+  # end
 
   def platform_objects(data, game)
     return nil if !data[:platforms].is_a?(Array)

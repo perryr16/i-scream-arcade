@@ -29,8 +29,8 @@ describe "create Game and assocaited objects from API call" do
     expect(mk64.genres[1].genre).to eq('Sport')
 
     # Keywords 
-    expect(mk64.keywords.length).to eq(132)
-    expect(mk64.keywords[0].keyword).to eq ('25')
+    # expect(mk64.keywords.length).to eq(132)
+    # expect(mk64.keywords[0].keyword).to eq ('25')
 
     # Platforms 
     expect(mk64.platforms.length).to eq(3)
