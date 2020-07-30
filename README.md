@@ -73,7 +73,9 @@ The test suite is run using RSpec and Capybara. The test results have been mocke
 `bundle exec rake db:create`
 `bundle exec rspec`
 
-In order to run tests with fresh data you must also clone down and start the [sinatra microservice](https://github.com/perryr16/i-scream-arcade-microservice). Once the microservice has been opened run the following commands to get it setup.
+In order to run tests with fresh data you must delete the VCR cassettes from 
+
+you must also clone down and start the [sinatra microservice](https://github.com/perryr16/i-scream-arcade-microservice). Once the microservice has been opened run the following commands to get it setup.
 
 `bundle install`
 `shotgun`

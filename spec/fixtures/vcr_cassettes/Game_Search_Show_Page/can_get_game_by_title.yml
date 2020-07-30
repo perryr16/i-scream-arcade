@@ -16,14 +16,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json
-      X-Content-Type-Options:
-      - nosniff
       Content-Length:
       - '1696'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 20:49:47 GMT
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"age_ratings":[8,2],"release_date":1990,"cover":"https://images.igdb.com/igdb/image/upload/t_thumb/co23jy.jpg","popularity":17.49408960071623,"summary":"Super
@@ -40,7 +48,7 @@ http_interactions:
         Bandicoot: The Wrath of Cortex","Big Crown: Showdown","Battle Royale : Survival.io
         Zombie","Wolfenstein: Cyberpilot","Havocado","Super Mario Maker 2","Hell Pie","SolSeraph","Zombie
         Driver: Immortal Edition"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/sc8e1y.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e1z.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e20.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e21.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e22.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e23.jpg"],"themes":["Action"],"video":"Vxg5eOPmzHI"}}'
-  recorded_at: Thu, 30 Jul 2020 16:20:22 GMT
+  recorded_at: Thu, 30 Jul 2020 20:49:47 GMT
 - request:
     method: get
     uri: https://i-scream-microservice.herokuapp.com/game/Super%20Mario%20World
@@ -57,14 +65,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json
-      X-Content-Type-Options:
-      - nosniff
       Content-Length:
       - '1696'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 20:49:49 GMT
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"age_ratings":[8,2],"release_date":1990,"cover":"https://images.igdb.com/igdb/image/upload/t_thumb/co23jy.jpg","popularity":17.49408960071623,"summary":"Super
@@ -81,7 +97,7 @@ http_interactions:
         Bandicoot: The Wrath of Cortex","Big Crown: Showdown","Battle Royale : Survival.io
         Zombie","Wolfenstein: Cyberpilot","Havocado","Super Mario Maker 2","Hell Pie","SolSeraph","Zombie
         Driver: Immortal Edition"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/sc8e1y.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e1z.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e20.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e21.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e22.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e23.jpg"],"themes":["Action"],"video":"Vxg5eOPmzHI"}}'
-  recorded_at: Thu, 30 Jul 2020 16:20:30 GMT
+  recorded_at: Thu, 30 Jul 2020 20:49:49 GMT
 - request:
     method: get
     uri: https://i-scream-microservice.herokuapp.com/game/Super%20Mario%20World
@@ -98,14 +114,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json
-      X-Content-Type-Options:
-      - nosniff
       Content-Length:
       - '1696'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 20:49:51 GMT
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"age_ratings":[8,2],"release_date":1990,"cover":"https://images.igdb.com/igdb/image/upload/t_thumb/co23jy.jpg","popularity":17.49408960071623,"summary":"Super
@@ -122,7 +146,7 @@ http_interactions:
         Bandicoot: The Wrath of Cortex","Big Crown: Showdown","Battle Royale : Survival.io
         Zombie","Wolfenstein: Cyberpilot","Havocado","Super Mario Maker 2","Hell Pie","SolSeraph","Zombie
         Driver: Immortal Edition"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/sc8e1y.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e1z.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e20.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e21.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e22.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e23.jpg"],"themes":["Action"],"video":"Vxg5eOPmzHI"}}'
-  recorded_at: Thu, 30 Jul 2020 16:20:38 GMT
+  recorded_at: Thu, 30 Jul 2020 20:49:51 GMT
 - request:
     method: get
     uri: https://i-scream-microservice.herokuapp.com/game/Crash%20Bandicoot:%20The%20Wrath%20of%20Cortex
@@ -139,14 +163,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json
-      X-Content-Type-Options:
-      - nosniff
       Content-Length:
       - '2310'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 20:49:53 GMT
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"age_ratings":null,"release_date":2001,"cover":"https://images.igdb.com/igdb/image/upload/t_thumb/co1qkw.jpg","popularity":3.674717232548577,"summary":"Crash
@@ -164,7 +196,7 @@ http_interactions:
         2","Xbox","Nintendo GameCube"],"similars":["Super Mario World","Big Crown:
         Showdown","Battle Royale : Survival.io Zombie","Wolfenstein: Cyberpilot","Havocado","Super
         Mario Maker 2","Hell Pie","SolSeraph","Zombie Driver: Immortal Edition"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/wupu3f8lgyaogolxmxho.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/r5e4frbf5jnjh4kaf3gn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/qqrzw7eymsibq4bxpf2x.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/pgkbssqq7orsjwulucwv.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/ax7vqofqgy7cdsr9xeta.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/h29myeb6oplgsxskwoxc.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/oxatiovkxecirefsi5st.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/pewzn7vn8wdjyvhnbldn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/snns9pddnf62jk9lw7dk.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/vr2c3h2aoh6haaf9qfl0.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/xpnhoajw3gzhb6g8yqcv.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/dl0q2xcbl134itg4codi.jpg"],"themes":["Action"],"video":"kom0aj-jmNY"}}'
-  recorded_at: Thu, 30 Jul 2020 16:20:47 GMT
+  recorded_at: Thu, 30 Jul 2020 20:49:53 GMT
 - request:
     method: get
     uri: https://i-scream-microservice.herokuapp.com/game/Crash%20Bandicoot:%20The%20Wrath%20of%20Cortex
@@ -181,14 +213,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json
-      X-Content-Type-Options:
-      - nosniff
       Content-Length:
       - '2310'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 20:49:55 GMT
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"age_ratings":null,"release_date":2001,"cover":"https://images.igdb.com/igdb/image/upload/t_thumb/co1qkw.jpg","popularity":3.674717232548577,"summary":"Crash
@@ -206,7 +246,7 @@ http_interactions:
         2","Xbox","Nintendo GameCube"],"similars":["Super Mario World","Big Crown:
         Showdown","Battle Royale : Survival.io Zombie","Wolfenstein: Cyberpilot","Havocado","Super
         Mario Maker 2","Hell Pie","SolSeraph","Zombie Driver: Immortal Edition"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/wupu3f8lgyaogolxmxho.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/r5e4frbf5jnjh4kaf3gn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/qqrzw7eymsibq4bxpf2x.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/pgkbssqq7orsjwulucwv.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/ax7vqofqgy7cdsr9xeta.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/h29myeb6oplgsxskwoxc.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/oxatiovkxecirefsi5st.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/pewzn7vn8wdjyvhnbldn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/snns9pddnf62jk9lw7dk.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/vr2c3h2aoh6haaf9qfl0.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/xpnhoajw3gzhb6g8yqcv.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/dl0q2xcbl134itg4codi.jpg"],"themes":["Action"],"video":"kom0aj-jmNY"}}'
-  recorded_at: Thu, 30 Jul 2020 16:20:55 GMT
+  recorded_at: Thu, 30 Jul 2020 20:49:55 GMT
 - request:
     method: get
     uri: https://i-scream-microservice.herokuapp.com/game/Crash%20Bandicoot:%20The%20Wrath%20of%20Cortex
@@ -223,14 +263,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json
-      X-Content-Type-Options:
-      - nosniff
       Content-Length:
       - '2310'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 20:49:57 GMT
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"age_ratings":null,"release_date":2001,"cover":"https://images.igdb.com/igdb/image/upload/t_thumb/co1qkw.jpg","popularity":3.674717232548577,"summary":"Crash
@@ -248,5 +296,5 @@ http_interactions:
         2","Xbox","Nintendo GameCube"],"similars":["Super Mario World","Big Crown:
         Showdown","Battle Royale : Survival.io Zombie","Wolfenstein: Cyberpilot","Havocado","Super
         Mario Maker 2","Hell Pie","SolSeraph","Zombie Driver: Immortal Edition"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/wupu3f8lgyaogolxmxho.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/r5e4frbf5jnjh4kaf3gn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/qqrzw7eymsibq4bxpf2x.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/pgkbssqq7orsjwulucwv.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/ax7vqofqgy7cdsr9xeta.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/h29myeb6oplgsxskwoxc.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/oxatiovkxecirefsi5st.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/pewzn7vn8wdjyvhnbldn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/snns9pddnf62jk9lw7dk.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/vr2c3h2aoh6haaf9qfl0.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/xpnhoajw3gzhb6g8yqcv.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/dl0q2xcbl134itg4codi.jpg"],"themes":["Action"],"video":"kom0aj-jmNY"}}'
-  recorded_at: Thu, 30 Jul 2020 16:21:06 GMT
+  recorded_at: Thu, 30 Jul 2020 20:49:57 GMT
 recorded_with: VCR 6.0.0

@@ -39,14 +39,5 @@ describe 'Welcome page game search' do
     expect(page).to have_content("Invalid Game Name")
     
   end
-
-  xit "can bring back games based off of a keyword" do
-    within('.game-search') do
-      choose 'search_type_keyword'
-      fill_in :search, with: "spider"
-      click_button "Search"
-    end
-  end 
-  
   
 end

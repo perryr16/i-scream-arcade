@@ -3876,3 +3876,17 @@ body {
   -webkit-background-clip: text;
           background-clip: text;
 }
+.quiz-table td{
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+
+  background: linear-gradient(rgba(173, 131, 3, 1.0), rgba(255, 255, 255, 0.5));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  text-transform: capitalize;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
