@@ -14,6 +14,9 @@ class GameSearchController < ApplicationController
     elsif params[:search] == ""
       flash[:error] = "Please Enter a Valid Search"
       redirect_to "/"
+    elsif empty_quiz 
+      flash[:error] = "Please Tell Me a Fear"
+      redirect_to "/quiz"
     else
       game = create_game_objects(params)
       create_redirect(game)
@@ -21,6 +24,13 @@ class GameSearchController < ApplicationController
   end
 
   private 
+
+  def empty_quiz
+    if params[:search_type] == 'quiz'
+      boxes = params.keys.find_all {|param| param.include?("box")}
+      boxes.empty?
+    end
+  end
 
   def create_game_objects(params)
     results = IScreamResults.new

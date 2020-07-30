@@ -1,9 +1,9 @@
 class IScreamService 
 
   def conn 
-    # Faraday.new('http://localhost:9393') do |faraday|
-
-    Faraday.new('https://i-scream-microservice.herokuapp.com') do |faraday|
+    
+    # Faraday.new('https://i-scream-microservice.herokuapp.com') do |faraday|
+    Faraday.new('http://localhost:9393') do |faraday|
       faraday.options[:timeout] = 300
     end 
     # Faraday.new('https://i-scream-microservice.herokuapp.com')
