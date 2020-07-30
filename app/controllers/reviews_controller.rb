@@ -33,6 +33,12 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @game = Game.find(params[:game_id])
+    Review.destroy(params[:review_id])
+    redirect_to "/games/#{@game.id}"
+  end
+
   private
   def review_params
     params.permit(:title, :user_rating, :content, :user_id, :game_id)

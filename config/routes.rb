@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     post '/games/:game_id', to: 'reviews#create'
     get '/games/:game_id/:review_id/edit', to: 'reviews#edit'
     patch '/games/:game_id/:review_id', to: 'reviews#update'
+    delete '/games/:game_id/:review_id', to: 'reviews#destroy'
 
     resources :games, only: [:index, :show]
     resources :user_games, only: [:create, :destroy]
