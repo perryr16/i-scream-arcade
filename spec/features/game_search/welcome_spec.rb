@@ -76,7 +76,9 @@ describe 'Welcome page game search' do
     expect(page).to have_content('Rayman Legends')
     expect(page).to have_content('Sanitarium')
     expect(page).to have_content('Ori and the Blind Forest')
+  end
 
+  it 'can give results back with keyword tom nook', :vcr do
     within('.game-search') do
       choose 'search_type_keyword'
       fill_in :search, with: "tom nook"
