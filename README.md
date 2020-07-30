@@ -73,16 +73,14 @@ The test suite is run using RSpec and Capybara. The test results have been mocke
 `bundle exec rake db:create`
 `bundle exec rspec`
 
-In order to run tests with fresh data you must delete the VCR cassettes from 
+In order to run tests with fresh data you must delete the VCR cassettes folder from `/spec/fixtures/` and rerun `bundle exec rspec`. This will populate the fixtures folder with fresh data.
 
-you must also clone down and start the [sinatra microservice](https://github.com/perryr16/i-scream-arcade-microservice). Once the microservice has been opened run the following commands to get it setup.
+If you'd like to run the microservice locally you must clone down the [sinatra microservice](https://github.com/perryr16/i-scream-arcade-microservice). Once the microservice has been opened run the following commands to get it setup.
 
 `bundle install`
 `shotgun`
 
-Shotgun is a gem that starts the sinatra service while allowing developers to make changes that will automatically reload on the local server. Shotgun will run the server on `localhost:9393` where you can hit the API directly. Once the server is running you must change the IScream Arcade Service connection address in `/app/services/i_scream_service.rb` to `http://localhost:9393`.
-
-To return the test suite to its normal state, change the connection address from `http://localhost:9393` back to `https://i-scream-microservice.herokuapp.com`. To maintain VCR's functionality change all references in the VCR cassettes from `http://localhost:9393` to `https://i-scream-microservice.herokuapp.com`.
+Shotgun is a gem that starts the sinatra service while allowing developers to make changes that will automatically reload on the local server. Shotgun will run the server on `localhost:9393` where you can hit the API directly. 
 
 ## Schema
 
