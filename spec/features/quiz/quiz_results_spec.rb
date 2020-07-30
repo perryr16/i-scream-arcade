@@ -53,12 +53,12 @@ describe "Fear Quiz" do
     expect(page).to have_content('Silent Hill 2')
     expect(page).to_not have_content('The Cat Lady')
 
-    horror = '1120'
+    # horror = '1120'
     
-    cat_keywords = cat_lady.keywords.map(&:keyword)
-    expect(cat_keywords.include?(horror))
-    silent_keywords = silent_hill.keywords.map(&:keyword)
-    expect(silent_keywords.include?(horror))
+    # cat_keywords = cat_lady.keywords.map(&:keyword)
+    # expect(cat_keywords.include?(horror))
+    # silent_keywords = silent_hill.keywords.map(&:keyword)
+    # expect(silent_keywords.include?(horror))
 
   end
 
@@ -83,10 +83,10 @@ describe "Fear Quiz" do
     game1 = Game.first
     game2 = Game.last
 
-    game1_keywords = game1.keywords.map(&:keyword)
-    expect((game1_keywords & selected_keywords).present?).to eq(true)
-    game2_keywords = game2.keywords.map(&:keyword)
-    expect((game2_keywords & selected_keywords).present?).to eq(true)
+    # game1_keywords = game1.keywords.map(&:keyword)
+    # expect((game1_keywords & selected_keywords).present?).to eq(true)
+    # game2_keywords = game2.keywords.map(&:keyword)
+    # expect((game2_keywords & selected_keywords).present?).to eq(true)
 
   end
   

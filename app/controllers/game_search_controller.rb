@@ -27,7 +27,9 @@ class GameSearchController < ApplicationController
     if params[:search_type] == 'game'
       game = results.create_game_objects(params[:search])
     elsif params[:search_type] == 'keyword'
-      games = results.games_by_keywords(params[:search])
+      keyword = params[:search].gsub(" ", "%20")
+      games = results.games_by_keywords(keyword)
+      # games = results.games_by_keywords(params[:keyword])
       return games if games.is_a?(String)
       session[:search_ids] = games.map(&:id) if games.is_a?(Array)
     end
