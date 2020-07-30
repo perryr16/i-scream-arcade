@@ -3,11 +3,11 @@ require 'rails_helper'
 describe "When a user visits a game's show page" do
   before :each do
     @game = create(:game)
+    @user = create(:user)
   end
 
   it "User can click on link to fill out review" do
-    user = create(:user)
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
     visit "/games/#{@game.id}"
     click_link "Write a Review"
@@ -16,8 +16,7 @@ describe "When a user visits a game's show page" do
   end
 
   it "User can write a new review for a game" do
-    user = create(:user)
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
     visit "/games/#{@game.id}/review"
 
