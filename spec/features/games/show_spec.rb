@@ -26,7 +26,7 @@ RSpec.describe "As a user" do
     game1 = create(:game)
     user = create(:user)
     review = create(:review, user_rating: 1, game_id: game1.id, user_id: user.id)
-  
+
     create(:review, user_rating: 3, game_id: game1.id, user_id: user.id)
     create(:review, user_rating: 2, game_id: game1.id, user_id: user.id)
     create(:review, user_rating: 1, game_id: game1.id, user_id: user.id)
