@@ -27,7 +27,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '"Invalid Game Name"'
-  recorded_at: Thu, 30 Jul 2020 02:11:01 GMT
+  recorded_at: Thu, 30 Jul 2020 02:51:02 GMT
 - request:
     method: get
     uri: http://localhost:9393/game/not%20a%20game%20name%203df34adsf
@@ -55,5 +55,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '"Invalid Game Name"'
-  recorded_at: Thu, 30 Jul 2020 02:11:02 GMT
+  recorded_at: Thu, 30 Jul 2020 02:51:03 GMT
 recorded_with: VCR 6.0.0

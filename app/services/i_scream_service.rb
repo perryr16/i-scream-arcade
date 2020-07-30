@@ -30,7 +30,7 @@ class IScreamService
   end
 
   def json_parse(response)
-    return 404 if response.status != '200'
+    return 404 if response.status != 200
     return "No Game Data For Specified Title" if response.body == '<h1>Internal Server Error</h1>'
     JSON.parse(response.body, symbolize_names: true)
   end
