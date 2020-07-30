@@ -29,13 +29,13 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 30 Jul 2020 20:15:06 GMT
+      - Thu, 30 Jul 2020 20:24:47 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: '"Invalid Game Name"'
-  recorded_at: Thu, 30 Jul 2020 20:15:06 GMT
+  recorded_at: Thu, 30 Jul 2020 20:24:47 GMT
 - request:
     method: get
     uri: https://i-scream-microservice.herokuapp.com/game/not%20a%20game%20name%203df34adsf
@@ -65,11 +65,11 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 30 Jul 2020 20:15:06 GMT
+      - Thu, 30 Jul 2020 20:24:47 GMT
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
       string: '"Invalid Game Name"'
-  recorded_at: Thu, 30 Jul 2020 20:15:06 GMT
+  recorded_at: Thu, 30 Jul 2020 20:24:47 GMT
 recorded_with: VCR 6.0.0

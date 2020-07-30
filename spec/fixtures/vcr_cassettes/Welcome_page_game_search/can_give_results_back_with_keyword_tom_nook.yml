@@ -29,7 +29,7 @@ http_interactions:
       Server:
       - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
       Date:
-      - Thu, 30 Jul 2020 20:18:55 GMT
+      - Thu, 30 Jul 2020 20:25:14 GMT
       Via:
       - 1.1 vegur
     body:
@@ -48,5 +48,5 @@ http_interactions:
         GameCube"],"similars":["Garry''s Mod","The Sims Mobile","Order of Battle:
         World War II","Minecraft: Pocket Edition","Ancient Cities","Simstory: Live
         As You Wish","The Settlers","Planet Zoo","LEGO Tower"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/p2otj88pc8j5zipjs7n4.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/u7obvapsx05gqstrt56j.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/ajsdgh4rh7jyjueyboft.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/b9ipp0tuobi9zh8hetu5.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/d63d56jchpcrcqaf60pn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/oxubrjpt5bzzm44ratlp.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/r1zsdyp097c8wjakvhhq.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/kh1d0asirrpszulxodag.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/bwhzcusldk2z5mbmn5kh.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/smcboybvcjijlenojl79.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/dediwadw3vwurrcdodc5.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/vhpcfoetrfbmvznovg6v.jpg"],"themes":["Sandbox","Kids"],"video":"fNxjGDGBYlg"}}]}'
-  recorded_at: Thu, 30 Jul 2020 20:18:55 GMT
+  recorded_at: Thu, 30 Jul 2020 20:25:14 GMT
 recorded_with: VCR 6.0.0
