@@ -15,31 +15,34 @@ class IScreamResults
 
   def create_game_objects(game_name)
     return game_params(game_name) if game_params(game_name).is_a?(String)
+    return game_params(game_name) if game_params(game_name).is_a?(Integer)
     return existing_game(game_name) if existing_game(game_name)
     data = game_params(game_name)[:data]
-    game = game_object(data)
-
-    category_objects(data, game)
-    genre_objects(data, game)
-    keyword_objects(data, game)
-    platform_objects(data, game)
-    screenshot_objects(data, game)
-    similar_objects(data, game)
-    theme_objects(data, game)
-    game
+    create_game_related_objects(data)
   end
 
-  def seed_game_objects(params)
-    data = params[:data]
-    game = game_object(data)
+  def games_by_keywords(keywords)
+    results = service.get_games_by_keywords(keywords)
+    return results if results.is_a?(String)
+    return results if results.is_a?(Integer)
 
-    category_objects(data, game)
-    genre_objects(data, game)
-    keyword_objects(data, game)
-    platform_objects(data, game)
-    screenshot_objects(data, game)
-    similar_objects(data, game)
-    theme_objects(data, game)
+    results[:data].map do |api_return|
+      data = api_return[:data]
+      create_game_related_objects(data)
+    end
+  end
+
+  def create_game_related_objects(data)
+      game = game_object(data)
+
+      category_objects(data, game)
+      genre_objects(data, game)
+      # keyword_objects(data, game)
+      platform_objects(data, game)
+      screenshot_objects(data, game)
+      similar_objects(data, game)
+      theme_objects(data, game)
+      game
   end
 
   def game_object(data)
@@ -60,12 +63,12 @@ class IScreamResults
     end
   end
 
-  def keyword_objects(data, game)
-    return nil if !data[:keywords].is_a?(Array)
-    data[:keywords].each do |keyword|
-      game.keywords.create(keyword: keyword)
-    end
-  end
+  # def keyword_objects(data, game)
+  #   return nil if !data[:keywords].is_a?(Array)
+  #   data[:keywords].each do |keyword|
+  #     game.keywords.create(keyword: keyword)
+  #   end
+  # end
 
   def platform_objects(data, game)
     return nil if !data[:platforms].is_a?(Array)
@@ -112,22 +115,5 @@ class IScreamResults
       video:              data[:video]
     }
   end
-
-  def games_by_keywords(keywords)
-    results = service.get_games_by_keywords(keywords)
-    return results if results.is_a?(String)
-    results[:data].map do |api_return|
-      data = api_return[:data]
-      game = game_object(data)
-
-      category_objects(data, game)
-      genre_objects(data, game)
-      keyword_objects(data, game)
-      platform_objects(data, game)
-      screenshot_objects(data, game)
-      similar_objects(data, game)
-      theme_objects(data, game)
-      game
-    end
-  end
+  
 end

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri:  https://i-scream-microservice.herokuapp.com/keyword/spider
+    uri: https://i-scream-microservice.herokuapp.com/keyword/spider
     body:
       encoding: US-ASCII
       string: ''
@@ -27,5 +27,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"data":{"id":4235,"name":"spider"}}'
-  recorded_at: Wed, 29 Jul 2020 23:11:56 GMT
+  recorded_at: Thu, 30 Jul 2020 16:24:00 GMT
 recorded_with: VCR 6.0.0

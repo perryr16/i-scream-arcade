@@ -2,7 +2,7 @@
   <div class="container d-flex h-100 align-items-center">
     <section class="quiz-scroll">
       <h1 class="mx-auto text-uppercase">Tell Me Your Fears</h1>
-      <%= form_tag( '/game_search?search_type=quiz', method: :post) do %>
+      <%= form_tag( '/quiz_game_search', method: :post) do %>
       <table>
         <tr>
           <th></th>
@@ -13,16 +13,16 @@
         </tr>
         <tr>
           <td>
-            <%= check_box_tag 'box1', 'alone' %> alone <br>
-            <%= check_box_tag 'box2', 'america' %> america <br>
-            <%= check_box_tag 'box3', 'babies' %> babies <br>
-            <%= check_box_tag 'box4', 'bears' %> bears <br>
-            <%= check_box_tag 'box5', 'biohazard' %> biohazard <br>
-            <%= check_box_tag 'box6', 'blood' %> blood <br>
-            <%= check_box_tag 'box7', 'boy' %> boy <br>
-            <%= check_box_tag 'box8', 'cold' %> cold <br>
-            <%= check_box_tag 'box9', 'darkness' %> darkness <br>
-            <%= check_box_tag 'box10', 'death' %> death <br>
+            <%= check_box_tag 'box1', 'america' %> america <br>
+            <%= check_box_tag 'box2', 'babies' %> babies<br>
+            <%= check_box_tag 'box3', 'bears' %> bears <br>
+            <%= check_box_tag 'box4', 'blood' %> blood <br>
+            <%= check_box_tag 'box5', 'boy' %> boys <br>
+            <%= check_box_tag 'box6', 'cats' %> cats <br>
+            <%= check_box_tag 'box7', 'clowns' %> clowns <br>
+            <%= check_box_tag 'box8', 'darkness' %> darkness <br>
+            <%= check_box_tag 'box9', 'death' %> death <br>
+            <%= check_box_tag 'box10', 'doll' %> dolls <br>
           </td>
           <td>
             <%= check_box_tag 'box11', 'driving' %> driving <br>
@@ -30,15 +30,15 @@
             <%= check_box_tag 'box13', 'earthquakes' %> earthquakes <br>
             <%= check_box_tag 'box14', 'exorcism' %> exorcism <br>
             <%= check_box_tag 'box15', 'fire' %> fire <br>
-            <%= check_box_tag 'box16', 'forest' %> forest <br>
-            <%= check_box_tag 'box17', 'ghost' %> ghost <br>
+            <%= check_box_tag 'box16', 'forest' %> forests <br>
+            <%= check_box_tag 'box17', 'ghost' %> ghosts <br>
             <%= check_box_tag 'box18', 'girls' %> girls <br>
             <%= check_box_tag 'box19', 'guns' %> guns <br>
-            <%= check_box_tag 'box20', 'happy' %> happy <br>
+            <%= check_box_tag 'box20', 'horror' %> horror <br>
           </td>
           <td>
-            <%= check_box_tag 'box21', 'haunted' %> haunted <br>
-            <%= check_box_tag 'box22', 'horror' %> horror <br>
+            <%= check_box_tag 'box21', 'hospital' %> hospitals <br>
+            <%= check_box_tag 'box22', 'insects' %> insects <br>
             <%= check_box_tag 'box23', 'job' %> job <br>
             <%= check_box_tag 'box24', 'loneliness' %> loneliness <br>
             <%= check_box_tag 'box25', 'minivan' %> minivan <br>
@@ -51,22 +51,22 @@
           <td>
             <%= check_box_tag 'box31', 'outdoors' %> outdoors <br>
             <%= check_box_tag 'box32', 'parents' %> parents <br>
-            <%= check_box_tag 'box33', 'rabbits' %> rabbits <br>
+            <%= check_box_tag 'error_404', '404' %> 404 errors <br>
             <%= check_box_tag 'box34', 'rats' %> rats <br>
             <%= check_box_tag 'box35', 'religion' %> religion <br>
-            <%= check_box_tag 'box36', 'outdoors' %> outdoors <br>
-            <%= check_box_tag 'box37', 'romance' %> romance <br>
+            <%= check_box_tag 'box36', 'romance' %> romance <br>
+            <%= check_box_tag 'box37', 'school' %> school <br>
             <%= check_box_tag 'box38', 'sharks' %> sharks <br>
-            <%= check_box_tag 'box39', 'slender man' %> slender man <br>
+            <%= check_box_tag 'box39', 'slender%20man' %> slender man <br>
             <%= check_box_tag 'box40', 'snakes' %> snakes <br>
           </td>
           <td>
             <%= check_box_tag 'box41', 'space' %> space <br>
-            <%= check_box_tag 'box42', 'spiders' %> spiders <br>
+            <%= check_box_tag 'box42', 'spider' %> spiders <br>
             <%= check_box_tag 'box43', 'sports' %> sports <br>
-            <%= check_box_tag 'box44', 'suburban' %> suburban <br>
-            <%= check_box_tag 'box45', 'teenager' %> teenager <br>
-            <%= check_box_tag 'box46', 'trash' %> trash <br>
+            <%= check_box_tag 'box44', 'suburban' %> suburban life<br>
+            <%= check_box_tag 'box45', 'teenager' %> teenagers <br>
+            <%= check_box_tag 'box46', 'wolf' %> wolves <br>
             <%= check_box_tag 'box47', 'tsunami' %> tsunami <br>
             <%= check_box_tag 'box48', 'water' %> water <br>
             <%= check_box_tag 'box49', 'worms' %> worms <br>
