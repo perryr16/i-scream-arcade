@@ -88,11 +88,8 @@ describe 'Welcome page game search' do
 
     within('.search-results') do
       nook = Game.find_by(name: "Animal Crossing")
-      # binding.pry
       expect(page).to have_content("Animal Crossing")
       within("#game-#{nook.id}") do 
-      # expect(page).to have_content("91")
-      # expect(page).to have_content("34")
       expect(page).to have_css("img[src*='#{nook.cover}']")
       end
     end
