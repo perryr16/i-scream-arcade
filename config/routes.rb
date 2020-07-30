@@ -6,12 +6,13 @@ Rails.application.routes.draw do
     # get '/game_search/:id', to: "game_search#show"
     post "/game_search", to: "game_search#create"
     resources :game_search, only: [:index, :show]
-    
+
     get 'auth/:provider/callback', to: 'sessions#create'
     get '/logout', to: 'sessions#destroy'
 
     get '/games/:game_id/review', to: 'reviews#new'
     post '/games/:game_id', to: 'reviews#create'
+    get '/games/game_id/reviews/:id', to: 'reviews#edit'
 
     resources :games, only: [:index, :show]
     resources :user_games, only: [:create, :destroy]
