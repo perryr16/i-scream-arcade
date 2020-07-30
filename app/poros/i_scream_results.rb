@@ -13,6 +13,8 @@ class IScreamResults
     Game.find_by(name: game_name)
   end
 
+  
+
   def create_game_objects(game_name)
     return game_params(game_name) if game_params(game_name).is_a?(String)
     return existing_game(game_name) if existing_game(game_name)
@@ -27,19 +29,6 @@ class IScreamResults
     similar_objects(data, game)
     theme_objects(data, game)
     game
-  end
-
-  def seed_game_objects(params)
-    data = params[:data]
-    game = game_object(data)
-
-    category_objects(data, game)
-    genre_objects(data, game)
-    keyword_objects(data, game)
-    platform_objects(data, game)
-    screenshot_objects(data, game)
-    similar_objects(data, game)
-    theme_objects(data, game)
   end
 
   def game_object(data)
