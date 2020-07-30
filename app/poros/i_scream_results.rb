@@ -28,7 +28,11 @@ class IScreamResults
 
     results[:data].map do |api_return|
       data = api_return[:data]
-      create_game_related_objects(data)
+      if existing_game(data[:name])
+        game = existing_game(data[:name])
+      else
+        create_game_related_objects(data)
+      end
     end
   end
 

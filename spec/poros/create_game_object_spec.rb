@@ -1,6 +1,4 @@
 require 'rails_helper'
-# NOTE: This will fail if microservice is not running. To start:
-# $ shotgun 
 
 describe "create Game and assocaited objects from API call" do 
 
@@ -22,7 +20,6 @@ describe "create Game and assocaited objects from API call" do
     expect(mk64.total_rating).to eq(81.0)
     expect(mk64.video).to eq("ASWgJvuQhTA")
     
-    # categories (empty)
     # Genres
     expect(mk64.genres.length).to eq(2)
     expect(mk64.genres[0].genre).to eq('Racing')

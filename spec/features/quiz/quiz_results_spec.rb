@@ -67,14 +67,13 @@ describe "Fear Quiz" do
     find(:css, "#box12").set(true)
     find(:css, "#box24").set(true)
     find(:css, "#box25").set(true)
-    find(:css, "#box47").set(true)
+    find(:css, "#box49").set(true)
 
     click_button 'See My Results'
 
     expect(current_path).to eq('/game_search')
 
     expect(page).to have_css('.game-img', count: 10)
-    
     expect('93.0').to appear_before('91.0')
     expect('91.0').to appear_before('90.0')
     expect('90.0').to appear_before('89.0')

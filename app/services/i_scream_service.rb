@@ -1,12 +1,6 @@
 class IScreamService 
 
-  def conn 
-    # TO RUN LOCALLY, SWAP LINES 5 and 6
-    # Faraday.new('http://localhost:9393') do |faraday|
-    Faraday.new('https://i-scream-microservice.herokuapp.com') do |faraday|
-      faraday.options[:timeout] = 300
-    end 
-  end
+
 
   def get_keyid(keyword)
     response = conn.get("/keyword/#{keyword}")
@@ -28,11 +22,18 @@ class IScreamService
     json_parse(response)
   end
 
+  private 
+
+  def conn 
+    Faraday.new('https://i-scream-microservice.herokuapp.com') do |faraday|
+      faraday.options[:timeout] = 300
+    end 
+  end
+
   def json_parse(response)
     return 404 if response.status != 200
     return "No Game Data For Specified Title" if response.body == '<h1>Internal Server Error</h1>'
     JSON.parse(response.body, symbolize_names: true)
   end
-
 end
 

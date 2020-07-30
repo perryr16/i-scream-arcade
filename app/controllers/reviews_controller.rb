@@ -6,7 +6,6 @@ class ReviewsController < ApplicationController
 
   def create
     @game = Game.find(params[:game_id])
-    # current_user.reviews.build
     review = current_user.reviews.create(review_params)
     if review.save
       flash[:notice] = "Your Review Has Been Added"

@@ -19,7 +19,7 @@ describe 'Game Search Show Page' do
     expect(page).to have_button('Crash Bandicoot: The Wrath of Cortex')
     expect(page).to have_button('Big Crown: Showdown')
     expect(page).to have_button('Super Mario Maker 2')
-    #and others 
+
     expect(page).to have_content('Action')
     expect(page).to have_content('Platform')
     expect(page).to have_content('Wii')
@@ -38,6 +38,5 @@ describe 'Game Search Show Page' do
     expect(page).to have_content('Rating: 64.0')
     expect(page).to have_content('Xbox')
     expect(page).to have_button('Havocado')
-    # expect(page).to have_content('')
   end
 end
