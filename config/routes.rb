@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
     get '/games/:game_id/review', to: 'reviews#new'
     post '/games/:game_id', to: 'reviews#create'
-    get '/games/game_id/reviews/:id', to: 'reviews#edit'
+    get '/games/:game_id/:review_id/edit', to: 'reviews#edit'
+    patch '/games/:game_id/:review_id', to: 'reviews#update'
 
     resources :games, only: [:index, :show]
     resources :user_games, only: [:create, :destroy]

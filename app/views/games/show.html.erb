@@ -55,10 +55,11 @@
               <h5>Be the first to review.</h5>
               <% else %>
               <% @game.reviews.each do |review|%>
-               <section class="review-<%= review.id %>">
+               <section class="reviews-<%= review.id %>">
                 <h5><%= review.title %></h5>
                 Rating: <%= review.user_rating %>
                 <p><%= review.content %></p>
+                <button><%=link_to 'Edit', "/games/#{review.game_id}/#{review.id}/edit" %></button>
                </section>
              <% end %>
            <% end %>

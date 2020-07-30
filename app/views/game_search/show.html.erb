@@ -59,6 +59,7 @@
                 <h5><%= review.title %></h5>
                 Rating: <%= review.user_rating %>
                 <p><%= review.content %></p>
+                <%= button_to "edit this review", '/reviews', method: :patch %>
                </section>
              <% end %>
            <% end %>
