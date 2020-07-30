@@ -14,7 +14,7 @@ describe "Fear Quiz" do
 
   it "slelect 1 value", :vcr do
     visit '/quiz'
-    find(:css, "#box22").set(true)
+    find(:css, "#box20").set(true)
 
     click_button 'See My Results'
 
@@ -89,6 +89,21 @@ describe "Fear Quiz" do
     # expect((game2_keywords & selected_keywords).present?).to eq(true)
 
   end
+
+  it "affraid of 404 errors" do
+    visit '/quiz'
+    find(:css, "#error_404").set(true)
+    find(:css, "#box24").set(true)
+    find(:css, "#box25").set(true)
+    find(:css, "#box47").set(true)
+
+    click_button 'See My Results'
+    expect(current_path).to eq('/quiz_game_search')
+    expect(page).to have_content('404')
+    expect(page).to have_content('Spooks not found')
+    
+  end
+  
   
   
 end

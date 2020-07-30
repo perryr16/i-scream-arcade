@@ -1,7 +1,9 @@
 class QuizGameSearchController < ApplicationController
 
   def create
-    if empty_quiz 
+    if params[:error_404]
+    render file: '/public/404'
+    elsif empty_quiz 
       flash[:error] = "Please Tell Me a Fear"
       redirect_to "/quiz"
     else
