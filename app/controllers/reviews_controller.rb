@@ -29,7 +29,7 @@ class ReviewsController < ApplicationController
       redirect_to "/games/#{@game.id}"
     else
       redirect_to "/games/#{@review.game_id}/#{@review.id}/edit"
-      flash[:notice] = "Updates haven't been made. Fill in all blanks"
+      flash[:notice] = @review.errors.full_messages.to_sentence
     end
   end
 

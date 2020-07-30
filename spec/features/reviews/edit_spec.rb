@@ -27,4 +27,20 @@ describe "Editing Reviews" do
     expect(current_path).to eq("/games/#{@game.id}")
     expect(page).to have_content("What are they feeding these pets?!")
   end
+
+  it "User can't update review if missing blanks" do
+    visit "/games/#{@game.id}"
+
+    within ".reviews-#{@review.id}" do
+      click_link "Edit"
+    end
+
+    fill_in :title, with: ""
+    fill_in :content, with: "What are they feeding these pets?!"
+    fill_in :user_rating, with: 2
+
+    click_on "Update"
+
+    expect(page).to have_content("Title can't be blank")
+  end
 end
