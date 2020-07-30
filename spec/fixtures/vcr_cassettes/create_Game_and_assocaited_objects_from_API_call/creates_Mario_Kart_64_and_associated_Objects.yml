@@ -16,14 +16,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json
-      X-Content-Type-Options:
-      - nosniff
       Content-Length:
       - '2258'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 20:26:01 GMT
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"age_ratings":[8],"release_date":1996,"cover":"https://images.igdb.com/igdb/image/upload/t_thumb/co1te8.jpg","popularity":5.457862054247628,"summary":"Mario
@@ -38,7 +46,7 @@ http_interactions:
         64","Wii","Wii U"],"similars":["Super Mario Bros.","Crash Team Racing","Crash
         Nitro Kart","Super Mario Kart","Mario Kart: Super Circuit","Mario Kart DS","Mario
         Kart 7","Mario Kart 8","Paper Mario: The Thousand-Year Door"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/sc87rl.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rm.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87ro.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rp.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rq.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rr.jpg"],"themes":["Action","Kids"],"video":"ASWgJvuQhTA"}}'
-  recorded_at: Thu, 30 Jul 2020 16:23:43 GMT
+  recorded_at: Thu, 30 Jul 2020 20:26:01 GMT
 - request:
     method: get
     uri: https://i-scream-microservice.herokuapp.com/game/Mario%20Kart%2064
@@ -55,14 +63,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json
-      X-Content-Type-Options:
-      - nosniff
       Content-Length:
       - '2258'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 20:26:05 GMT
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"age_ratings":[8],"release_date":1996,"cover":"https://images.igdb.com/igdb/image/upload/t_thumb/co1te8.jpg","popularity":5.457862054247628,"summary":"Mario
@@ -77,7 +93,7 @@ http_interactions:
         64","Wii","Wii U"],"similars":["Super Mario Bros.","Crash Team Racing","Crash
         Nitro Kart","Super Mario Kart","Mario Kart: Super Circuit","Mario Kart DS","Mario
         Kart 7","Mario Kart 8","Paper Mario: The Thousand-Year Door"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/sc87rl.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rm.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87ro.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rp.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rq.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rr.jpg"],"themes":["Action","Kids"],"video":"ASWgJvuQhTA"}}'
-  recorded_at: Thu, 30 Jul 2020 16:23:51 GMT
+  recorded_at: Thu, 30 Jul 2020 20:26:05 GMT
 - request:
     method: get
     uri: https://i-scream-microservice.herokuapp.com/game/Mario%20Kart%2064
@@ -94,14 +110,22 @@ http_interactions:
   response:
     status:
       code: 200
-      message: OK
+      message: 'OK '
     headers:
+      Connection:
+      - keep-alive
       Content-Type:
       - application/json
-      X-Content-Type-Options:
-      - nosniff
       Content-Length:
       - '2258'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 20:26:07 GMT
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"data":{"age_ratings":[8],"release_date":1996,"cover":"https://images.igdb.com/igdb/image/upload/t_thumb/co1te8.jpg","popularity":5.457862054247628,"summary":"Mario
@@ -116,5 +140,5 @@ http_interactions:
         64","Wii","Wii U"],"similars":["Super Mario Bros.","Crash Team Racing","Crash
         Nitro Kart","Super Mario Kart","Mario Kart: Super Circuit","Mario Kart DS","Mario
         Kart 7","Mario Kart 8","Paper Mario: The Thousand-Year Door"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/sc87rl.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rm.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87ro.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rp.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rq.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rr.jpg"],"themes":["Action","Kids"],"video":"ASWgJvuQhTA"}}'
-  recorded_at: Thu, 30 Jul 2020 16:23:59 GMT
+  recorded_at: Thu, 30 Jul 2020 20:26:07 GMT
 recorded_with: VCR 6.0.0
