@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :users, only: [:edit, :update]
 
     resources :quiz_game_search, only: [:create]
+    resources :similar_game_search, only: [:create]
 
 
 

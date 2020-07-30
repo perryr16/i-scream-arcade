@@ -41,7 +41,7 @@
         <tr>
           <td>
           <%@game.similars.each do |similar| %>
-          <%= button_to similar.game, "/game_search?similar=#{similar.game}", method: :post, class: "btn transparent-50 width-wide"%>
+          <%= button_to similar.game, "/similar_game_search?similar=#{similar.game}", method: :post, class: "btn transparent-50 width-wide"%>
           <%end %>
           </td>
           <td class="grid-space">
