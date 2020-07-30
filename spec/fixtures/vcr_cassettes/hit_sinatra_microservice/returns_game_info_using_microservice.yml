@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://i-scream-microservice.herokuapp.com/game/Mario%20Kart%2064
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2258'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 21:03:57 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"age_ratings":[8],"release_date":1996,"cover":"https://images.igdb.com/igdb/image/upload/t_thumb/co1te8.jpg","popularity":5.457862054247628,"summary":"Mario
+        Kart 64 is the second main installment of the Mario Kart series. It is the
+        first game in the series to use three-dimensional graphics, however, the characters
+        and items in this game are still two-dimensional, pre-rendered sprites. The
+        game offers two camera angles and three engine sizes: 50cc, 100cc and 150cc.
+        Each kart has distinctive handling, acceleration and top speed capabilities.
+        Shells that you fire at rival racers, Bananas that make them skid out and
+        Lightning Bolts that make them small and very slow are just a few of the game''s
+        unique power-ups.","name":"Mario Kart 64","total_rating":81.79204527809605,"categories":0,"genres":["Racing","Sport"],"keywords":[25,280,281,296,1019,1046,1057,1075,1381,1440,1678,1682,1710,1744,1783,2071,2112,2152,2274,2415,2759,3627,3831,3912,3988,4144,4146,4147,4157,4161,4162,4170,4179,4186,4210,4211,4216,4243,4274,4286,4294,4303,4321,4324,4333,4350,4359,4391,4480,4509,4522,4569,4657,4678,4694,4747,4758,4760,4803,4907,4910,4994,5029,5043,5171,5196,5302,5354,5362,5406,5507,5553,5558,5602,5612,5639,5704,5759,5786,5801,5876,5878,5943,5987,6015,6138,6139,6140,6154,6174,6176,6178,6185,6191,6192,6194,6204,6206,6207,6208,6209,6368,6715,6765,6798,6824,6832,7026,7070,7107,7220,7305,7522,7552,7633,8132,8187,8879,9075,9275,9529,10436,10749,11109,11187,11378,11435,11917,12170,13121,13491,16053],"platforms":["Nintendo
+        64","Wii","Wii U"],"similars":["Super Mario Bros.","Crash Team Racing","Crash
+        Nitro Kart","Super Mario Kart","Mario Kart: Super Circuit","Mario Kart DS","Mario
+        Kart 7","Mario Kart 8","Paper Mario: The Thousand-Year Door"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/sc87rl.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rm.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87ro.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rp.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rq.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc87rr.jpg"],"themes":["Action","Kids"],"video":"ASWgJvuQhTA"}}'
+  recorded_at: Thu, 30 Jul 2020 21:03:57 GMT
+recorded_with: VCR 6.0.0

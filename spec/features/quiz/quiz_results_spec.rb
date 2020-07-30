@@ -74,7 +74,6 @@ describe "Fear Quiz" do
     expect(current_path).to eq('/game_search')
 
     expect(page).to have_css('.game-img', count: 10)
-    save_and_open_page
     expect('93.0').to appear_before('91.0')
     expect('91.0').to appear_before('90.0')
     expect('90.0').to appear_before('89.0')

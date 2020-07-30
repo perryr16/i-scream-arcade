@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://i-scream-microservice.herokuapp.com/keywords_to_games/tom%20nook
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2241'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - WEBrick/1.4.2 (Ruby/2.6.6/2020-03-31)
+      Date:
+      - Thu, 30 Jul 2020 21:02:58 GMT
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"data":{"age_ratings":[8,1],"release_date":2001,"cover":"https://images.igdb.com/igdb/image/upload/t_thumb/co1nyn.jpg","popularity":10.13861721120764,"summary":"Occasionally
+        strange but completely addictive, Nintendo''s Animal Crossing for the GameCube
+        is not so much a game as a simulation of life on a small town. Players begin
+        the game by setting out to live life on their own in a colorful town, where
+        they are greeted by a seemingly endless supply of things to do and characters
+        to meet.\n\nTime passes in Animal Crossing in real-time, as the month, day,
+        season, and time of day matches that of the player''s. Holiday seasons come
+        and go in Animal Crossing, just as they would in the real world. Experience
+        the freedom to fish, decorate your house, go bug catching, garden, write letters,
+        and even play original Nintendo NES games in this imaginative, and addictive
+        game.","name":"Animal Crossing","total_rating":78.25282706942104,"categories":0,"genres":["Simulator"],"keywords":[43,25528,25529,25530,25531],"platforms":["Nintendo
+        GameCube"],"similars":["Garry''s Mod","The Sims Mobile","Order of Battle:
+        World War II","Minecraft: Pocket Edition","Ancient Cities","Simstory: Live
+        As You Wish","The Settlers","Planet Zoo","LEGO Tower"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/p2otj88pc8j5zipjs7n4.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/u7obvapsx05gqstrt56j.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/ajsdgh4rh7jyjueyboft.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/b9ipp0tuobi9zh8hetu5.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/d63d56jchpcrcqaf60pn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/oxubrjpt5bzzm44ratlp.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/r1zsdyp097c8wjakvhhq.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/kh1d0asirrpszulxodag.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/bwhzcusldk2z5mbmn5kh.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/smcboybvcjijlenojl79.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/dediwadw3vwurrcdodc5.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/vhpcfoetrfbmvznovg6v.jpg"],"themes":["Sandbox","Kids"],"video":"fNxjGDGBYlg"}}]}'
+  recorded_at: Thu, 30 Jul 2020 21:02:58 GMT
+recorded_with: VCR 6.0.0
