@@ -5,7 +5,8 @@ class ReviewsController < ApplicationController
 
   def create
     @game = Game.find(params[:game_id])
-    review = @game.reviews.create(review_params)
+    # current_user.reviews.build
+    review = current_user.reviews.create(review_params)
     if review.save
       flash[:notice] = "Your Review Has Been Added"
       redirect_to "/games/#{@game.id}"
@@ -16,8 +17,7 @@ class ReviewsController < ApplicationController
   end
 
   private
-
   def review_params
-    params.permit(:title, :user_rating, :content)
+    params.permit(:title, :user_rating, :content, :user_id, :game_id)
   end
 end
