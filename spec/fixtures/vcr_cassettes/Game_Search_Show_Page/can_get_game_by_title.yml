@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://i-scream-microservice.herokuapp.com/game/Super%20Mario%20World
+    uri:  https://i-scream-microservice.herokuapp.com/game/Super%20Mario%20World
     body:
       encoding: US-ASCII
       string: ''
@@ -35,15 +35,15 @@ http_interactions:
         game mechanics, and artistic themes influenced later titles in the Mario series.
         The game was released to best-selling status on the SNES, received large amounts
         of critical acclaim, and is commonly seen on Nintendo''s best games of all
-        times on various critic listings.","name":"Super Mario World","total_rating":96.35643957414786,"categories":0,"genres":["Platform"],"keywords":null,"platforms":["Wii","Super
+        times on various critic listings.","name":"Super Mario World","total_rating":96.35640007812356,"categories":0,"genres":["Platform"],"keywords":null,"platforms":["Wii","Super
         Nintendo Entertainment System (SNES)","Wii U","New Nintendo 3DS"],"similars":["Crash
         Bandicoot: The Wrath of Cortex","Big Crown: Showdown","Battle Royale : Survival.io
         Zombie","Wolfenstein: Cyberpilot","Havocado","Super Mario Maker 2","Hell Pie","SolSeraph","Zombie
         Driver: Immortal Edition"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/sc8e1y.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e1z.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e20.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e21.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e22.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e23.jpg"],"themes":["Action"],"video":"Vxg5eOPmzHI"}}'
-  recorded_at: Tue, 28 Jul 2020 21:46:13 GMT
+  recorded_at: Wed, 29 Jul 2020 23:10:51 GMT
 - request:
     method: get
-    uri: https://i-scream-microservice.herokuapp.com/game/Super%20Mario%20World
+    uri:  https://i-scream-microservice.herokuapp.com/game/Super%20Mario%20World
     body:
       encoding: US-ASCII
       string: ''
@@ -76,15 +76,15 @@ http_interactions:
         game mechanics, and artistic themes influenced later titles in the Mario series.
         The game was released to best-selling status on the SNES, received large amounts
         of critical acclaim, and is commonly seen on Nintendo''s best games of all
-        times on various critic listings.","name":"Super Mario World","total_rating":96.35643957414786,"categories":0,"genres":["Platform"],"keywords":null,"platforms":["Wii","Super
+        times on various critic listings.","name":"Super Mario World","total_rating":96.35640007812356,"categories":0,"genres":["Platform"],"keywords":null,"platforms":["Wii","Super
         Nintendo Entertainment System (SNES)","Wii U","New Nintendo 3DS"],"similars":["Crash
         Bandicoot: The Wrath of Cortex","Big Crown: Showdown","Battle Royale : Survival.io
         Zombie","Wolfenstein: Cyberpilot","Havocado","Super Mario Maker 2","Hell Pie","SolSeraph","Zombie
         Driver: Immortal Edition"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/sc8e1y.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e1z.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e20.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e21.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e22.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/sc8e23.jpg"],"themes":["Action"],"video":"Vxg5eOPmzHI"}}'
-  recorded_at: Tue, 28 Jul 2020 21:46:21 GMT
+  recorded_at: Wed, 29 Jul 2020 23:10:59 GMT
 - request:
     method: get
-    uri: https://i-scream-microservice.herokuapp.com/game/Crash%20Bandicoot:%20The%20Wrath%20of%20Cortex
+    uri:  https://i-scream-microservice.herokuapp.com/game/Crash%20Bandicoot:%20The%20Wrath%20of%20Cortex
     body:
       encoding: US-ASCII
       string: ''
@@ -123,10 +123,10 @@ http_interactions:
         2","Xbox","Nintendo GameCube"],"similars":["Super Mario World","Big Crown:
         Showdown","Battle Royale : Survival.io Zombie","Wolfenstein: Cyberpilot","Havocado","Super
         Mario Maker 2","Hell Pie","SolSeraph","Zombie Driver: Immortal Edition"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/wupu3f8lgyaogolxmxho.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/r5e4frbf5jnjh4kaf3gn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/qqrzw7eymsibq4bxpf2x.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/pgkbssqq7orsjwulucwv.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/ax7vqofqgy7cdsr9xeta.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/h29myeb6oplgsxskwoxc.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/oxatiovkxecirefsi5st.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/pewzn7vn8wdjyvhnbldn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/snns9pddnf62jk9lw7dk.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/vr2c3h2aoh6haaf9qfl0.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/xpnhoajw3gzhb6g8yqcv.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/dl0q2xcbl134itg4codi.jpg"],"themes":["Action"],"video":"kom0aj-jmNY"}}'
-  recorded_at: Tue, 28 Jul 2020 21:46:29 GMT
+  recorded_at: Wed, 29 Jul 2020 23:11:08 GMT
 - request:
     method: get
-    uri: https://i-scream-microservice.herokuapp.com/game/Crash%20Bandicoot:%20The%20Wrath%20of%20Cortex
+    uri:  https://i-scream-microservice.herokuapp.com/game/Crash%20Bandicoot:%20The%20Wrath%20of%20Cortex
     body:
       encoding: US-ASCII
       string: ''
@@ -165,5 +165,5 @@ http_interactions:
         2","Xbox","Nintendo GameCube"],"similars":["Super Mario World","Big Crown:
         Showdown","Battle Royale : Survival.io Zombie","Wolfenstein: Cyberpilot","Havocado","Super
         Mario Maker 2","Hell Pie","SolSeraph","Zombie Driver: Immortal Edition"],"screenshots":["https://images.igdb.com/igdb/image/upload/t_thumb/wupu3f8lgyaogolxmxho.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/r5e4frbf5jnjh4kaf3gn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/qqrzw7eymsibq4bxpf2x.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/pgkbssqq7orsjwulucwv.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/ax7vqofqgy7cdsr9xeta.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/h29myeb6oplgsxskwoxc.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/oxatiovkxecirefsi5st.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/pewzn7vn8wdjyvhnbldn.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/snns9pddnf62jk9lw7dk.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/vr2c3h2aoh6haaf9qfl0.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/xpnhoajw3gzhb6g8yqcv.jpg","https://images.igdb.com/igdb/image/upload/t_thumb/dl0q2xcbl134itg4codi.jpg"],"themes":["Action"],"video":"kom0aj-jmNY"}}'
-  recorded_at: Tue, 28 Jul 2020 21:46:37 GMT
+  recorded_at: Wed, 29 Jul 2020 23:11:16 GMT
 recorded_with: VCR 6.0.0

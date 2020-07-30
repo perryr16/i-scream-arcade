@@ -6,6 +6,7 @@
       <a class="btn btn-primary js-scroll-trigger" href="/quiz">Will it Scare Me?</a><br>
       Take the Fear Quiz
       <br><br><br><br>
+      <% cache cache_key_for(Game, "list") do %>
         <div class="game-search">
       <h2 class="text-black mb-4 text-center mx-auto small-gradient">Search for Games</h2>
       <%= form_tag "/game_search" do %>
@@ -15,6 +16,7 @@
         <%= label_tag(:keyword, "KEYWORD", class: "tiny-gradient") %><br>
         <%= text_field_tag :search %><br><br>
         <%= submit_tag "Search", :class=>"btn btn-primary js-scroll-trigger"%>
+      <% end %>
       <% end %>
       </div>
       </div>

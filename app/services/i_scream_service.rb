@@ -1,8 +1,12 @@
 class IScreamService 
 
   def conn 
-    # Faraday.new('http://localhost:9393')
-    Faraday.new('https://i-scream-microservice.herokuapp.com')
+    # Faraday.new('http://localhost:9393') do |faraday|
+
+    Faraday.new('https://i-scream-microservice.herokuapp.com') do |faraday|
+      faraday.options[:timeout] = 300
+    end 
+    # Faraday.new('https://i-scream-microservice.herokuapp.com')
   end
 
   def get_keyid(keyword)
@@ -17,6 +21,11 @@ class IScreamService
 
   def get_game_exact(game_name)
     response = conn.get("/game/#{game_name}")
+    json_parse(response)
+  end
+
+  def get_games_by_keywords(keywords)
+    response = conn.get("/keywords_to_games/#{keywords}")
     json_parse(response)
   end
 

@@ -19,7 +19,7 @@
                 <% end %>
                 </td>
                 <td><img class="game-img thumbnail" src="<%=game.cover %>" alt=""></td>
-                <td><%=game.name %></td>
+                <td><%= link_to  "#{game.name}", "/games/#{game.id}" %></td>
                 <td><%=game.total_rating %></td>
                 <td><%=game.popularity %></td>
               </tr>

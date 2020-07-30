@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://i-scream-microservice.herokuapp.com/game/not%20a%20game%20name%203df34adsf
+    uri:  https://i-scream-microservice.herokuapp.com/game/not%20a%20game%20name%203df34adsf
     body:
       encoding: US-ASCII
       string: ''
@@ -27,10 +27,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '"Invalid Game Name"'
-  recorded_at: Tue, 28 Jul 2020 21:46:56 GMT
+  recorded_at: Wed, 29 Jul 2020 23:11:35 GMT
 - request:
     method: get
-    uri: https://i-scream-microservice.herokuapp.com/game/not%20a%20game%20name%203df34adsf
+    uri:  https://i-scream-microservice.herokuapp.com/game/not%20a%20game%20name%203df34adsf
     body:
       encoding: US-ASCII
       string: ''
@@ -55,5 +55,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '"Invalid Game Name"'
-  recorded_at: Tue, 28 Jul 2020 21:46:57 GMT
+  recorded_at: Wed, 29 Jul 2020 23:11:36 GMT
 recorded_with: VCR 6.0.0
