@@ -31,6 +31,8 @@ class QuizGameSearchController < ApplicationController
     if game.is_a?(String)
       flash[:error] = game 
       redirect_back(fallback_location: '/')
+    elsif game.is_a?(Integer)
+      render file: '/public/404'
     else
       redirect_to "/game_search"
     end

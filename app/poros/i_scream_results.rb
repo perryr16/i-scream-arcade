@@ -13,10 +13,11 @@ class IScreamResults
     Game.find_by(name: game_name)
   end
 
-  
+
 
   def create_game_objects(game_name)
     return game_params(game_name) if game_params(game_name).is_a?(String)
+    return game_params(game_name) if game_params(game_name).is_a?(Integer)
     return existing_game(game_name) if existing_game(game_name)
     data = game_params(game_name)[:data]
     game = game_object(data)
@@ -105,6 +106,7 @@ class IScreamResults
   def games_by_keywords(keywords)
     results = service.get_games_by_keywords(keywords)
     return results if results.is_a?(String)
+    return results if results.is_a?(Integer)
     results[:data].map do |api_return|
       data = api_return[:data]
       game = game_object(data)
