@@ -40,7 +40,8 @@ describe "a User can add a game to 'my games'" do
     @game1.reload
     @game2.reload
     @game4.reload
-    expect(@user.games).to eq([@game1, @game4])
+    expect(@user.games.include?(@game1)).to eq(true)
+    expect(@user.games.include?(@game4)).to eq(true)
     expect(@game1.users).to eq([@user])
     expect(@game2.users).to eq([])
     expect(@game4.users).to eq([@user])

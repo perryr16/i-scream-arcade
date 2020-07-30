@@ -25,6 +25,7 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth'
 gem 'dotenv-rails'
 gem 'seed_dump'
+gem 'orderly'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
