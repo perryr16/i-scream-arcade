@@ -104,7 +104,7 @@ Shotgun is a gem that starts the sinatra service while allowing developers to ma
 
 ## Profile
 
-<img width="1234" alt="Screen Shot 2020-07-29 at 3 01 45 PM" src="https://user-images.githubusercontent.com/59414750/88854485-9276df00-d1ae-11ea-8c34-582cd5fd59d5.png">
+<img width="1234" alt="Screen Shot 2020-07-29 at 3 01 45 PM" src="https://i.ibb.co/syPr2s1/Screen-Shot-2020-08-03-at-3-30-40-PM.png">
 
 <img width="1427" alt="Screen Shot 2020-07-29 at 3 03 19 PM" src="https://user-images.githubusercontent.com/59414750/88854519-a0c4fb00-d1ae-11ea-8198-a52f750ee167.png">
 
