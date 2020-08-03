@@ -41,7 +41,6 @@ class IScreamResults
 
       category_objects(data, game)
       genre_objects(data, game)
-      # keyword_objects(data, game)
       platform_objects(data, game)
       screenshot_objects(data, game)
       similar_objects(data, game)
@@ -53,17 +52,30 @@ class IScreamResults
     Game.create(new_game_params(data))
   end
 
-  def category_objects(data, game)
-    return nil if !data[:categories].is_a?(Array)
-    data[:categories].each do |category|
-      game.cateogries.create(category: category)
-    end
+  def new_game_params(data)
+    {
+      age_rating:         age_ratings(data),
+      cover:              data[:cover],
+      popularity:         data[:popularity].to_i,
+      summary:            data[:summary],
+      release_date:       data[:release_date],
+      name:               data[:name],
+      total_rating:       data[:total_rating].to_i,
+      video:              data[:video]
+    }
   end
 
   def genre_objects(data, game)
     return nil if !data[:genres].is_a?(Array)
     data[:genres].each do |genre|
       game.genres.create(genre: genre)
+    end
+  end
+
+  def category_objects(data, game)
+    return nil if !data[:categories].is_a?(Array)
+    data[:categories].each do |category|
+      game.cateogries.create(category: category)
     end
   end
 
@@ -107,17 +119,6 @@ class IScreamResults
     data[:age_ratings][0]
   end
 
-  def new_game_params(data)
-    {
-      age_rating:         age_ratings(data),
-      cover:              data[:cover],
-      popularity:         data[:popularity].to_i,
-      summary:            data[:summary],
-      release_date:       data[:release_date],
-      name:               data[:name],
-      total_rating:       data[:total_rating].to_i,
-      video:              data[:video]
-    }
-  end
+
   
 end

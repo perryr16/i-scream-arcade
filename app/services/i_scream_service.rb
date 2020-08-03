@@ -1,7 +1,5 @@
 class IScreamService 
 
-
-
   def get_keyid(keyword)
     response = conn.get("/keyword/#{keyword}")
     json_parse(response)
